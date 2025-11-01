@@ -13,7 +13,6 @@ if not logger.hasHandlers():
     logger.addHandler(sh)
     # File handler (writes to project root or container workdir)
     try:
-        import os
         os.makedirs('logs', exist_ok=True)
         fh = logging.FileHandler('logs/app.log', encoding='utf-8')
         fh.setFormatter(formatter)
@@ -34,9 +33,6 @@ class Config:
         
         if not self.api_key:
             raise ValueError("OpenAI API key not found in .env file")
-        
-        # Set up OpenAI client
-        openai.api_key = self.api_key
     
     def validate_api_key(self):
         """Validate the API key by making a simple request"""

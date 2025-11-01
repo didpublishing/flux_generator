@@ -10,10 +10,6 @@ import re
 
 class PromptDataManager:
     def __init__(self, csv_file='prompts/prompts.csv'):
-        from pathlib import Path
-        import os
-        import logging
-
         self.logger = logging.getLogger("flux_prompt")
 
         # Resolve CSV path relative to this file's directory

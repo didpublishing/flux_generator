@@ -1,6 +1,9 @@
 import openai
+import logging
 from config import Config
 from prompt_repository import PromptRepository
+
+logger = logging.getLogger("flux_prompt")
 
 class PromptGenerator:
     def __init__(self):
@@ -114,7 +117,7 @@ Output: “A young detective from the 1940s, Pulp fiction style illustration, Du
             
         except Exception as e:
             # Fallback to basic generation if OpenAI fails
-            print(f"OpenAI optimization failed: {e}")
+            logger.warning(f"OpenAI optimization failed: {e}")
             return self.generate_prompt(parameters)
     
     def get_parameter_labels(self):
@@ -192,7 +195,7 @@ Generate a professional, technically accurate prompt optimized for Flux models."
             return optimized_prompt
             
         except Exception as e:
-            print(f"Repository optimization failed: {e}")
+            logger.warning(f"Repository optimization failed: {e}")
             # Fallback to standard optimization
             return self.optimize_prompt_with_openai(parameters)
     
