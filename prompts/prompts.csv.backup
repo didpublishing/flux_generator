@@ -1,0 +1,2 @@
+id,timestamp,context,art_style,camera_angle,environment,lighting,focus,color_palette,composition,modifiers,generated_prompt
+c56253b5,2025-09-25 23:47:11,Test context with fixed path,Test style,Test angle,Test environment,Test lighting,Test focus,Test colors,Test composition,Test modifiers,Test prompt with fixed path resolution

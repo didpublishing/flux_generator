@@ -1,0 +1,81 @@
+comic {subject} graphic illustration, comic art, graphic novel art, highly detailed, <lora:Comic_Art_1.5:1> comic_art, black outlines, detailed contrast, monochrome, art style of ((neal adams:1)), strong rim lighting:1, graphic novels, comics
+negative: photograph, deformed grlitch, noisy, photorealistic, stock photo
+
+Realistic Comicbook Style FLUX:
+	
+mad-rlcmc
+flatcolor
+comic
+illustration
+
+Alfre Woodard:
+mariamartin1, middleaged African American woman (Alfre Woodard person:1), short straight black hair
+
+Dakota Fanning
+dakotaf1,  Dakota Fanning person:1, young blond woman with  grey eyes.
+
+Elle Fanning:
+ElleFanning, blond hair, gray eyes, tall, pink skin, (Elle Fanning person:1)
+
+Gabbie Carter:
+GabbieC, (Gabbie Carter person:1) shoulder-length blond hair, dimples, grey eyes, large natural breasts
+
+Ian McShane:
+George_Williams, (Ian McShane person:1) older caucasian man with droopy eyes and pronounced eyebrows
+
+Artemis Hammersmith:
+artemish, (light grey hair, short hair style with  long strands in front of her ears)  concept art style with clean lines, comic_art, black outlines, detailed contrast, art style of ((neal adams:1)), rim lighting, graphic novels, comics, soft feminine physique
+
+Brooke908_V1:
+a young Afro-Brazilian woman with red hair
+
+calvin909:
+calvin909, young man with short dark hair, light skinned Hispanic with brown eyes
+
+Gino_Aragon_V2_Flux:
+ginoh, , comic_art, black outlines, detailed contrast, art style of ((neal adams:1)), rim lighting, graphic novels, comics, lineart, black ink outline, comic art style of Neal Adams, art style of Jim Steranko] black comic book outline.
+
+ginoartemis1:
+Ginoartemis1, (Gino is handsome with brown skin and has dark brown wavy hair, no facial hair and glowing red irises), (Artemis is beautiful and has short grey hair and green eyes), comic_art, black outlines, detailed contrast, art style of ((neal adams:1)), rim lighting, graphic novels, comics, lineart, black ink outline, comic art style of Neal Adams, art style of Jim Steranko] black comic book outline.
+
+Hailey989:
+Hailey989, blond hair, gray eyes, tall, pink skin, (Dakota Fanning person:1)comic_art, black outlines, detailed contrast, art style of ((neal adams:1)), rim lighting, graphic novels, comics, lineart, black ink outline, comic art style of Neal Adams, art style of Jim Steranko] black comic book outline.
+
+Lupita Nyongo
+lupitan1, a beautiful African woman, Lupita Nyongo person, slim, fit and toned.
+
+
+Mayor_Velasquez_V1:
+Mayor_Velasquez, comic book line art style, Mayor_V, (Gina Torres person, Lana Parrilla person), (art style of neal adams:1) comic art style,  art style of Jim Steranko] black comic book outline.
+
+Nicola Coughlan:
+nicolac1, Beautiful woman in a red floral top. She is smiling at the viewer. Nicola Coughlan person,  <lora:flux-Realismlora:1> dramatic cinematic lighting <lora:nicolac1:1>
+
+Nick_Rampart:
+Nick_Rampart, Steve Buscemi (person)comic_art, black outlines, detailed contrast, monochrome, art style of ((neal adams:1)), rim lighting, graphic novels, comics
+
+Renauld White:
+a handsome Brazilian male model, renauldw1, handsome, muscular
+
+Turnaround sheet:
+create a turnaround sheet of this character. Recommended Prompt:create turnaround sheet of this exact character, 5 full-body poses on pure white background: front view, 3/4 left, left profile, back view, right profile, 3/4 right — evenly spaced in a clean horizontal row, consistent lighting and style, no background noise, no shadows, same proportions and detailing across all views
+
+RealComic_Kontext:
+convert the image into an illustration style, realistic, comic art by Neal Adams.
+
+Line art:
+Transform this image into a detailed realistic inked comic illustration in black and white, clean ink style.  Keep all elements exactly the same including people, outfits, features, gestures. Remove all shading and gradients completely. Use only two line widths throughout the image: a slightly thicker outline for the main contours and a consistent thinner line for all inner details. The final result should be clean, simple, and ready for coloring. komikx-style  Art style of neal adams:1
+You can compose prompts in discrete blocks. Each block controls a major aspect of the image:
+
+Section				||Description				||Example
+Context				||Who/what is the subject?	||"A fox reading a book"
+Art Style			||Style, medium, artist		||"in the style of ..."	
+Camera Angle		||Perspective or viewpoint	||"overhead shot"
+Environment			||Background/location		||"in a lush forest"
+Lighting			||Quality, time of day, 	||"golden hour, soft sunlight"
+Focus				||DOF, detail, sharpness	||"sharp focus, blurred background"
+Color Palette		||Tones, color, mood		||"pastel tones"
+Composition			||Framing, arrangement		||"rule of thirds composition"
+Modifiers			||Any other attributes (mood, weather, etc.)	"whimsical, misty, tranquil"
+
+

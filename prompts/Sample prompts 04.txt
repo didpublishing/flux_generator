@@ -1,0 +1,39 @@
+[medium shot], [low angle, close-up], [steampunk inventor working on a mechanical device], [cluttered workshop filled with gears and tools], [steam rising from the contraption, intense focus on the inventor’s hands], [warm industrial lighting], [low angle], [steampunk art style].
+
+[wide shot], [aerial view, wide angle], [ancient army marching through a mountain pass], [rugged mountain terrain with steep cliffs], [banners waving, soldiers in formation], [harsh midday sun], [overhead angle], [epic historical art style].
+
+[medium close-up], [side view, eye level], [modern artist painting a large canvas], [spacious loft studio with large windows], [paint splatters on the floor, intense expression on the artist’s face], [soft natural daylight], [eye level], [realistic art style].
+
+[full shot], [frontal view, wide angle], [urban explorer navigating an abandoned building], [decaying industrial complex with broken windows], [graffiti-covered walls, debris on the floor], [soft ambient light], [eye level], [photographic urban exploration style].
+
+[extreme close-up], [eye level, macro shot], [sword being sharpened on a whetstone], [blacksmith’s workshop with sparks flying], [focus on the blade and stone, blurred background], [dramatic workshop lighting], [macro shot], [historical craftsmanship style].
+
+[medium shot], [low angle, close-up], [futuristic warrior charging with an energy sword], [alien battlefield with glowing crystals], [energy crackling from the sword, intense expression], [neon blue lighting], [dynamic low angle], [sci-fi action art style].
+
+[long shot], [aerial view, wide angle], [hot air balloons drifting over a serene lake], [lush green forest surrounding the lake], [reflections of the balloons on the water, soft morning mist], [gentle morning light], [overhead angle], [romantic adventure style].
+
+[medium close-up], [side view, eye level], [Roman senator giving a speech], [grand marble hall with columns], [crowd listening attentively, intense expression on the senator’s face], [soft natural light], [eye level], [historical epic art style].
+
+[full shot], [frontal view, wide angle], [daring pirate standing on the bow of a ship], [open sea with a storm approaching], [pirate flag billowing in the wind, waves crashing against the ship], [dramatic storm lighting], [eye level], [adventure art style].
+
+[extreme close-up], [eye level, macro shot], [old key being inserted into a rusty lock], [dusty attic filled with cobwebs], [focus on the key and lock, soft light filtering through a small window], [moody low light], [macro shot], [mystery art style].
+
+[medium shot], [low angle, dynamic view], [superheroine launching into the sky], [modern city skyline at sunset], [cape flowing, buildings reflecting the setting sun], [dramatic backlight], [low angle], [comic book style].
+
+[long shot], [aerial view, wide angle], [ancient caravan crossing a desert], [endless sand dunes with a setting sun], [camels carrying goods, travelers wrapped in robes], [golden hour lighting], [overhead angle], [historical adventure style].
+
+[medium close-up], [side view, eye level], [scientist studying a holographic display], [futuristic laboratory with advanced tech], [data floating in the air, intense focus on the scientist’s face], [neon blue lighting], [eye level], [sci-fi art style].
+
+[full shot], [frontal view, wide angle], [medieval blacksmith forging a sword], [dimly lit forge with glowing embers], [sparks flying as the hammer strikes, intense focus on the blacksmith], [warm forge lighting], [eye level], [historical craftsmanship style].
+
+[extreme close-up], [eye level, macro shot], [teardrop falling onto a love letter], [dimly lit room with soft shadows], [focus on the teardrop, blurred text in the background], [soft candlelight], [macro shot], [romantic drama style].
+
+[medium shot], [low angle, dynamic view], [samurai in mid-swing with his katana], [bamboo forest with sunlight filtering through], [focused expression, sword cutting through the air], [bright sunlight], [low angle], [traditional Japanese ink painting style].
+
+[long shot], [aerial view, wide angle], [futuristic city with towering skyscrapers], [neon-lit streets with flying cars], [holographic advertisements in the sky, vibrant city life], [vivid neon lighting], [overhead angle], [cyberpunk art style].
+
+[medium close-up], [side view, eye level], [cowboy reloading his revolver], [dusty Western street with wooden buildings], [intense focus on the cowboy’s hands, sunlight casting long shadows], [golden hour lighting], [eye level], [Western art style].
+
+[full shot], [frontal view, wide angle], [ancient sorcerer summoning a magical portal], [stone temple with mystical runes], [swirling magical energy, intense focus on the sorcerer’s concentration], [mystical lighting], [eye level], [fantasy art style].
+
+[extreme close-up], [eye level, macro shot], [clockwork gears turning inside a pocket watch], [vintage study with leather-bound books], [focus on the intricate gears, warm lamplight], [soft ambient light], [macro shot], [steampunk art style].

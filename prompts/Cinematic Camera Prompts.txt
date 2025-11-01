@@ -1,0 +1,55 @@
+# Cinematic Camera Prompts for Stable Diffusion
+
+## Distance & Framing Prompts
+- `extreme wide shot`, `establishing shot` - Shows entire scene/location from far distance
+- `wide shot`, `long shot` - Shows full subject with plenty of surrounding environment
+- `full shot` - Shows entire subject from head to toe
+- `medium long shot`, `3/4 shot` - Shows subject from knees up
+- `medium shot` - Shows subject from waist up
+- `medium close-up` - Shows subject from chest up
+- `close-up` - Shows subject's face/head only
+- `extreme close-up` - Shows detail or single feature (eyes, lips, etc.)
+
+## Angle Prompts
+- `eye level shot` - Camera at subject's eye level, neutral perspective
+- `low angle shot` - Camera looking up at subject, creates power/dominance
+- `high angle shot` - Camera looking down at subject, creates vulnerability
+- `dutch angle`, `tilted shot` - Camera rotated, horizon at angle
+- `bird's eye view`, `overhead shot` - Camera directly above looking down
+- `worm's eye view` - Camera at ground level looking up
+
+## Character Framing Prompts
+- `over the shoulder shot` - Shot from behind one subject looking at another
+- `two shot` - Two subjects in same frame
+- `three shot` - Three subjects in same frame
+- `group shot` - Multiple subjects in frame
+- `single shot` - One subject only
+- `reaction shot` - Subject's emotional response
+- `point of view shot`, `pov shot` - Through character's eyes
+
+## Movement & Technical Prompts
+- `tracking shot` - Camera follows moving subject
+- `dolly shot` - Camera moves toward/away from subject
+- `zoom shot` - Lens zooms in/out on subject
+- `master shot` - Wide shot showing all elements of scene
+- `insert shot`, `cutaway` - Close detail of specific object/action
+
+## Combinations & Modifiers
+Add these to enhance your prompts:
+- Lens: `shot on 35mm`, `telephoto lens`, `wide angle lens`
+- Lighting: `cinematic lighting`, `dramatic lighting`, `natural lighting`
+- Style: `film grain`, `movie still`, `cinematic composition`
+- Quality: `4k`, `8k`, `high definition`, `professional photography`
+
+## Example Prompts
+1. Dramatic portrait: `close-up shot, dramatic lighting, low angle shot, cinematic composition`
+2. Establishing scene: `extreme wide shot, bird's eye view, cinematic lighting, 8k`
+3. Action sequence: `medium shot, dutch angle, dramatic lighting, motion blur`
+4. Emotional moment: `medium close-up, eye level shot, natural lighting, film grain`
+
+## Tips for Usage
+1. Combine camera distances with angles for more specific results
+2. Add lighting and style modifiers to enhance cinematic feel
+3. Use movement prompts sparingly as they can be harder to generate
+4. Consider emotional impact when choosing angles
+5. Start with basic shots before experimenting with complex combinations

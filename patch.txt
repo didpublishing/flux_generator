@@ -1,0 +1,45 @@
+*** Begin Patch
+*** Update File: web_app.py
+@@
+-        html, body, [data-testid=\"stAppViewContainer\"], .main, .block-container, .stApp {
+-            background: #171923 !important;
+-            color: #D9DEE6 !important;
++        html, body, [data-testid=\"stAppViewContainer\"], .main, .block-container, .stApp {
++            background: #171923 !important;
++            color: #FFFFFF !important;
+             font-family: 'Inter', 'Segoe UI', Arial, sans-serif !important;
+         }
+@@
+-        .SidebarContent, [data-testid=\"stSidebar\"], .css-1d391kg .css-18ni7ap {
+-            background: #1A1D25 !important;
+-            color: #ABB2BB !important;
++        .SidebarContent, [data-testid=\"stSidebar\"], .css-1d391kg .css-18ni7ap {
++            background: #1A1D25 !important;
++            color: #FFFFFF !important;
+             border-right: 2px solid #22232B !important;
+             font-size: 1rem;
+         }
+@@
+-        .stTabs [role=\"tab\"] {
+-            color: #ABB2BB !important;
++        .stTabs [role=\"tab\"] {
++            color: #FFFFFF !important;
+             font-weight: 590 !important;
+             background: transparent !important;
+             border-radius: 7px 7px 0 0 !important;
+             margin: 0 8px 0 0 !important;
+             min-width: 120px;
+             font-size: 1.06rem;
+             padding-bottom: 3.5px !important;
+         }
+@@
+-        ::placeholder, .stMarkdown, .stHelp, .stTextInput > label, .stTextArea > label {
+-            color: #8A8F98 !important;
+-            opacity: .9!important;
+-        }
++        ::placeholder, .stHelp, .stTextInput > label, .stTextArea > label {
++            color: #8A8F98 !important;
++            opacity: .9!important;
++        }
++        .stMarkdown { color: #FFFFFF !important; }
+*** End Patch

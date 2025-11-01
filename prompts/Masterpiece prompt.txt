@@ -1,0 +1,5 @@
+Prompt: (((modelshoot style))),(Masterpiece, best quality), full body, stunningly beautiful , pale skin, eyelashes, beautiful face, cinematic composition, detailed skin, detailed, detailed face, intricate, vibrant, photo realistic, realistic, dramatic, sharp focus, 8k
+
+Negative prompt: Asian, cartoon, 3d, (disfigured), (bad art), (deformed), (poorly drawn), (extra limbs), (close up), strange colours, blurry, boring, sketch, lackluster, big breast, large breast, huge breasts, face portrait, self-portrait, signature, letters, watermark
+
+Steps: 22, Sampler: DPM++ SDE Karras, CFG scale: 11, Seed: 4117145557, Size: 512x768, Model hash: 1b5be397

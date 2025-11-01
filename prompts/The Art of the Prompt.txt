@@ -1,0 +1,110 @@
+If you just copy other people's stuff you have no control over the images you generate. Learn how to develop prompts and let your creativity run wild!
+Of course, you can all do absolutely crazy combos and experiments as you please. This article is not intended to suppress that, but to provide those who would like to take more targeted control of their images with the means! If you wanna go crazy then do it!!
+1. Basics
+There are various methods for composing a Prompt, but the basic structure should look like this:
+
+{Medium/+ opt. Mod/Main style} {Object/Subject} {Details} {Background} {Mods/Embeddings}
+
+Medium: which medium do you want to use? Painting, comic, 3D, photo, drawing? Any specific style you want to get? Comic, fantasy, cyberpunk, Steampunk? Optionally you can insert a mod here and the perspective can also be included.
+
+Example: "a vivid scifi illustration, low camera angle, upper body"
+
+Note: "Illustration" is the Medium and "Vivid" is the Mod and "Scifi" the Main style!
+
+Object/Subject: Your main motives in simple, clear words starting with "of".
+
+Example: "of a female astronaut"
+
+Details: Details include everything that should define your main motives more clearly. Clothes, poses, hair colors, body types, etc. Here you can quickly accumulate endless tokens, but the more tokens you use, the less accurate the generated image will be in the end. So try to use tokens sparingly and think about what exactly you want.
+
+Example: "pretty face, skintight bodysuit, helmet, futuristic, floating in space"
+
+Background: This should be self-explanatory, define your background in simple terms. Less is more.
+
+Example: vast galaxy background
+
+Before we take a closer look at the mods, let's first see what we have so far:
+Same thing here, of course our image changes every time our text prompt changes, but terms like "Insanely" or "absurd" have no influence on the general quality and only cost us unnecessary tokens
+
+Note: Terms like Highly, Extremely or Insanely have an effect on the generated image. This dates back to the beginning of stable diffusion when there were no negative embeddings/Loras like there are today. It can still be prompted like this today, but negative embeddings have largely made it redundant. If, for whatever reason, you don't use embeddings/Loras, this would be a method to increase quality.
+
+Prompts like this(Copied from a random image in Civit):
+
+(masterpiece, realistic:1.3), (extremely intricate:1.2), (photorealistic:1.4), (extremely delicate), (ultra realistic:1.3), (hyperrealistic), hyperrealistic photography, extremely detailed, HDR, RAW photo, dslr, highly detailed, lifelike, photorealistic, digital painting
+
+Tokens are being wasted here in a completely mindless way because popular buzzwords are simply copied without understanding what exactly they are doing. These tokens could be better used to further work out the details.
+
+3. Style Mods/Artist Names
+The same applies here again: know what you want, what the goal is and keep it simple! It's counterproductive if you use buzzwords that don't push your desired style, especially if you use a model that is stylized from the start!
+
+In general, you have significantly more influence if you “describe” the style instead of simply using an artist name!
+
+If you want to go Photo realistic than use Mods that push that style (Raw, Photo, realistic, DSLR, etc). Same goes for anime or painting or any other style. Learn the therms that support the desired style and those that don't
+
+For our prompt I want to go in a more western Style
+
+Example: "comic style, graphic novel style, sharp lines, smooth shading"
+
+4. Embeddings(Negative)
+There are, what feels like, a million negative embeddings out there. All I can tell you is look around, try it out and find the embeddings you like best.
+
+I use the following:
+
+1bad-hands-5, 1antiBlur, verybadimagenegative_v1.3, PA7_UnRealistic-Neg_v2-neg, bad-artist-anime, 1ng_deepnegative_v1_75t
+
+Basically I want to tell you that mods are very powerful but here too it is important to keep it simple and direct and forget about all the unnecessary bells and whistles. Think about what you want and go for it!
+
+Note: I can only recommend that you try out different mods individually to see what effect they actually have. X/Y/Z Plot can be helpful here.
+
+Now back to our Prompt. We want Mods that will push our Image without wasting tokens.
+
+Example: "detailed, sharp, HDR, good quality, good resolution, maximalist, masterpiece"
+
+As you can see Negative Embeddings have a big Impact on our Image!
+
+5. Negative Prompt
+Negative prompts are essentially a “do the opposite of” command. Here we can enhance elements we want or suppress unwanted elements.
+
+Our image hast still some Anime-ish elements so I want them gone.
+
+Example: "Anime, Manga, Cartoon"
+
+Also we can enforce some of our quality Mods.
+
+Example: "Blurry, low quality, low resolution, pixelated, minimalist"
+
+Now we can run some generations, edit/adjust/Expand our prompt if needed and push some token weights up or down.
+
+
+
+The final prompt looks now like this:
+
+Comic Illustration, low camera angle, medium shot, of a female astronaut drifting in outer space, pretty face, (skintight bodysuit:1.3), (helmet:1.3), futuristic, floating in space, sexy, vast galaxy background, (sharp:1.2), (detailed:1.2), (HD:1.2), (HDR:1.2), (8K:1.2), (best quality:1.2), (best resolution:1.2), maximalist, (masterpiece:1.2), rough lines, by pencil and ink, crosshatching
+
+Negative: Painting, Anime, 3D, photo, RAW, Cartoon, Animated, long hair, (blurry:1.2), (low quality:1.2), (low resolution:1.2), (noisy:1.2), (distorted:1.2), (pixelated:1.2), (minimalist:1.2), (deformed:1.2), (mutated:1.2), 1bad-hands-5, 1antiBlur, verybadimagenegative_v1.3, PA7_UnRealistic-Neg_v2-neg, bad-artist-anime, 1ng_deepnegative_v1_75t
+
+We could work further on our text, for example to close the helmet with a visor or gloves for her bare hands etc. But now you know the basics and can explore the endless possibilities of stable diffusion on your own ^.^
+
+
+
+
+
+and with a little help from a scifi suit Lora we can get this:
+
+
+
+
+
+
+
+If you are interested in western comic art, we would be happy to welcome you to our AI Comic Corner Discord server. We are a small community based around AI comics. Join us and make new friends, share your art or just chat with like-minded people.
+
+
+
+
+
+
+
+
+
+

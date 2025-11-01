@@ -1,0 +1,15 @@
+{
+  "master_prompts": {},
+  "knowledge_base": {
+    "camera_angles": [],
+    "image_formats": [],
+    "technical_parameters": [],
+    "style_guides": [],
+    "negative_prompts": []
+  },
+  "metadata": {
+    "created": "2025-10-30T07:33:37.879505",
+    "version": "1.0",
+    "last_updated": "2025-10-30T07:33:37.879519"
+  }
+}

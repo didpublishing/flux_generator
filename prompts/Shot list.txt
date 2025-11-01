@@ -1,0 +1,19 @@
+Wide shot (WS): A wide shot shows the subject in the context of their surroundings and is typically used to establish a location or provide a sense of scale.
+
+Medium shot (MS): A medium shot shows the subject from the waist up and is often used to show the subject interacting with their environment.
+
+Close-up (CU): A close-up shot shows a detailed view of the subject's face or a small portion of their body, and is often used to create intimacy or emphasis.
+
+Extreme close-up (ECU): An extreme close-up shot shows a very detailed view of a small portion of the subject, such as their eyes or mouth.
+
+Over-the-shoulder (OTS) shot: An over-the-shoulder shot shows the subject from the perspective of someone standing behind them, often used to show a conversation between two characters.
+
+Two-shot: A two-shot shows two subjects in the same frame, often used to show a conversation between two characters.
+
+Point-of-view (POV) shot: A point-of-view shot shows the subject's perspective, as if the viewer is seeing through their eyes.
+
+Insert shot: An insert shot shows a detailed view of an object or prop, often used to convey information or add visual interest.
+
+Establishing shot: An establishing shot shows the location and context for the scene, often used at the beginning of a scene or sequence to orient the viewer.
+
+Cutaway shot: A cutaway shot shows a different subject or shot within the same scene, often used to add visual interest or provide information.

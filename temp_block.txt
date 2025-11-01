@@ -1,0 +1,250 @@
+    """Show detailed view of a selected prompt"""
+    st.subheader("Prompt Details")
+    
+    with st.expander("View Full Details", expanded=True):
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.text_input("ID", value=prompt['id'], disabled=True)
+            st.text_input("Timestamp", value=prompt['timestamp'], disabled=True)
+            st.text_area("Context", value=prompt.get('context', ''), disabled=True)
+            st.text_input("Art Style", value=prompt.get('art_style', ''), disabled=True)
+            st.text_input("Camera Angle", value=prompt.get('camera_angle', ''), disabled=True)
+        
+        with col2:
+            st.text_input("Environment", value=prompt.get('environment', ''), disabled=True)
+            st.text_input("Lighting", value=prompt.get('lighting', ''), disabled=True)
+            st.text_input("Focus", value=prompt.get('focus', ''), disabled=True)
+            st.text_input("Color Palette", value=prompt.get('color_palette', ''), disabled=True)
+            st.text_input("Composition", value=prompt.get('composition', ''), disabled=True)
+        
+        st.text_area("Modifiers", value=prompt.get('modifiers', ''), disabled=True)
+        st.text_area("Generated Prompt", value=prompt.get('generated_prompt', ''), height=150, disabled=True)
+
+def image_analysis_tab():
+    """Tab for analyzing images and generating prompts"""
+    st.header("🖼️ Image Analysis & Prompt Generation")
+    st.markdown("Upload an image to analyze and generate a Flux prompt from it")
+    
+    analyzer = st.session_state.image_analyzer
+    data_manager = st.session_state.data_manager
+    
+    # Image upload
+    uploaded_file = st.file_uploader(
+        "Choose an image file",
+        type=['png', 'jpg', 'jpeg', 'gif', 'bmp', 'webp'],
+        help="Upload an image to analyze and generate a prompt from"
+    )
+    
+    if uploaded_file is not None:
+        # Display the uploaded image
+        st.image(uploaded_file, caption="Uploaded Image", use_column_width=True)
+        
+        # Analysis type selection
+        analysis_types = analyzer.get_analysis_types()
+        analysis_type = st.selectbox(
+            "Analysis Type",
+            options=list(analysis_types.keys()),
+            format_func=lambda x: f"{x.title()} - {analysis_types[x]}",
+            help="Choose the type of analysis to perform"
+        )
+        
+        # Analyze button
+        if st.button("🔍 Analyze Image", type="primary"):
+            with st.spinner("Analyzing image..."):
+                try:
+                    # Convert uploaded file to PIL Image
+                    from PIL import Image
+                    image = Image.open(uploaded_file)
+                    
+                    # Perform analysis
+                    analysis_result = analyzer.analyze_image(image, analysis_type)
+                    
+                    if "error" in analysis_result:
+                        st.error(analysis_result["error"])
+                    else:
+                        # Display results
+                        st.success("✅ Analysis complete!")
+                        
+                        # Show analysis results
+                        if analysis_type == "detailed" and "subject" in analysis_result:
+
+                            # Structured analysis
+                            st.subheader("📊 Analysis Results")
+                            
+                            col1, col2 = st.columns(2)
+                            
+                            with col1:
+                                st.text_input("Subject", value=analysis_result.get("subject", ""), disabled=True)
+                                st.text_input("Art Style", value=analysis_result.get("art_style", ""), disabled=True)
+                                st.text_input("Camera Angle", value=analysis_result.get("camera_angle", ""), disabled=True)
+                                st.text_input("Environment", value=analysis_result.get("environment", ""), disabled=True)
+                                st.text_input("Lighting", value=analysis_result.get("lighting", ""), disabled=True)
+                            
+                            with col2:
+                                st.text_input("Focus", value=analysis_result.get("focus", ""), disabled=True)
+                                st.text_input("Color Palette", value=analysis_result.get("color_palette", ""), disabled=True)
+                                st.text_input("Composition", value=analysis_result.get("composition", ""), disabled=True)
+                                st.text_area("Modifiers", value=analysis_result.get("modifiers", ""), disabled=True)
+                            
+                            # Generated prompt
+                            suggested_prompt = analysis_result.get("suggested_prompt", "")
+                            st.text_area("Generated Prompt", value=suggested_prompt, height=150, disabled=True)
+                            
+                            # Send to Generate Prompt button
+                            subject_text = analysis_result.get("subject", "") or suggested_prompt
+                            if st.button("Send to Generate Prompt", key="send_to_generate_prompt_detailed"):
+                                st.session_state["param_context"] = subject_text
+                                st.success("Sent to Generate Prompt! Switch to the 'Generate Prompt' tab to continue.")
+                            
+                            # Copy to clipboard button for generated prompt
+                            if suggested_prompt:
+                                components.html(
+                                    f"""
+                                    <div>
+                                      <button style=\"padding:8px 12px; margin-top:6px;\" onclick=\"navigator.clipboard.writeText(text_{id(suggested_prompt)}).then(()=>{{{{this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy Generated Prompt',1500)}}}});\">Copy Generated Prompt</button>
+                                      <script>
+                                        const text_{id(suggested_prompt)} = {json.dumps(suggested_prompt)};
+                                      </script>
+                                    </div>
+                                    """,
+                                    height=60,
+                                )
+                            
+                            # Store for saving
+                            st.session_state.analysis_result = analysis_result
+                            
+                            # Always show save button if analysis result exists
+                            if 'analysis_result' in st.session_state:
+                                save_clicked = st.button("💾 Save Analysis as Prompt", key="detailed_save")
+                                if save_clicked:
+
+
+                                    st.write(f"Analysis result in session state: {'analysis_result' in st.session_state}")
+                                    if 'analysis_result' in st.session_state:
+
+                                        st.write(f"Analysis result keys: {list(st.session_state.analysis_result.keys()) if isinstance(st.session_state.analysis_result, dict) else 'Not a dict'}")
+                                        
+                                        if 'analysis_result' in st.session_state:
+                                            try:
+                                                result = st.session_state.analysis_result
+                                                
+                                                # Prepare data for saving
+                                                save_data = {
+                                                    'context': result.get('subject', ''),
+                                                    'art_style': result.get('art_style', ''),
+                                                    'camera_angle': result.get('camera_angle', ''),
+                                                    'environment': result.get('environment', ''),
+                                                    'lighting': result.get('lighting', ''),
+                                                    'focus': result.get('focus', ''),
+                                                    'color_palette': result.get('color_palette', ''),
+                                                    'composition': result.get('composition', ''),
+                                                    'modifiers': result.get('modifiers', ''),
+                                                    'generated_prompt': result.get('suggested_prompt', '')
+                                                }
+                                                
+                                                # Save to CSV
+                                                prompt_id = data_manager.save_prompt(save_data)
+                                                st.success(f"✅ Analysis saved as prompt with ID: {prompt_id}")
+                                                logger.info(f"Image analysis saved as prompt with ID: {prompt_id}")
+                                                
+                                            except Exception as e:
+                                                st.error(f"Error saving analysis: {str(e)}")
+                                        else:
+                                            st.warning("Please analyze an image first")
+                            
+                        else:
+                            # Text analysis
+                            st.subheader("📝 Analysis Description")
+                            st.text_area("Description", value=analysis_result.get("description", ""), height=200, disabled=True)
+                            
+                            st.subheader("🎯 Suggested Prompt")
+                            suggested_prompt = analysis_result.get("suggested_prompt", "")
+                            st.text_area("Generated Prompt", value=suggested_prompt, height=150, disabled=True)
+                            
+                            # Send to Generate Prompt button (text/simple analysis)
+                            text_context = analysis_result.get("description", "") or suggested_prompt
+                            if st.button("Send to Generate Prompt", key="send_to_generate_prompt_text"):
+                                st.session_state["param_context"] = text_context
+                                st.success("Sent to Generate Prompt! Switch to the 'Generate Prompt' tab to continue.")
+
+                            # Copy to clipboard button for generated prompt (text analysis)
+                            if suggested_prompt:
+                                components.html(
+                                    f"""
+                                    <div>
+                                      <button style=\"padding:8px 12px; margin-top:6px;\" onclick=\"navigator.clipboard.writeText(text_{id(suggested_prompt)}).then(()=>{{{{this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy Generated Prompt',1500)}}}});\">Copy Generated Prompt</button>
+                                      <script>
+                                        const text_{id(suggested_prompt)} = {json.dumps(suggested_prompt)};
+                                      </script>
+                                    </div>
+                                    """,
+                                    height=60,
+                                )
+
+                            # Store for saving
+                            st.session_state.analysis_result = analysis_result
+                            
+                            # Save prompt button for text analysis
+                            if st.button("💾 Save Analysis as Prompt"):
+
+
+                                st.write(f"Analysis result in session state: {'analysis_result' in st.session_state}")
+                                if 'analysis_result' in st.session_state:
+
+                                    st.write(f"Analysis result keys: {list(st.session_state.analysis_result.keys()) if isinstance(st.session_state.analysis_result, dict) else 'Not a dict'}")
+                                else:
+
+                                    st.warning("No analysis result found. Please analyze an image first.")
+                                    return
+                                
+                                if 'analysis_result' in st.session_state:
+                                    try:
+                                        result = st.session_state.analysis_result
+                                        
+                                        # Prepare data for saving
+                                        save_data = {
+                                            'context': 'Image Analysis',
+                                            'art_style': '',
+                                            'camera_angle': '',
+                                            'environment': '',
+                                            'lighting': '',
+                                            'focus': '',
+                                            'color_palette': '',
+                                            'composition': '',
+                                            'modifiers': result.get('description', ''),
+                                            'generated_prompt': result.get('suggested_prompt', '')
+                                        }
+                                        
+                                        # Save to CSV
+                                        prompt_id = data_manager.save_prompt(save_data)
+                                        st.success(f"✅ Analysis saved as prompt with ID: {prompt_id}")
+                                        logger.info(f"Image analysis saved as prompt with ID: {prompt_id}")
+                                        
+                                    except Exception as e:
+                                        st.error(f"Error saving analysis: {str(e)}")
+                                else:
+                                    st.warning("Please analyze an image first")
+                
+                except Exception as e:
+                    st.error(f"Error analyzing image: {str(e)}")
+                    logger.error(f"Image analysis error: {str(e)}")
+    
+    # Instructions
+    st.markdown("---")
+    st.markdown("### 📖 How to Use Image Analysis")
+    st.markdown("""
+    1. **Upload an Image**: Choose any image file (PNG, JPG, etc.)
+    2. **Select Analysis Type**: 
+       - **Detailed**: Comprehensive analysis with structured data
+       - **Artistic**: Focus on artistic style and visual qualities
+       - **Technical**: Technical aspects like composition and lighting
+       - **Simple**: Basic description of main elements
+    3. **Analyze**: Click the analyze button to process the image
+    4. **Review Results**: Check the generated description and prompt
+    5. **Save**: Save the analysis as a new prompt for future use
+    """)
+
+def prompt_repository_tab():
+    """Tab for managing the prompt repository"""
+    st.header("📚 Prompt Repository")

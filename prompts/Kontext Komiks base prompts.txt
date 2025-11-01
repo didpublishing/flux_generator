@@ -1,0 +1,69 @@
+Your goal is to teach the AI the transformation rule from a photo to your art style. Therefore, the dataset needs to cover the fundamental building blocks of visual storytelling:
+Characters & Emotion: How do you draw faces, expressions, and body language?
+Environments & Mood: How do you render different settings (indoor/outdoor, day/night) and create atmosphere?
+Lighting & Color: How does your style handle shadows, highlights, and color palettes in various lighting scenarios?
+Composition & Perspective: How do you frame a scene? Do you use dramatic angles, close-ups, or wide shots?
+Details & Textures: How do you simplify or stylize complex textures like wood, fabric, metal, or skin?
+Subject Matter Distribution (50 Image Pairs)
+Here is a breakdown of image categories. For each numbered item, you will create two images:
+The "Before" Image: A photograph.
+The "After" Image: Your artistic rendition of that photograph in your comic book style.
+Category 1: Character Portraits & Expressions (15 Pairs)
+This is the most critical category for character consistency. Focus on a variety of faces and the emotions central to suspense and mystery.
+1. Neutral Portrait: A straightforward, forward-facing portrait of a male character, neutral expression, simple lighting.
+2. Anxious Close-Up: A close-up on a female character's face, eyes wide with worry or fear.
+3. Determined Gaze: A three-quarters view of a character looking off-camera with strong determination.
+4. Profile in Shadow: A character's profile, half-lit dramatically (film noir style). This teaches your style's handling of harsh shadows on a face.
+5. Joyful Laughter: A moment of levity to provide contrast. A character smiling or laughing.
+6. Crying/Sorrow: A character showing sadness or grief. This is important for emotional range.
+7. Suspicion: A character looking over their shoulder or giving a sideways glance.
+8. Anger/Rage: A close-up of a character shouting or with a furious expression.
+9. Elderly Character: A portrait of an older person to train the model on wrinkles and aged features.
+10. Child's Portrait: A portrait of a child, focusing on softer features.
+11. Character with Glasses: To see how your style handles accessories on the face.
+12. Character in Rain: Face wet with rain, showing how you render water and its effect on hair and skin.
+13. Exhaustion: A character looking tired, with bags under their eyes.
+14. A Smirk/Cunning Look: A character with a sly, knowing, or villainous expression.
+15. Surprise/Shock: A character's face reacting to a sudden event.
+Category 2: Environments & Establishing Shots (10 Pairs)
+These images teach the model how to apply your style to backgrounds and create a sense of place.
+16. Modern City Street at Night: A street-level view with neon signs, wet pavement, and deep shadows.
+17. Abandoned Warehouse Interior: Dusty, with beams of light cutting through grimy windows. Focus on texture.
+18. Claustrophobic Alleyway: A narrow, brick-lined alley, perhaps with a single flickering light source.
+19. Serene Forest Clearing (Day): A fantasy element. Sun-dappled trees, perhaps an ancient stone ruin.
+20. Foggy Harbor/Docks: A moody, atmospheric shot with water, boats, and limited visibility.
+21. Ornate Library/Study: Dimly lit, filled with books, a desk, and a sense of history. Perfect for mystery.
+22. Sterile Modern Office: Clean lines, reflective surfaces, and fluorescent lighting.
+23. Cozy Living Room: A fireplace, comfortable furniture, providing a sense of safety or false security.
+24. Grimy Basement: Exposed pipes, concrete floor, a single bare bulb.
+25. Suburban House Exterior (Night): A seemingly normal house, but lit in a way that feels ominous.
+Category 3: Character Interaction & Staging (10 Pairs)
+These scenes train the model on how multiple characters occupy a space and interact.
+26. Tense Conversation: Two people sitting at a table, leaning in, one gesturing with their hands.
+27. A Comforting Embrace: One character hugging another who is distressed.
+28. An Accusatory Point: One character pointing at another across a room.
+29. Passing an Object: A close-up on two hands as one passes a key, a note, or a mysterious object to the other.
+30. Standing Back-to-Back: Two characters poised for action or in a standoff.
+31. A Chase Scene: One figure running, viewed from behind, with another figure in the distant background.
+32. Whispering a Secret: One character leaning in to whisper in another's ear.
+33. A Crowd Scene: A character moving through a blurred crowd to train focus and depth of field.
+34. A Discovery: A character kneeling to look at something on the ground (a clue, a body outline).
+35. A Standoff: Two characters facing each other from a distance in an open space.
+Category 4: Action, Props & Fantasy Elements (15 Pairs)
+This category focuses on dynamic moments and the specific details that define your genre blend.
+36. Hand Holding a Flashlight: A first-person view of a hand holding a flashlight, casting a beam in a dark room.
+37. Kicking Open a Door: A dynamic shot of a door being forced open.
+38. Examining a Clue: A close-up of hands wearing gloves holding an old photograph or a magnifying glass over a map.
+39. Shattered Glass: A broken mirror or window with a reflection in the shards.
+40. A Glowing Amulet: (Fantasy) A character holding a small object that emits a soft, magical light.
+41. Ancient, Gnarled Tree: (Fantasy) A fantastical tree with glowing moss or strange symbols carved into its bark.
+42. Running Through the Woods: A motion-blurred shot of a character running through a forest.
+43. A Car Driving on a Rainy Night: View from inside the car, with rain streaking across the windshield.
+44. A Single Drop of Blood: A stark, macro shot of a drop of blood hitting a surface like a tile floor.
+45. An Old, Locked Book: A close-up on an ancient-looking book with a complex lock.
+46. Flickering Candlelight: A character's face illuminated only by the unsteady light of a candle.
+47. Drawing a Weapon: A character's hand reaching for or drawing a gun or knife from a holster or pocket.
+48. Computer Screen Glow: A character's face lit only by the blue/green glow of a computer monitor displaying code or cryptic text.
+49. Ethereal Wisps of Light: (Fantasy) Strange, glowing particles or tendrils of light floating in a dark room.
+50. Reflection in an Eye: A close-up on a character's eye, showing a reflection of something they are witnessing.
+By creating these 50 pairs, you will have a dataset that teaches your LoRA not just what a person or a tree looks like in your style, but how your style handles light, shadow, emotion, texture, and composition across the core scenarios of your chosen genres. This will result in a far more flexible and powerful creative tool.

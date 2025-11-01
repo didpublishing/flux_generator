@@ -1,0 +1,53 @@
+You are a master prompt maker. Review the options below and select examples to generate prompts.
+
+Options list:
+camera shot: (Extreme closeup, closeup, medium closeup, medium shot, cowboy shot, medium full shot, full shot, wide angle shot, eye level, low angle, over the shoulder, dolly shot, crane shot, tracking shot, aerial view, stedicam shot, extreme long shot, long shot)
+
+adjective: 
+(beautiful, handsome, pretty, moody, creative, intelligent, inspiring, captivating, exciting, fascinating, innovative, engaging, thought-provoking, unique, memorable, enchanting, impressive, exquisite, awe-inspiring, surprising, dynamic, stunning, remarkable, extraordinary, imaginative, inspiring, intriguing, delightful, harmonious, unforgettable, persuasive, evocative, engrossing)
+
+subject: 
+(man, woman, couple, group, nature, technology, art, science, history, music, literature, food, travel, fashion, sports, philosophy, culture, education, health, relationships, psychology, environment, business, film, politics, astronomy, architecture, gaming, mythology, photography, social media, religion, mathematics, medicine)
+
+doing action: 
+(explore, discover, investigate, analyze, examine, research, study, evaluate, assess, experiment, observe, question, debate, speculate, theorize, synthesize, compare, contrast, interpret, critique, propose, demonstrate, illustrate, demonstrate, present, discuss, elaborate, demonstrate, argue, challenge, defend, advocate, suggest, recommend, encourage, inspire, brainstorm, create, design, develop, implement, refine, test, revise, adapt, innovate, imagine, envision, visualize, communicate, express, share, collaborate, cooperate, problem-solve, strategize, plan, organize, prioritize, manage, coordinate, execute, monitor, measure, assess, document, report, reflect, conclude, summarize, document, celebrate, recognize, acknowledge, promote walk, run, jump, climb, swim, lift, push, pull, throw, catch, kick, punch, crawl, balance, stretch, bend, twist, turn, reach, grasp, release, shake, hug, dance, skip, hop, leap, squat, lunge, kickbox, wrestle, cartwheel, somersault, cycle, ride, skate, ski, surf, paddle, row, hike, jog, sprint, juggle, twirl, spin, spin, dive, fly, float, float, pose, meditate, breathe, stretch, yawn, sleep, wake, eat, drink, chew, taste, smell, see, hear, touch, talk, listen, laugh, cry, sigh, sigh, snore, sneeze, cough, blink, wink, nod, wave, point, nod, clap, cheer, bow, salute)
+
+creative lighting style: 
+(ambient lighting, dramatic lighting, soft lighting, backlit lighting, silhouette lighting, spotlighting, uplighting, downlighting, accent lighting, mood lighting, candlelight, natural lighting, shadow play, high-key lighting, low-key lighting, rim lighting, fill lighting, chiaroscuro lighting, gobo lighting, color wash lighting, strobe lighting, fairy lights, string lights, neon lighting, projection lighting, dappled lighting, bounce lighting, silhouette lighting, split lighting, cross lighting, key lighting, three-point lighting, practical lighting, directional lighting, diffused lighting, architectural lighting, theatrical lighting, underwater lighting, moonlighting, starlighting, firelighting, lantern lighting, disco lighting, bokeh lighting, twinkle lighting, sunburst lighting, cloud lighting, gridded lighting, rainbow lighting, kaleidoscope lighting, lantern lighting, gobo lighting, crystal lighting, mirror lighting, vintage lighting, edison bulb lighting, monochromatic lighting, rainbow lighting, pixel lighting, holographic lighting, infrared lighting, ultraviolet lighting, firefly lighting, motion-activated lighting, dynamic lighting, interactive lighting, animated lighting, laser lighting)
+
+art medium: 
+(comic art, painting, line art, drawing, sculpture, photography, printmaking, ceramics, textiles, collage, mixed media, digital art, installation art, performance art, video art, film, animation, graphic design, illustration, graffiti, street art, calligraphy, typography, mosaic, woodwork, metalwork, glassblowing, jewelry making, fashion design, pottery, bookbinding, paper art, leatherwork, screen printing, linocut, etching, lithography, acrylic painting, oil painting, watercolor painting, pastel drawing, charcoal drawing, pen and ink drawing, graphite drawing, digital painting, photo manipulation, cyanotype, wood carving, stone carving, clay modeling, fiber art, embroidery, weaving, macramé, quilting, batik, tapestry, puppetry, origami, kinetic art, land art, sound art, conceptual art, abstract art, realism, impressionism, expressionism, cubism, surrealism, pop art, minimalism, contemporary art, traditional art, folk art, outsider art, new media art)
+
+in the style of comic artist: 
+(Klaus Janson, Terry Austin, Joe Sinnott, Wally Wood, Bob Layton, Scott Williams, Jonathan Glapion, John Romita Sr., Dick Giordano, Tom Palmer, Mike Royer, Murphy Anderson, Al Williamson, George Klein, Bill Everett, Vince Colletta, Danny Miki, Jim Lee, Frank Giacoia, John Beatty, Tim Townsend, Al Milgrom, Kevin Nowlan, Mark Morales, Joe Rubinstein, Dan Green, Matt Banning , Gary Martin, Andrew Pepoy, Sandra Hope, Dexter Vines, Mick Gray, Walden Wong, Jay Leisten, Mike Mignola, Klaus Janson, Bryan Hitch, Howard Chaykin, Al Williamson, Dustin Nguyen, Mike Deodato, Alex Toth, Neal Adams, Alex Ross, Jim Lee, Alphonse Mucha, Frank Cho, Brian Stelfreeze, Travis Charest, Brian Boland, Milo Manara, Steve Dillon, Bruce Timm, Wally Wood)
+
+in the style of director:
+(Martin Scorsese, Steven Spielberg, Quentin Tarantino, Alfred Hitchcock, Stanley Kubrick, Christopher Nolan, Francis Ford Coppola, Akira Kurosawa, Steven Soderbergh, Guillermo del Toro, David Fincher, Ridley Scott, Wes Anderson, Pedro Almodóvar, Spike Lee, Tim Burton, Joel and Ethan Coen (The Coen Brothers), Ang Lee, James Cameron, Denis Villeneuve, Sofia Coppola, Paul Thomas Anderson, Alejandro González Iñárritu, Kathryn Bigelow, Darren Aronofsky, Terry Gilliam, Clint Eastwood, Bong Joon-ho, David Lynch, Danny Boyle, Christopher Guest, Richard Linklater, Michael Bay, Peter Jackson, Robert Zemeckis, Baz Luhrmann, Oliver Stone, Lars von Trier, Wes Craven, Sofia Coppola, John Carpenter, Sofia Coppola, Greta Gerwig, Taika Waititi, Sofia Coppola)
+
+in the style of photographer:
+(Ansel Adams, Annie Leibovitz, Henri Cartier-Bresson, Dorothea Lange, Steve McCurry, Richard Avedon, Diane Arbus, Robert Capa, Sebastião Salgado, Cindy Sherman, Irving Penn, Man Ray, Edward Weston, Yousuf Karsh, Helmut Newton, Vivian Maier, David Bailey, Helmut Newton, Annie Griffiths, Mary Ellen Mark, Elliott Erwitt, William Eggleston, Cindy Sherman, Gregory Crewdson, Herb Ritts, Alfred Stieglitz, Sally Mann, Joel Meyerowitz, Irving Penn, Lee Miller)
+
+brand of camera:
+(Canon EOS 5D Mark IV, Nikon D850, Sony Alpha a7 III, Fujifilm X-T4, Panasonic Lumix GH5, Sony Alpha a7R IV, Nikon Z7, Canon EOS R5, Olympus OM-D E-M1 Mark III, Leica Q2, Sony Alpha a6600, Fujifilm X-T3, Canon EOS 6D Mark II, Nikon D750, Sony Alpha a9 II)
+
+focal length: 
+(f/4, f/5, f/6.3, f/7.1, f/8, f/9, f/10, f/11, f/13, f/14, f/16, f/18, f/20, f/22, f/25, f/29, f/32, f/36, f/40, f/45, f/51, f/57, f/64, f/66)
+End options list.
+
+Select one sample from each option above and place them within each of the parenthasis below. That will populate the prompt. 
+
+Prompt list:
+[camera shot]=( )
+[brand of camera]=( )
+[focal length]=( )
+[adjective]=( )
+[subject]=( )
+[doing action]=( )
+[creative lighting style]=( )
+[art medium]=( )
+[in the style of comic artist]
+
+[camera shot] An image of [adjective] [subject] [doing action], [creative lighting style], extremely detailed, ultra realistic, 10k high resolution,
+in the style of [art medium 1], [art medium 2], [art medium 3], [in the style of], [in the style of], [brand of camera], [focal length]
+
+Create and print five prompts from the options above for me to choose from bur include " ( )" for subject customization.

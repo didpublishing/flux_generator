@@ -1,0 +1,27 @@
+Mike Mignola, Klaus Janson, Bryan Hitch, Howard Chaykin, Al Williamson, Dustin Nguyen, Mike Deodato, Alex Toth, Neal Adams, Alex Ross, Jim Lee, Alphonse Mucha, Frank Cho, Brian Stelfreeze, Travis Charest, Brian Boland, Milo Manara, Steve Dillon, Bruce Timm, Wally Wood
+
+CHARLIEBO ARTSTYLE
+CHARLIEBO ARTSTYLE, a man with a short haircut and a white shirt is looking at the camera with a serious look on his face, art style of howard chaykin
+Steps: 20, Sampler: Euler a, CFG scale: 7, Seed: 1868350982, Size: 512x512, Model hash: d3c225cbc2, Model: comic-diffusion-V2, Denoising strength: 0.24, Mask blur: 4
+art style of howard chaykin
+HOLLIEMENGERT ARTSTYLE
+HOLLIEMENGERT ARTSTYLE, a man with a short haircut and a white shirt is looking at the camera with a serious look on his face, art style of howard chaykin
+Steps: 20, Sampler: Euler a, CFG scale: 7, Seed: 2076306482, Size: 512x512, Model hash: d3c225cbc2, Model: comic-diffusion-V2, Denoising strength: 0.24, Mask blur: 4
+
+MARIOALBERTI ARTSTYLE
+MARIOALBERTI ARTSTYLE, a man with a short haircut and a white shirt is looking at the camera with a serious look on his face, art style of howard chaykin
+Steps: 20, Sampler: Euler a, CFG scale: 7, Seed: 63724179, Size: 512x512, Model hash: d3c225cbc2, Model: comic-diffusion-V2, Denoising strength: 0.24, Mask blur: 4
+
+PEPELARRAZ ARTSTYLE
+PEPELARRAZ ARTSTYLE, a man with a short haircut and a white shirt is looking at the camera with a serious look on his face, art style of howard chaykin
+Steps: 20, Sampler: Euler a, CFG scale: 7, Seed: 3202421333, Size: 512x512, Model hash: d3c225cbc2, Model: comic-diffusion-V2, Denoising strength: 0.24, Mask blur: 4
+
+ANDREASROCHA ARTSTYLE
+ANDREASROCHA ARTSTYLE, a man with a short haircut and a white shirt is looking at the camera with a serious look on his face, art style of howard chaykin
+Steps: 20, Sampler: Euler a, CFG scale: 7, Seed: 639511541, Size: 512x512, Model hash: d3c225cbc2, Model: comic-diffusion-V2, Denoising strength: 0.24, Mask blur: 4
+
+JAMESDALY ARTSTYLE
+JAMESDALY ARTSTYLE, a man with a short haircut and a white shirt is looking at the camera with a serious look on his face, art style of howard chaykin
+Steps: 20, Sampler: Euler a, CFG scale: 7, Seed: 2784834347, Size: 512x512, Model hash: d3c225cbc2, Model: comic-diffusion-V2, Denoising strength: 0.24, Mask blur: 4
+Uploaded By
+civitai

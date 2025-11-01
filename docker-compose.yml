@@ -1,0 +1,20 @@
+services:
+  # Web-based GUI using Streamlit
+  flux-prompt-web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    container_name: flux-prompt-web
+    ports:
+      - "8501:8501"
+    volumes:
+      # Bind mount the entire app so local code/styles are used
+      - ./:/app
+      - ./prompts:/app/prompts
+      - ./logs:/app/logs
+      - ./.env:/app/.env
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    profiles:
+      - web

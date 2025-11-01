@@ -1,0 +1,58 @@
+shot size sheet:
+Extreme closeup
+closeup
+medium closeup
+medium shot
+cowboy shot
+medium full shot
+full shot
+wide angle shot
+eye level
+low angle
+over the shoulder
+dolly shot
+crane shot
+tracking shot
+aerial view
+stedicam shot
+extreme long shot 
+long shot
+
+ExamplesL
+cinematic scene - eye level shot, masterpiece, best quality, ultra-detailed, ,  (  ), eye level shot
+cinematic scene - low angle steadycam, best quality, ultra-detailed, shot of (  ),   cinematography, still, very detailled, sharp
+cinematic scene - Extreme closeup masterpiece, best quality, ultra-detailed,(  ) cinematography, still, very detailled, sharp
+cinematic scene - Extreme closeup - masterpiece,  best quality, ultra-detailed,,  (  ), cinematography, still, very detailled, sharp
+cinematic scene - closeup masterpiece, best quality, ultra-detailed,,  (  ), cinematography, still, very detailled, sharp
+cinematic scene - medium closeup masterpiece, best quality, ultra-detailed,,  (  ), cinematography, still, very detailled, sharp
+cinematic scene - medium shot masterpiece, best quality, ultra-detailed,,  (  ), cinematography, still, very detailled, sharp
+cinematic scene - cowboy shot, masterpiece, best quality, ultra-detailed,,  (  ), cinematography, still, very detailled, sharp
+cinematic scene - medium full shot, masterpiece, best quality, ultra-detailed, ,  (  ), cinematography, still, very detailled, sharp
+cinematic scene - full shot, masterpiece,,  (  ), best quality, ultra-detailed,  cinematography, still, very detailled, sharp
+cinematic scene - wide angle shot, masterpiece, best quality, ultra-detailed,,  (  ), cinematography, still, very detailled, sharp
+cinematic scene - eye level, masterpiece, best quality, ultra-detailed,,  (  ), cinematography, still, very detailled, sharp
+cinematic scene - low angle, masterpiece, best quality, ultra-detailed,,  (  ), cinematography, still, very detailled, sharp
+cinematic scene - high angle, masterpiece, best quality, ultra-detailed,,  (  ), cinematography, still, very detailled, sharp
+cinematic scene - over the shoulder, masterpiece, best quality, ultra-detailed,,  (  ), cinematography, still, very detailled, sharp
+cinematic scene - dolly shot, masterpiece, best quality, ultra-detailed,,  (  ), cinematography, still, very detailled, sharp
+cinematic scene - crane shot, masterpiece, best quality, ultra-detailed,,  (  ), cinematography, still, very detailled, sharp
+cinematic scene - tracking shot, masterpiece, best quality, ultra-detailed,,  (  ), cinematography, still, very detailled, sharp 
+cinematic scene - aerial view, masterpiece, best quality, ultra-detailed,,  (  ), cinematography, still, very detailled, sharp
+cinematic scene - stedicam shot, masterpiece, best quality, ultra-detailed,,  (  ), cinematography, still, very detailled, sharp
+cinematic scene - extreme long shot, masterpiece, best quality, ultra-detailed,,  (  ), cinematography, still, very detailled, sharp 
+cinematic scene - long shot, masterpiece, best quality, ultra-detailed,,  (  ), cinematography, still, very detailled, sharp
+
+Camera Position	| Extreme Long Shot	| Long Shot					| Mid-shot 				| Close-Up				| Extreme Close-Up
+Eye Level		| Context, Scale	| Connection, Engagement 	| Empathy, Engagement 	|	Intimacy, Focus		| Intensity, Focus
+High Angle	Vulnerability	Powerlessness, Submissiveness	Inferiority, Weakness	Dominance, Control	Intimidation
+Low Angle	Awe, Grandeur	Strength, Authority	Superiority, Power	Imposing, Heroic	Dominance, Power
+Over the Shoulder	Connection, POV	Interaction, Dialogue	Proximity, Connection	Reaction, Emotion	Intensity, Focus
+Dolly Shot	Movement, Scope	Connection, Progress	Intimacy, Motion	Engaging, Dynamic	Focus, Detail
+Crane Shot	Sweeping, Grand	Scale, Environment	Movement, Drama	Dramatic, Fluid	Majestic, Aerial
+Tracking Shot	Motion, Energy	Tension, Suspense	Mobility, Connection	Excitement, Action	Intensity, Detail
+Aerial View	Grandeur, Scale	Context, Overview	Perspective, Geography	Distance, Detachment	Isolation, Focus
+Steadicam Shot	Stability, Motion	Smoothness, Engagement	Connection, Intimacy	Energy, Excitement	Detail, Clarity
+
+
+
+

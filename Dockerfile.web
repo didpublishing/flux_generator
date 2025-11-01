@@ -1,0 +1,36 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements and install dependencies
+COPY requirements-web.txt .
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements-web.txt
+
+# Copy application files
+COPY *.py ./
+COPY styles.css ./
+# Do not bake secrets or local configs into the image
+# .env is mounted at runtime via docker-compose
+
+# Create data directory
+RUN mkdir -p /app/data
+RUN mkdir -p /app/logs
+
+# Create Streamlit config directory and config file
+RUN mkdir -p ~/.streamlit \
+  && printf "[server]\nport = 8501\naddress = '0.0.0.0'\nheadless = true\nenableXsrfProtection = false\nenableCORS = false\n\n[browser]\nserverAddress = '0.0.0.0'\ncollectUsageStats = false\n\n[theme]\nbase = 'dark'\nprimaryColor = '#32C8FA'\nbackgroundColor = '#0f1117'\nsecondaryBackgroundColor = '#171923'\ntextColor = '#FFFFFF'\nfont = 'sans serif'\n" > ~/.streamlit/config.toml
+
+# Expose Streamlit port
+EXPOSE 8501
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
+    CMD curl -f http://localhost:8501/_stcore/health || exit 1
+
+# Run Streamlit app
+CMD ["streamlit", "run", "web_app.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.headless=true"]

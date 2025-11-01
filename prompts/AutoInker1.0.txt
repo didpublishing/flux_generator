@@ -1,0 +1,3 @@
+AutoInker1.0
+Instance Token:AIinkerohwx
+prompt: black and white ink line

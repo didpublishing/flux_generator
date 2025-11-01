@@ -1,0 +1,39 @@
+[medium shot], [low angle, close-up], [grizzled cowboy with a revolver], [dusty Western town at dusk], [tumbleweeds and wooden buildings in the background], [golden hour lighting], [low angle], [art style of Sergio Leone Westerns].
+
+[full shot], [frontal view, wide angle], [superhero in a dynamic pose mid-flight], [above a modern city skyline at night], [cape billowing in the wind, city lights glowing below], [dramatic spotlight], [high angle], [comic book style, art by Jim Lee].
+
+[medium close-up], [side view, eye level], [businesswoman shaking hands with a client], [high-end office with large windows], [cityscape visible through the windows], [soft daylight], [eye level], [photographic style, high definition].
+
+[wide shot], [over-the-shoulder, medium distance], [two lovers embracing], [candlelit dinner at an elegant restaurant], [romantic candle glow, city lights outside], [soft warm lighting], [eye level], [cinematic romance style].
+
+[extreme close-up], [eye level, macro shot], [dew-covered leaf], [sunlit forest floor at dawn], [tiny insects visible on the leaf, blurred forest background], [soft natural light], [macro shot], [photographic nature style].
+
+[medium shot], [frontal view, close-up], [warrior leaping into battle], [medieval battlefield with clashing armies], [sword raised, intense focus on the warrior], [dramatic backlight], [dynamic low angle], [epic fantasy art style].
+
+[long shot], [aerial view, wide angle], [military tanks advancing], [desert landscape during combat], [dust clouds rising, explosions in the distance], [harsh midday sun], [overhead angle], [realistic war photography].
+
+[medium shot], [side view, close-up], [ancient wizard casting a spell], [mystical forest with glowing runes], [magical energy swirling around, glowing eyes], [mystical light], [low angle], [fantasy art style, inspired by Tolkien].
+
+[medium close-up], [over-the-shoulder, eye level], [detective investigating a crime scene], [dimly lit alley with rain-soaked pavement], [cigarette smoke curling up, shadows casting across the detective’s face], [moody noir lighting], [eye level], [film noir style].
+
+[full shot], [frontal view, wide angle], [group of cowboys riding horses], [vast desert with rocky canyons], [dust trailing behind, intense focus on the leading cowboy], [sunset with deep shadows], [wide angle], [classic Western style].
+
+[medium shot], [low angle, side view], [masked superhero perched on a skyscraper], [night cityscape below], [cape flowing, moonlight illuminating the scene], [harsh moonlight], [dramatic low angle], [comic book style, art by Frank Miller].
+
+[medium close-up], [eye level, close-up], [CEO giving a speech], [corporate boardroom with modern design], [microphone in hand, intense expression], [bright conference lighting], [eye level], [high definition photography].
+
+[wide shot], [frontal view, medium distance], [romantic couple walking hand in hand], [sunset beach with waves gently crashing], [footprints in the sand, soft colors of the sunset], [warm, golden lighting], [eye level], [romantic art style].
+
+[extreme close-up], [eye level, macro shot], [butterfly on a blooming flower], [vibrant meadow in springtime], [wings detailed with intricate patterns, pollen visible on the flower], [soft morning light], [macro shot], [nature photography style].
+
+[medium shot], [low angle, dynamic view], [knight charging into battle], [medieval castle under siege], [flaming arrows flying through the air, intense focus on the knight’s determined face], [dramatic torchlight], [low angle], [epic fantasy art].
+
+[long shot], [aerial view, wide angle], [soldiers in a tense standoff], [urban warzone with crumbling buildings], [tactical gear, intense focus on the scene’s tension], [harsh afternoon sun], [overhead angle], [realistic war photography].
+
+[medium close-up], [side view, low angle], [sorcerer summoning a storm], [ancient temple ruins with swirling clouds], [arcane symbols glowing, lightning in the background], [stormy lighting], [low angle], [fantasy art style, inspired by dark magic].
+
+[medium shot], [over-the-shoulder, close-up], [private investigator analyzing clues], [dimly lit office with shadows], [papers scattered, intense expression on the investigator’s face], [moody spotlight], [eye level], [film noir style].
+
+[full shot], [frontal view, wide angle], [lone gunslinger walking through a deserted street], [abandoned Western town at high noon], [dust kicking up with each step, focus on the tension], [harsh sunlight with deep shadows], [eye level], [classic Western art].
+
+[medium shot], [side view, dynamic angle], [hero lifting a car], [urban street in chaos], [muscles straining, intense expression], [dramatic lighting with debris flying], [low angle], [comic book style, art by Alex Ross].
