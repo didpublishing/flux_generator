@@ -1,5 +1,66 @@
 {
-  "master_prompts": {},
+  "master_prompts": {
+    "b850793c": {
+      "id": "b850793c",
+      "name": "Flux Cinematic Master Template",
+      "content": "cinematic composition, professional photography, highly detailed, 8k resolution, masterpiece quality, [subject], shot on 35mm film, shallow depth of field, bokeh background, professional color grading, film grain, dramatic lighting, golden hour, rule of thirds, centered framing, high contrast, vibrant colors, sharp focus, professional retouching, award-winning photography, National Geographic style, cinematic atmosphere, moody tones, professional lighting setup, studio quality, DSLR photography, full frame sensor, professional lens, f/1.4 aperture, ISO 100, natural lighting, soft shadows, rim lighting, volumetric lighting, atmospheric perspective, depth of field, chromatic aberration, lens flare, professional post-processing, color correction, tone mapping, HDR processing, ultra-realistic, photorealistic, hyper-detailed, intricate details, fine textures, smooth gradients, perfect composition, balanced exposure, professional quality, gallery-worthy, exhibition quality",
+      "category": "flux_master",
+      "description": "A comprehensive master prompt template optimized for Flux models, emphasizing cinematic quality, technical photography details, and professional composition. Use this as a base template that gets enhanced with user-specific parameters.",
+      "created": "2025-11-08T22:38:24.652751",
+      "last_used": "2025-12-05T07:02:20.756694",
+      "usage_count": 10
+    },
+    "10f6b0f7": {
+      "id": "10f6b0f7",
+      "name": "Flux Artistic Illustration Master",
+      "content": "[subject], digital illustration, concept art, highly detailed artwork, professional illustration, vibrant colors, dynamic composition, artistic style, detailed character design, expressive poses, rich textures, atmospheric lighting, dramatic shadows, creative interpretation, stylized rendering, professional art direction, award-winning illustration, gallery quality, fine art, masterful technique, intricate details, smooth brushwork, professional digital painting, color harmony, visual storytelling, compelling narrative, artistic vision, creative expression, unique style, original artwork, high quality illustration, detailed linework, professional shading, depth and dimension, artistic composition, balanced color palette, expressive brushstrokes, professional finish, polished artwork, exhibition quality, portfolio piece, artistic mastery, creative excellence, stunning visuals, captivating imagery, artistic flair, professional craftsmanship",
+      "category": "artistic",
+      "description": "Master template for artistic illustrations and digital art optimized for Flux models. Emphasizes creative styles, artistic techniques, and visual storytelling elements. Perfect for concept art, character illustrations, and stylized artwork.",
+      "created": "2025-11-08T23:01:11.617093",
+      "last_used": null,
+      "usage_count": 0
+    },
+    "a7ef32e4": {
+      "id": "a7ef32e4",
+      "name": "Flux Realistic Comic Illustration Master",
+      "content": "[subject], realistic comic book illustration, graphic novel style, realistic comic art, dynamic action pose, dramatic inking, bold linework, professional comic book art, detailed character rendering, cinematic panel composition, dramatic shadows, high contrast lighting, chiaroscuro, comic book coloring, flat colors with gradients, professional inking technique, feathering, detailed textures, realistic proportions, expressive facial features, dynamic movement, action sequence, comic book cover quality, sequential art, professional illustration, award-winning comic art, gallery quality, detailed backgrounds, atmospheric depth, moody tones, dramatic composition, rule of thirds, professional art direction, masterful technique, intricate details, smooth rendering, professional finish, polished artwork, exhibition quality, portfolio piece, artistic mastery, stunning visuals, captivating imagery, professional craftsmanship, high quality illustration, detailed linework, professional shading, depth and dimension, balanced color palette, expressive style, realistic comic book aesthetic",
+      "category": "artistic",
+      "description": "Master template for realistic comic book style illustrations optimized for Flux models. Combines photorealistic rendering with comic book aesthetics, emphasizing dynamic action, dramatic inking, and cinematic panel composition. Perfect for graphic novels, comic covers, and sequential art.",
+      "created": "2025-11-08T23:10:18.095320",
+      "last_used": null,
+      "usage_count": 0
+    },
+    "bc28945d": {
+      "id": "bc28945d",
+      "name": "Flux Studio Portrait Master",
+      "content": "[subject], professional studio portrait, studio photography, professional headshot, studio lighting setup, softbox lighting, key light, fill light, rim light, professional portrait photography, shallow depth of field, sharp focus on eyes, professional retouching, skin texture, natural skin tones, professional color grading, neutral background, seamless backdrop, studio environment, professional camera setup, full frame DSLR, portrait lens, 85mm lens, f/2.8 aperture, ISO 100, professional lighting equipment, studio quality, commercial photography, professional portrait session, award-winning photography, high resolution, 8k quality, detailed facial features, natural expression, professional pose, confident posture, professional composition, rule of thirds, centered framing, balanced exposure, professional post-processing, color correction, tone mapping, gallery-worthy portrait, exhibition quality, portfolio piece, professional quality, polished finish, studio portrait photography, professional headshot photography, corporate portrait, executive portrait, professional photography, masterful technique, intricate details, smooth gradients, perfect composition, balanced lighting, professional quality",
+      "category": "technical",
+      "description": "Master template for professional studio portrait photography optimized for Flux models. Emphasizes professional lighting setups, studio equipment, portrait composition, and retouching techniques. Perfect for headshots, professional portraits, and commercial photography.",
+      "created": "2025-11-08T23:16:30.113743",
+      "last_used": null,
+      "usage_count": 0
+    },
+    "827e9758": {
+      "id": "827e9758",
+      "name": "Realistic Comic Book Art",
+      "content": "[subject], realistic comic book style, HiDream style, sharp thin black outlines, clean thin black linework defining characters and objects, crisp cell shading, flat colors with slight smooth blending, clear cell shading technique, vibrant yet clear color palette, minimal color bleeding, high detail and contrast, bold outlines with smooth transitions, sharp edges, clear contrasts, slight shadows for depth, stylized but realistic aesthetic, professional comic book illustration, graphic novel style, detailed linework, precise inking, clean rendering, subtle color blending, smooth color transitions, flat color fills, cell shading technique, professional comic art, high quality illustration, detailed character rendering, realistic proportions, expressive features, dynamic composition, atmospheric depth, moody tones, professional art direction, masterful technique, intricate details, polished artwork, exhibition quality, portfolio piece, artistic mastery, stunning visuals, captivating imagery, professional craftsmanship, ComfyUI optimized, HiDream optimized, clean aesthetic, professional finish",
+      "category": "artistic",
+      "description": "Master prompt for generating realistic comic book art using HiDream in ComfyUI. Focuses on clean thin black outlines, cell shading with clear and vibrant colors, and slight color blending for subtle depth.",
+      "created": "2025-11-09T00:22:29.845500",
+      "last_used": null,
+      "usage_count": 0
+    },
+    "a1ab6e4d": {
+      "id": "a1ab6e4d",
+      "name": "Flux Infographic Design Master",
+      "content": "[subject], professional infographic design, clean layout, modern infographic style, data visualization, graphic design, typography, icons and symbols, information graphics, visual communication, clear hierarchy, organized composition, professional design, minimalist design, flat design elements, vector style illustration, clean lines, geometric shapes, color-coded sections, professional color scheme, balanced composition, readable typography, iconography, data charts, graphs and diagrams, visual storytelling, educational graphics, informational design, professional presentation, high quality graphics, detailed design elements, professional layout, grid-based design, visual hierarchy, clear information architecture, professional graphic design, award-winning design, portfolio quality, exhibition ready, polished design, professional finish, clean aesthetic, modern design, contemporary style, professional craftsmanship, high resolution, detailed graphics, precise rendering, professional quality, masterful design technique",
+      "category": "general",
+      "description": "Master template for professional infographic design optimized for Flux models. Emphasizes clean layouts, data visualization elements, typography, icons, and graphic design principles. Perfect for creating educational graphics, data presentations, and informational visuals.",
+      "created": "2025-11-09T00:33:46.189094",
+      "last_used": null,
+      "usage_count": 0
+    }
+  },
   "knowledge_base": {
     "camera_angles": [],
     "image_formats": [],
@@ -10,6 +71,6 @@
   "metadata": {
     "created": "2025-10-30T07:33:37.879505",
     "version": "1.0",
-    "last_updated": "2025-10-30T07:33:37.879519"
+    "last_updated": "2025-12-05T07:02:20.756794"
   }
 }

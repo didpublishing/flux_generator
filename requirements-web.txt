@@ -4,3 +4,28 @@ openai>=1.51.0
 streamlit>=1.32.0
 watchdog>=3.0.0
 Pillow>=9.0.0
+requests>=2.31.0
+
+# Image generation providers (optional - install based on your provider choice)
+# 
+# For Black Forest Labs (RECOMMENDED - Official Flux API):
+# requests>=2.31.0  # Usually already installed, but ensure it's available
+# 
+# For Fal.ai (Alternative):
+# fal-client>=0.4.0
+# 
+# For Together.ai (Alternative):
+# together>=1.2.0
+# 
+# For Replicate (Alternative):
+# replicate>=0.25.0
+# 
+# For ComfyUI (Local Installation):
+websocket-client>=1.6.0
+
+# Install based on your provider:
+# - BFL: requests (usually pre-installed)
+# - Fal: pip install fal-client
+# - Together: pip install together
+# - Replicate: pip install replicate
+# - ComfyUI: pip install websocket-client requests (usually pre-installed)

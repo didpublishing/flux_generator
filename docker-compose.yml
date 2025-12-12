@@ -1,10 +1,10 @@
 services:
-  # Web-based GUI using Streamlit
-  flux-prompt-web:
+  # Web-based GUI using Streamlit with ComfyUI integration
+  flux-generator-comfy:
     build:
       context: .
       dockerfile: Dockerfile.web
-    container_name: flux-prompt-web
+    container_name: flux-generator-comfy
     ports:
       - "8501:8501"
     volumes:
@@ -12,9 +12,18 @@ services:
       - ./:/app
       - ./prompts:/app/prompts
       - ./logs:/app/logs
+      - ./workflows:/app/workflows
+      - ./temp_uploads:/app/temp_uploads
       - ./.env:/app/.env
     environment:
       - PYTHONUNBUFFERED=1
+      # For Docker on Windows/Mac, use host.docker.internal to reach host services
+      # For Linux, you may need to use the actual host IP or network_mode: host
+      - COMFYUI_SERVER_ADDRESS=${COMFYUI_SERVER_ADDRESS:-host.docker.internal:8188}
     restart: unless-stopped
     profiles:
       - web
+    # Optional: Add extra_hosts for Linux compatibility
+    # Uncomment the following if host.docker.internal doesn't work on your system:
+    # extra_hosts:
+    #   - "host.docker.internal:host-gateway"

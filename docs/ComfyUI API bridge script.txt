@@ -1,0 +1,65 @@
+This is the **Master Prompt** that compiles all necessary prerequisites, API functions, dynamic control logic, and integration details for Cursor to produce and execute the ComfyUI API bridge script.
+
+The user's structured workflows, utilizing **Qwen** (VLM/LLM) and **Flux** (Image Generation) models, rely heavily on custom nodes and conditional execution, necessitating a robust approach to dynamically modify the workflow JSON payload.
+
+***
+
+### **Master Prompt for Cursor: ComfyUI API Bridge (`comfy_gradio_api_bridge.py`)**
+
+Generate a complete, self-contained Python script named **`comfy_gradio_api_bridge.py`** and incorporate the following essential sections into the output, including comprehensive startup instructions for the user.
+
+#### **I. Essential User Startup and Prerequisites (Tutorial Guide)**
+
+Generate a step-by-step guide for the user to prepare their environment and workflows.
+
+1.  **ComfyUI Installation & Launch:** The user must have a running ComfyUI server instance, typically accessible at `127.0.0.1:8188`.
+2.  **Required Python Libraries:** The Python environment running the Gradio application must have `requests`, `websocket-client`, `Pillow`, and `numpy` installed.
+3.  **Workflow Conversion (API Format):** The user must load their specialized workflows (using Qwen/Flux nodes) into the ComfyUI UI, enable **Dev Mode Options** (via the gear icon), and use the **"Save (API format)"** button to export the JSON execution payload (e.g., `workflow_api.json`).
+4.  **Custom Node Installation Check:** Any custom nodes specific to **Qwen** (VLM/LLM prompt integration nodes) or **Flux** (e.g., model loaders, Flux Kontext Creator, Flux Guidance) must be installed in ComfyUI (recommended via ComfyUI Manager). Advanced control nodes like **rgthree's Any Switch** or **KSampler Config** should also be installed if used for workflow switching/control.
+
+#### **II. Python Configuration and Core API Utility Functions**
+
+Define configuration constants and the essential Python functions to manage communication with the ComfyUI server.
+
+*   **Constants:** `SERVER_ADDRESS = "127.0.0.1:8188"`, `CLIENT_ID` (generated via `uuid.uuid4()`), `COMFYUI_INPUT_TEMP_DIR` (e.g., `./temp_uploads/`).
+*   **Imports:** Include `requests`, `json`, `os`, `uuid`, `io`, `PIL.Image`, `websocket`, and `typing.Union`.
+*   **API Core Functions (Implemented):**
+    *   `queue_prompt(prompt, client_id, server_address)`: Submits the workflow JSON to `/prompt` via HTTP POST.
+    *   `get_history(prompt_id, server_address)`: Retrieves execution history and output file details.
+    *   `get_image(filename, subfolder, folder_type, server_address)`: Fetches binary image data from `/view`.
+    *   `upload_image(input_path, filename, server_address, folder_type="input", image_type="image", overwrite=True)`: Uploads local images (for I2I workflows) to the server's input folder.
+
+#### **III. Dynamic Parameter Control and Node Location**
+
+Implement the logic necessary to reliably find and manipulate nodes within the structured JSON workflow.
+
+*   **Helper Function:** **`find_node_by_class_type(workflow_json, class_type)`**
+    *   This function must iterate through the `workflow_json` dictionary (the prompt payload) and return the **Node ID (string key)** of the *first* node found where the inner dictionary's `class_type` attribute matches the input `class_type` string (e.g., "KSampler", "LoadImage").
+
+*   **Main Function Signature:** **`execute_comfy_workflow(workflow_file_path: str, pos_prompt: str, neg_prompt: str, seed: int, steps: int, cfg: float, input_image_path: Union[str, None], denoise_weight: float = 1.0, mode_switch_value: str = "T2I")`**
+
+#### **IV. Workflow Execution Logic (`execute_comfy_workflow` Implementation Detail)**
+
+Cursor must implement the body of `execute_comfy_workflow` to perform these steps:
+
+1.  **Load Workflow & Image Handling:**
+    *   Load the `workflow_file_path` JSON.
+    *   **Conditional I2I:** If `input_image_path` is provided, save the image data locally, call `upload_image`, use `find_node_by_class_type` to locate the **"LoadImage"** node ID, and update its input parameter (e.g., `"filename"` or `"image"`) with the uploaded file name.
+
+2.  **Dynamic Parameter Injection (General Nodes):** Utilize `find_node_by_class_type` to locate and update inputs in core generation nodes:
+    *   **Positive/Negative Prompts:** Locate **"CLIPTextEncode"** node IDs and set their `text` inputs.
+    *   **Sampler Settings:** Locate the **"KSampler"** node ID and update `seed`, `steps`, `cfg`, and `denoise` (set `denoise` to `denoise_weight` for I2I control).
+
+3.  **Advanced Control Integration (Switches):**
+    *   Implement logic to search for a generic **Switch/Primitive Node** (`class_type` may be `"Primitive"`, `"AnySwitch"`, or similar rgthree utility).
+    *   Update this **Control Node's** parameter (e.g., `"value"`, `"text"`, or `"select"`) using the `mode_switch_value` argument to programmatically select the T2I or I2I execution path within the structured workflow.
+
+4.  **Specialized Node Parameter Handling (Flux & Qwen Placeholder Guidance):** Include internal comments/placeholders in the Python code demonstrating how to target and modify inputs for Qwen and Flux custom nodes, assuming they are present in the workflow:
+    *   *Example Qwen VLM Node (`class_type` = "Qwen2-VL-Instruct"):* Show how to locate the node and update its query input (e.g., setting the LLM prompt based on Gradio input for prompt refinement).
+    *   *Example Flux Guidance Node (`class_type` = "FluxGuidance"):* Show how to locate the node and modify the `guidance` value (e.g., `prompt[flux_guide_id]["inputs"]["guidance"] = user_guidance_value`).
+
+5.  **Execution and Retrieval:** Call `queue_prompt`. Implement synchronous waiting logic (via polling `get_history` until the execution message type is completed/executed, leveraging the structure shown in sources) before retrieving the final image via `get_image`.
+
+#### **V. Gradio Integration Snippet**
+
+Provide a boilerplate Python snippet demonstrating how the main Gradio application would use the `execute_comfy_workflow` function, capturing user inputs (prompt, sliders, and `gr.Image(type="filepath")` for I2I/mode selection) and linking them to the master script.

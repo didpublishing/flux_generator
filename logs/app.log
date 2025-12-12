@@ -34,3 +34,1262 @@
 2025-10-31 18:12:20,776 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
 2025-10-31 23:46:46,626 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
 2025-11-01 06:55:43,724 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-01 01:24:18,990 INFO OpenAI Images provider initialized
+2025-11-01 01:24:19,087 INFO Black Forest Labs direct API initialized
+2025-11-01 01:24:19,087 INFO Flux provider initialized (host: bfl, model: flux1.1-pro)
+2025-11-01 08:27:51,994 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-01 08:29:13,462 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-01 08:29:40,543 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-01 08:38:38,573 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-01 08:38:39,139 INFO OpenAI Images provider initialized
+2025-11-01 08:38:39,189 INFO Black Forest Labs direct API initialized
+2025-11-01 08:38:39,189 INFO Flux provider initialized (host: bfl, model: flux1.1-pro)
+2025-11-01 08:39:30,863 INFO Using provider: flux_bfl (model: flux-schnell)
+2025-11-01 08:39:31,729 ERROR BFL API request failed: 404 Client Error: Not Found for url: https://api.bfl.ai/flux1.1-schnell
+2025-11-01 01:40:38,072 INFO Black Forest Labs direct API initialized
+2025-11-01 08:41:54,456 INFO Using provider: flux_bfl (model: flux-schnell)
+2025-11-01 08:41:55,339 ERROR BFL API request failed: 404 Client Error: Not Found for url: https://api.bfl.ai/flux1.1-schnell
+2025-11-01 01:42:36,686 INFO OpenAI Images provider initialized
+2025-11-01 01:42:36,852 INFO Black Forest Labs direct API initialized
+2025-11-01 01:42:36,853 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-01 08:43:58,440 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-01 08:43:58,539 INFO OpenAI Images provider initialized
+2025-11-01 08:43:58,569 INFO Black Forest Labs direct API initialized
+2025-11-01 08:43:58,570 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-01 08:44:26,939 INFO Using provider: flux_bfl (model: flux-dev)
+2025-11-01 08:44:27,677 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-dev
+2025-11-01 08:44:28,507 INFO Successfully connected to: https://api.bfl.ai/v1/flux-dev
+2025-11-01 08:58:43,627 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-01 08:58:43,708 INFO OpenAI Images provider initialized
+2025-11-01 08:58:43,708 INFO Black Forest Labs direct API initialized
+2025-11-01 08:58:43,709 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-01 08:58:43,713 INFO Image Vault initialized at: /app/vault/images
+2025-11-01 08:58:43,714 INFO Image Vault initialized
+2025-11-01 09:00:42,282 INFO Using provider: flux_bfl (model: flux-dev)
+2025-11-01 09:00:44,306 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-dev
+2025-11-01 09:00:46,389 INFO Successfully connected to: https://api.bfl.ai/v1/flux-dev
+2025-11-01 09:00:53,181 INFO Image saved to vault: 00b28985 (00b28985.png)
+2025-11-01 09:00:53,184 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-01 09:01:09,897 INFO Using provider: flux_bfl (model: flux-dev)
+2025-11-01 09:01:11,889 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-dev
+2025-11-01 09:01:13,623 INFO Successfully connected to: https://api.bfl.ai/v1/flux-dev
+2025-11-01 09:01:19,469 INFO Image saved to vault: fe6bbe71 (fe6bbe71.png)
+2025-11-01 09:01:19,474 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-01 09:02:08,838 INFO Using provider: flux_bfl (model: flux-dev)
+2025-11-01 09:02:10,723 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-dev
+2025-11-01 09:02:12,637 INFO Successfully connected to: https://api.bfl.ai/v1/flux-dev
+2025-11-01 09:02:18,479 INFO Image saved to vault: 4c60ba43 (4c60ba43.png)
+2025-11-01 09:02:18,482 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-01 09:03:11,404 INFO Using provider: flux_bfl (model: flux-dev)
+2025-11-01 09:03:13,427 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-dev
+2025-11-01 09:03:15,371 INFO Successfully connected to: https://api.bfl.ai/v1/flux-dev
+2025-11-01 09:03:25,578 INFO Image saved to vault: 59cbf612 (59cbf612.png)
+2025-11-01 09:03:25,580 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-01 09:05:13,868 INFO Using provider: flux_bfl (model: flux-dev)
+2025-11-01 09:05:15,799 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-dev
+2025-11-01 09:05:17,642 INFO Successfully connected to: https://api.bfl.ai/v1/flux-dev
+2025-11-01 09:05:23,380 INFO Image saved to vault: 70296548 (70296548.png)
+2025-11-01 09:05:23,383 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-01 09:10:46,455 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-01 09:10:46,556 INFO OpenAI Images provider initialized
+2025-11-01 09:10:46,557 INFO Black Forest Labs direct API initialized
+2025-11-01 09:10:46,557 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-01 09:10:46,574 INFO Image Vault initialized at: /app/vault/images
+2025-11-01 09:10:46,574 INFO Image Vault initialized
+2025-11-01 09:16:31,224 INFO Using flux-kontext-pro for image editing
+2025-11-01 09:16:31,225 INFO Using provider: flux_bfl (model: flux-kontext-pro)
+2025-11-01 09:16:33,233 INFO Trying alternative endpoint: https://api.bfl.ai/flux-kontext-max
+2025-11-01 09:16:34,933 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-01 09:16:36,845 INFO Successfully connected to: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-01 09:16:42,674 INFO Image saved to vault: 89618292 (89618292.png)
+2025-11-01 09:16:42,677 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-01 09:18:13,884 INFO Using flux-kontext-pro for image editing
+2025-11-01 09:18:13,885 INFO Using provider: flux_bfl (model: flux-kontext-pro)
+2025-11-01 09:18:15,902 INFO Trying alternative endpoint: https://api.bfl.ai/flux-kontext-max
+2025-11-01 09:18:17,638 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-01 09:18:19,515 INFO Successfully connected to: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-01 09:18:25,325 INFO Image saved to vault: 1c3a7b4c (1c3a7b4c.png)
+2025-11-01 09:18:25,329 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-01 09:19:10,655 INFO Using flux-kontext-pro for image editing
+2025-11-01 09:19:10,656 INFO Using provider: flux_bfl (model: flux-kontext-pro)
+2025-11-01 09:19:12,487 INFO Trying alternative endpoint: https://api.bfl.ai/flux-kontext-max
+2025-11-01 09:19:14,273 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-01 09:19:16,067 INFO Successfully connected to: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-01 09:19:22,001 INFO Image saved to vault: 94ace7fc (94ace7fc.png)
+2025-11-01 09:19:22,003 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-01 09:22:54,608 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-01 09:22:54,669 INFO OpenAI Images provider initialized
+2025-11-01 09:22:54,670 INFO Black Forest Labs direct API initialized
+2025-11-01 09:22:54,670 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-01 09:22:54,679 INFO Image Vault initialized at: /app/vault/images
+2025-11-01 09:22:54,679 INFO Image Vault initialized
+2025-11-01 09:23:20,687 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-01 09:23:20,809 INFO OpenAI Images provider initialized
+2025-11-01 09:23:20,809 INFO Black Forest Labs direct API initialized
+2025-11-01 09:23:20,810 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-01 09:23:20,824 INFO Image Vault initialized at: /app/vault/images
+2025-11-01 09:23:20,824 INFO Image Vault initialized
+2025-11-01 09:24:59,468 INFO Using flux-kontext-pro for image editing
+2025-11-01 09:24:59,469 INFO Using provider: flux_bfl (model: flux-kontext-pro)
+2025-11-01 09:24:59,471 INFO Flux Kontext img2img: inputImage provided, strength=0.3
+2025-11-01 09:25:01,596 INFO Trying alternative endpoint: https://api.bfl.ai/flux-kontext-max
+2025-11-01 09:25:03,349 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-01 09:25:05,167 INFO Successfully connected to: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-01 09:25:11,532 INFO Image saved to vault: 35205ce1 (35205ce1.png)
+2025-11-01 09:25:11,534 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-01 09:25:56,396 INFO Using flux-kontext-pro for image editing
+2025-11-01 09:25:56,397 INFO Using provider: flux_bfl (model: flux-kontext-pro)
+2025-11-01 09:25:56,398 INFO Flux Kontext img2img: inputImage provided, strength=0.7
+2025-11-01 09:25:58,376 INFO Trying alternative endpoint: https://api.bfl.ai/flux-kontext-max
+2025-11-01 09:26:00,122 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-01 09:26:02,082 INFO Successfully connected to: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-01 09:26:07,949 INFO Image saved to vault: de87a9e9 (de87a9e9.png)
+2025-11-01 09:26:07,952 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-01 16:24:45,561 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-01 16:24:45,804 INFO OpenAI Images provider initialized
+2025-11-01 16:24:45,805 INFO Black Forest Labs direct API initialized
+2025-11-01 16:24:45,805 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-01 16:24:45,822 INFO Image Vault initialized at: /app/vault/images
+2025-11-01 16:24:45,824 INFO Image Vault initialized
+2025-11-01 22:51:48,142 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-01 22:51:48,302 INFO OpenAI Images provider initialized
+2025-11-01 22:51:48,303 INFO Black Forest Labs direct API initialized
+2025-11-01 22:51:48,304 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-01 22:51:48,315 INFO Image Vault initialized at: /app/vault/images
+2025-11-01 22:51:48,315 INFO Image Vault initialized
+2025-11-01 23:04:32,770 INFO ✅ Saved prompt to CSV: /app/prompts/prompts.csv
+2025-11-01 23:04:32,820 INFO Prompt saved via web interface with ID: e887c16c
+2025-11-01 23:12:31,467 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-01 23:12:31,583 INFO OpenAI Images provider initialized
+2025-11-01 23:12:31,584 INFO Black Forest Labs direct API initialized
+2025-11-01 23:12:31,584 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-01 23:12:31,595 INFO Image Vault initialized at: /app/vault/images
+2025-11-01 23:12:31,596 INFO Image Vault initialized
+2025-11-03 18:00:56,731 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-03 18:00:57,055 INFO OpenAI Images provider initialized
+2025-11-03 18:00:57,056 INFO Black Forest Labs direct API initialized
+2025-11-03 18:00:57,057 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-03 18:00:57,102 INFO Image Vault initialized at: /app/vault/images
+2025-11-03 18:00:57,102 INFO Image Vault initialized
+2025-11-03 18:07:30,154 INFO Using provider: flux_bfl (model: flux-pro)
+2025-11-03 18:07:31,035 INFO Trying alternative endpoint: https://api.bfl.ai/flux-pro-1.1
+2025-11-03 18:07:31,635 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-pro-1.1
+2025-11-03 18:07:32,847 INFO Successfully connected to: https://api.bfl.ai/v1/flux-pro-1.1
+2025-11-03 18:07:32,848 INFO BFL API request submitted successfully. Response keys: ['id', 'polling_url']
+2025-11-03 18:07:36,424 INFO Image saved to vault: 23e5b4b5 (23e5b4b5.png)
+2025-11-03 18:07:36,426 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-03 18:07:52,077 INFO Returning cached image
+2025-11-03 19:39:51,142 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-03 19:39:51,244 INFO OpenAI Images provider initialized
+2025-11-03 19:39:51,245 INFO Black Forest Labs direct API initialized
+2025-11-03 19:39:51,245 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-03 19:39:51,257 INFO Image Vault initialized at: /app/vault/images
+2025-11-03 19:39:51,258 INFO Image Vault initialized
+2025-11-04 00:40:00,935 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-04 00:40:01,206 INFO OpenAI Images provider initialized
+2025-11-04 00:40:01,207 INFO Black Forest Labs direct API initialized
+2025-11-04 00:40:01,208 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-04 00:40:01,252 INFO Image Vault initialized at: /app/vault/images
+2025-11-04 00:40:01,252 INFO Image Vault initialized
+2025-11-04 01:49:32,136 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-04 01:49:32,227 INFO OpenAI Images provider initialized
+2025-11-04 01:49:32,227 INFO Black Forest Labs direct API initialized
+2025-11-04 01:49:32,228 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-04 01:49:32,243 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-04 01:49:32,251 INFO Image Vault initialized at: /app/vault/images
+2025-11-04 01:49:32,252 INFO Image Vault initialized
+2025-11-04 02:00:21,192 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-04 02:00:21,312 INFO OpenAI Images provider initialized
+2025-11-04 02:00:21,313 INFO Black Forest Labs direct API initialized
+2025-11-04 02:00:21,314 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-04 02:00:21,315 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-04 02:00:21,331 INFO Image Vault initialized at: /app/vault/images
+2025-11-04 02:00:21,332 INFO Image Vault initialized
+2025-11-04 02:15:46,110 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-04 02:15:46,200 INFO OpenAI Images provider initialized
+2025-11-04 02:15:46,200 INFO Black Forest Labs direct API initialized
+2025-11-04 02:15:46,200 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-04 02:15:46,202 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-04 02:15:46,212 INFO Image Vault initialized at: /app/vault/images
+2025-11-04 02:15:46,212 INFO Image Vault initialized
+2025-11-04 02:19:01,830 INFO Using flux-kontext-pro for image editing
+2025-11-04 02:19:01,830 INFO Using provider: flux_bfl (model: flux-kontext-pro)
+2025-11-04 02:19:01,832 INFO Using base64 'image' and 'inputImage' parameters for Flux Kontext (size: 1397964 chars)
+2025-11-04 02:19:01,833 INFO Flux Kontext img2img: Image provided, strength=0.7
+2025-11-04 02:19:04,404 INFO Trying alternative endpoint: https://api.bfl.ai/flux-kontext-max
+2025-11-04 02:19:06,645 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-04 02:19:09,204 INFO Successfully connected to: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-04 02:19:09,204 INFO BFL API request submitted successfully. Response keys: ['id', 'polling_url']
+2025-11-04 02:19:09,205 INFO Source image was included in the request
+2025-11-04 02:19:17,222 INFO Image saved to vault: 6670c6fe (6670c6fe.png)
+2025-11-04 02:19:17,223 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-04 02:19:46,595 INFO Using flux-kontext-pro for image editing
+2025-11-04 02:19:46,596 INFO Using provider: flux_bfl (model: flux-kontext-pro)
+2025-11-04 02:19:46,598 INFO Using base64 'image' and 'inputImage' parameters for Flux Kontext (size: 1397964 chars)
+2025-11-04 02:19:46,598 INFO Flux Kontext img2img: Image provided, strength=0.3
+2025-11-04 02:19:49,087 INFO Trying alternative endpoint: https://api.bfl.ai/flux-kontext-max
+2025-11-04 02:19:51,410 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-04 02:19:53,840 INFO Successfully connected to: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-04 02:19:53,841 INFO BFL API request submitted successfully. Response keys: ['id', 'polling_url']
+2025-11-04 02:19:53,841 INFO Source image was included in the request
+2025-11-04 02:19:59,476 INFO Image saved to vault: 98d8af7d (98d8af7d.png)
+2025-11-04 02:19:59,478 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-04 02:20:27,871 INFO Using flux-kontext-pro for image editing
+2025-11-04 02:20:27,872 INFO Using provider: flux_bfl (model: flux-kontext-pro)
+2025-11-04 02:20:27,873 INFO Using base64 'image' and 'inputImage' parameters for Flux Kontext (size: 1397964 chars)
+2025-11-04 02:20:27,873 INFO Flux Kontext img2img: Image provided, strength=0.1
+2025-11-04 02:20:30,333 INFO Trying alternative endpoint: https://api.bfl.ai/flux-kontext-max
+2025-11-04 02:20:32,524 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-04 02:20:34,988 INFO Successfully connected to: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-04 02:20:34,989 INFO BFL API request submitted successfully. Response keys: ['id', 'polling_url']
+2025-11-04 02:20:34,989 INFO Source image was included in the request
+2025-11-04 02:20:43,125 INFO Image saved to vault: d793744d (d793744d.png)
+2025-11-04 02:20:43,127 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-04 02:23:01,409 INFO Using flux-kontext-pro for image editing
+2025-11-04 02:23:01,410 INFO Using provider: flux_bfl (model: flux-kontext-pro)
+2025-11-04 02:23:01,412 INFO Using base64 'image' and 'inputImage' parameters for Flux Kontext (size: 1655796 chars)
+2025-11-04 02:23:01,413 INFO Flux Kontext img2img: Image provided, strength=0.2
+2025-11-04 02:23:03,828 INFO Trying alternative endpoint: https://api.bfl.ai/flux-kontext-max
+2025-11-04 02:23:05,971 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-04 02:23:08,325 INFO Successfully connected to: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-04 02:23:08,325 INFO BFL API request submitted successfully. Response keys: ['id', 'polling_url']
+2025-11-04 02:23:08,325 INFO Source image was included in the request
+2025-11-04 02:23:14,012 INFO Image saved to vault: 595fe390 (595fe390.png)
+2025-11-04 02:23:14,014 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-04 02:23:41,211 INFO Using flux-kontext-pro for image editing
+2025-11-04 02:23:41,212 INFO Using provider: flux_bfl (model: flux-kontext-pro)
+2025-11-04 02:23:41,213 INFO Using base64 'image' and 'inputImage' parameters for Flux Kontext (size: 1655796 chars)
+2025-11-04 02:23:41,214 INFO Flux Kontext img2img: Image provided, strength=0.1
+2025-11-04 02:23:43,712 INFO Trying alternative endpoint: https://api.bfl.ai/flux-kontext-max
+2025-11-04 02:23:45,842 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-04 02:23:48,140 INFO Successfully connected to: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-04 02:23:48,141 INFO BFL API request submitted successfully. Response keys: ['id', 'polling_url']
+2025-11-04 02:23:48,141 INFO Source image was included in the request
+2025-11-04 02:23:54,193 INFO Image saved to vault: 094e5506 (094e5506.png)
+2025-11-04 02:23:54,194 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-04 02:25:56,658 INFO Using provider: flux_bfl (model: flux-kontext-pro)
+2025-11-04 02:25:57,443 INFO Trying alternative endpoint: https://api.bfl.ai/flux-kontext-max
+2025-11-04 02:25:58,018 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-04 02:25:58,684 INFO Successfully connected to: https://api.bfl.ai/v1/flux-kontext-pro
+2025-11-04 02:25:58,685 INFO BFL API request submitted successfully. Response keys: ['id', 'polling_url']
+2025-11-04 02:26:04,229 INFO Image saved to vault: f352ddd4 (f352ddd4.png)
+2025-11-04 02:26:04,231 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-04 02:26:36,161 INFO Returning cached image
+2025-11-04 02:28:46,592 INFO Using provider: flux_bfl (model: flux-dev)
+2025-11-04 02:28:47,416 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-dev
+2025-11-04 02:28:48,146 INFO Successfully connected to: https://api.bfl.ai/v1/flux-dev
+2025-11-04 02:28:48,146 INFO BFL API request submitted successfully. Response keys: ['id', 'polling_url']
+2025-11-04 02:28:55,017 INFO Image saved to vault: f19e5eb3 (f19e5eb3.png)
+2025-11-04 02:28:55,019 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-04 02:29:42,486 INFO Using provider: flux_bfl (model: flux-dev)
+2025-11-04 02:29:43,253 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-dev
+2025-11-04 02:29:43,850 INFO Successfully connected to: https://api.bfl.ai/v1/flux-dev
+2025-11-04 02:29:43,850 INFO BFL API request submitted successfully. Response keys: ['id', 'polling_url']
+2025-11-04 02:29:49,600 INFO Image saved to vault: fbf33dc6 (fbf33dc6.png)
+2025-11-04 02:29:49,601 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-05 01:18:36,092 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-05 01:18:36,339 INFO OpenAI Images provider initialized
+2025-11-05 01:18:36,340 INFO Black Forest Labs direct API initialized
+2025-11-05 01:18:36,340 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-05 01:18:36,343 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-05 01:18:36,395 INFO Image Vault initialized at: /app/vault/images
+2025-11-05 01:18:36,396 INFO Image Vault initialized
+2025-11-05 06:29:07,130 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-05 06:29:07,277 INFO OpenAI Images provider initialized
+2025-11-05 06:29:07,277 INFO Black Forest Labs direct API initialized
+2025-11-05 06:29:07,278 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-05 06:29:07,281 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-05 06:29:07,319 INFO Image Vault initialized at: /app/vault/images
+2025-11-05 06:29:07,319 INFO Image Vault initialized
+2025-11-05 07:11:13,015 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-05 07:11:13,073 INFO OpenAI Images provider initialized
+2025-11-05 07:11:13,074 INFO Black Forest Labs direct API initialized
+2025-11-05 07:11:13,074 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-05 07:11:13,075 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-05 07:11:13,083 INFO Image Vault initialized at: /app/vault/images
+2025-11-05 07:11:13,083 INFO Image Vault initialized
+2025-11-05 21:35:17,654 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-05 21:35:17,904 INFO OpenAI Images provider initialized
+2025-11-05 21:35:17,905 INFO Black Forest Labs direct API initialized
+2025-11-05 21:35:17,906 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-05 21:35:17,908 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-05 21:35:17,930 INFO Image Vault initialized at: /app/vault/images
+2025-11-05 21:35:17,931 INFO Image Vault initialized
+2025-11-06 08:57:56,210 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-06 08:57:56,435 INFO OpenAI Images provider initialized
+2025-11-06 08:57:56,436 INFO Black Forest Labs direct API initialized
+2025-11-06 08:57:56,437 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 08:57:56,439 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 08:57:56,512 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 08:57:56,512 INFO Image Vault initialized
+2025-11-06 01:20:07,131 INFO OpenAI Images provider initialized
+2025-11-06 01:20:07,131 INFO Black Forest Labs direct API initialized
+2025-11-06 01:20:07,132 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 01:20:07,159 INFO ComfyUI server reachable at 127.0.0.1:8188 (checked /system_stats)
+2025-11-06 01:20:07,399 INFO Found 2 available models: sd_xl_base_1.0.safetensors, sd_xl_refiner_1.0.safetensors
+2025-11-06 01:20:07,407 INFO ComfyUI provider initialized (server: 127.0.0.1:8188)
+2025-11-06 01:20:07,407 INFO ComfyUI provider initialized (server: 127.0.0.1:8188)
+2025-11-06 01:20:07,410 INFO Image Vault initialized at: D:\GitHub\Flux Generator\flux_generator_comfy\vault\images
+2025-11-06 01:20:07,410 INFO Image Vault initialized
+2025-11-06 01:20:07,608 INFO Found 2 available models: sd_xl_base_1.0.safetensors, sd_xl_refiner_1.0.safetensors
+2025-11-06 01:20:07,611 INFO ComfyUI provider initialized (server: 127.0.0.1:8188)
+2025-11-06 09:22:37,597 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-06 09:22:37,663 INFO OpenAI Images provider initialized
+2025-11-06 09:22:37,664 INFO Black Forest Labs direct API initialized
+2025-11-06 09:22:37,665 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 09:22:37,666 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 09:22:37,672 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 09:22:37,672 INFO Image Vault initialized
+2025-11-06 09:24:35,475 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-06 09:24:35,578 INFO OpenAI Images provider initialized
+2025-11-06 09:24:35,579 INFO Black Forest Labs direct API initialized
+2025-11-06 09:24:35,579 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 09:24:35,581 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 09:24:35,598 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 09:24:35,599 INFO Image Vault initialized
+2025-11-06 10:46:12,421 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-06 10:46:12,526 INFO OpenAI Images provider initialized
+2025-11-06 10:46:12,526 INFO Black Forest Labs direct API initialized
+2025-11-06 10:46:12,527 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 10:46:12,529 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 10:46:12,542 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 10:46:12,542 INFO Image Vault initialized
+2025-11-06 02:48:28,527 INFO OpenAI Images provider initialized
+2025-11-06 02:48:28,528 INFO Black Forest Labs direct API initialized
+2025-11-06 02:48:28,528 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 02:48:28,558 INFO ComfyUI server reachable at 127.0.0.1:8188 (checked /system_stats)
+2025-11-06 02:48:28,783 INFO Found 2 available models: sd_xl_base_1.0.safetensors, sd_xl_refiner_1.0.safetensors
+2025-11-06 02:48:28,788 INFO ComfyUI provider initialized (server: 127.0.0.1:8188)
+2025-11-06 02:48:28,789 INFO ComfyUI provider initialized (server: 127.0.0.1:8188)
+2025-11-06 10:50:25,794 INFO Using provider: flux_bfl (model: flux-pro)
+2025-11-06 10:50:26,767 INFO Trying alternative endpoint: https://api.bfl.ai/flux-pro-1.1
+2025-11-06 10:50:27,349 INFO Trying alternative endpoint: https://api.bfl.ai/v1/flux-pro-1.1
+2025-11-06 10:50:28,095 INFO Successfully connected to: https://api.bfl.ai/v1/flux-pro-1.1
+2025-11-06 10:50:28,097 INFO BFL API request submitted successfully. Response keys: ['id', 'polling_url']
+2025-11-06 10:50:31,822 INFO Image saved to vault: d96cda92 (d96cda92.png)
+2025-11-06 10:50:31,826 INFO Image automatically saved to vault (provider: flux_bfl)
+2025-11-06 02:52:52,550 INFO OpenAI Images provider initialized
+2025-11-06 02:52:52,550 INFO Black Forest Labs direct API initialized
+2025-11-06 02:52:52,551 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 02:52:52,588 INFO ComfyUI server reachable at 127.0.0.1:8188 (checked /system_stats)
+2025-11-06 02:52:52,759 INFO Found 2 available models: sd_xl_base_1.0.safetensors, sd_xl_refiner_1.0.safetensors
+2025-11-06 02:52:52,763 INFO ComfyUI provider initialized (server: 127.0.0.1:8188)
+2025-11-06 02:52:52,764 INFO ComfyUI provider initialized (server: 127.0.0.1:8188)
+2025-11-06 02:52:52,765 INFO Image Vault initialized at: D:\GitHub\Flux Generator\flux_generator_comfy\vault\images
+2025-11-06 02:52:52,765 INFO Image Vault initialized
+2025-11-06 11:20:27,244 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-06 11:20:27,330 INFO OpenAI Images provider initialized
+2025-11-06 11:20:27,331 INFO Black Forest Labs direct API initialized
+2025-11-06 11:20:27,332 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:20:27,334 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:20:27,349 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 11:20:27,350 INFO Image Vault initialized
+2025-11-06 11:20:27,362 INFO OpenAI Images provider initialized
+2025-11-06 11:20:27,362 INFO Black Forest Labs direct API initialized
+2025-11-06 11:20:27,363 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:20:27,365 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:21:37,502 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-06 11:21:37,597 INFO OpenAI Images provider initialized
+2025-11-06 11:21:37,597 INFO Black Forest Labs direct API initialized
+2025-11-06 11:21:37,598 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:21:37,600 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:21:37,607 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 11:21:37,607 INFO Image Vault initialized
+2025-11-06 11:21:37,618 INFO OpenAI Images provider initialized
+2025-11-06 11:21:37,619 INFO Black Forest Labs direct API initialized
+2025-11-06 11:21:37,619 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:21:37,620 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:21:57,493 INFO OpenAI Images provider initialized
+2025-11-06 11:21:57,494 INFO Black Forest Labs direct API initialized
+2025-11-06 11:21:57,494 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:21:57,496 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:21:57,509 INFO OpenAI Images provider initialized
+2025-11-06 11:21:57,509 INFO Black Forest Labs direct API initialized
+2025-11-06 11:21:57,510 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:21:57,511 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:22:08,398 INFO OpenAI Images provider initialized
+2025-11-06 11:22:08,399 INFO Black Forest Labs direct API initialized
+2025-11-06 11:22:08,400 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:22:08,402 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:22:08,424 INFO OpenAI Images provider initialized
+2025-11-06 11:22:08,425 INFO Black Forest Labs direct API initialized
+2025-11-06 11:22:08,426 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:22:08,427 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:22:08,451 INFO OpenAI Images provider initialized
+2025-11-06 11:22:08,452 INFO Black Forest Labs direct API initialized
+2025-11-06 11:22:08,453 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:22:08,455 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:22:08,467 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 11:22:08,468 INFO Image Vault initialized
+2025-11-06 11:22:08,573 INFO OpenAI Images provider initialized
+2025-11-06 11:22:08,573 INFO Black Forest Labs direct API initialized
+2025-11-06 11:22:08,574 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:22:08,575 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:22:08,590 INFO OpenAI Images provider initialized
+2025-11-06 11:22:08,591 INFO Black Forest Labs direct API initialized
+2025-11-06 11:22:08,591 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:22:08,593 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:22:10,177 INFO OpenAI Images provider initialized
+2025-11-06 11:22:10,178 INFO Black Forest Labs direct API initialized
+2025-11-06 11:22:10,178 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:22:10,180 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:22:10,194 INFO OpenAI Images provider initialized
+2025-11-06 11:22:10,195 INFO Black Forest Labs direct API initialized
+2025-11-06 11:22:10,195 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:22:10,196 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:22:10,211 INFO OpenAI Images provider initialized
+2025-11-06 11:22:10,211 INFO Black Forest Labs direct API initialized
+2025-11-06 11:22:10,211 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:22:10,212 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:22:10,220 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 11:22:10,220 INFO Image Vault initialized
+2025-11-06 11:22:10,327 INFO OpenAI Images provider initialized
+2025-11-06 11:22:10,328 INFO Black Forest Labs direct API initialized
+2025-11-06 11:22:10,329 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:22:10,330 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:22:10,346 INFO OpenAI Images provider initialized
+2025-11-06 11:22:10,346 INFO Black Forest Labs direct API initialized
+2025-11-06 11:22:10,347 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:22:10,348 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 03:23:22,888 INFO OpenAI Images provider initialized
+2025-11-06 03:23:22,888 INFO Black Forest Labs direct API initialized
+2025-11-06 03:23:22,888 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 03:23:22,941 INFO ComfyUI server reachable at 127.0.0.1:8188 (checked /system_stats)
+2025-11-06 03:23:23,140 INFO Found 2 available models: sd_xl_base_1.0.safetensors, sd_xl_refiner_1.0.safetensors
+2025-11-06 03:23:23,143 INFO ComfyUI provider initialized (server: 127.0.0.1:8188)
+2025-11-06 03:23:23,143 INFO ComfyUI provider initialized (server: 127.0.0.1:8188)
+2025-11-06 11:24:02,742 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-06 11:24:02,801 INFO OpenAI Images provider initialized
+2025-11-06 11:24:02,801 INFO Black Forest Labs direct API initialized
+2025-11-06 11:24:02,802 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:24:02,803 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:24:02,811 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 11:24:02,811 INFO Image Vault initialized
+2025-11-06 11:24:02,822 INFO OpenAI Images provider initialized
+2025-11-06 11:24:02,823 INFO Black Forest Labs direct API initialized
+2025-11-06 11:24:02,823 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:24:02,824 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:24:08,087 INFO OpenAI Images provider initialized
+2025-11-06 11:24:08,088 INFO Black Forest Labs direct API initialized
+2025-11-06 11:24:08,088 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:24:08,090 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:24:53,775 INFO OpenAI Images provider initialized
+2025-11-06 11:24:53,775 INFO Black Forest Labs direct API initialized
+2025-11-06 11:24:53,776 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:24:53,777 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 11:24:53,793 INFO OpenAI Images provider initialized
+2025-11-06 11:24:53,793 INFO Black Forest Labs direct API initialized
+2025-11-06 11:24:53,794 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 11:24:53,795 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:06:56,044 INFO OpenAI Images provider initialized
+2025-11-06 12:06:56,044 INFO Black Forest Labs direct API initialized
+2025-11-06 12:06:56,045 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:06:56,047 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:06:56,061 INFO OpenAI Images provider initialized
+2025-11-06 12:06:56,061 INFO Black Forest Labs direct API initialized
+2025-11-06 12:06:56,061 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:06:56,062 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:06:56,078 INFO OpenAI Images provider initialized
+2025-11-06 12:06:56,078 INFO Black Forest Labs direct API initialized
+2025-11-06 12:06:56,078 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:06:56,079 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:06:56,085 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 12:06:56,086 INFO Image Vault initialized
+2025-11-06 12:06:56,200 INFO OpenAI Images provider initialized
+2025-11-06 12:06:56,201 INFO Black Forest Labs direct API initialized
+2025-11-06 12:06:56,201 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:06:56,203 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:06:56,215 INFO OpenAI Images provider initialized
+2025-11-06 12:06:56,216 INFO Black Forest Labs direct API initialized
+2025-11-06 12:06:56,216 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:06:56,217 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:07:02,738 INFO OpenAI Images provider initialized
+2025-11-06 12:07:02,739 INFO Black Forest Labs direct API initialized
+2025-11-06 12:07:02,740 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:07:02,743 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:07:02,779 INFO OpenAI Images provider initialized
+2025-11-06 12:07:02,780 INFO Black Forest Labs direct API initialized
+2025-11-06 12:07:02,781 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:07:02,783 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:07:02,807 INFO OpenAI Images provider initialized
+2025-11-06 12:07:02,808 INFO Black Forest Labs direct API initialized
+2025-11-06 12:07:02,808 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:07:02,810 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:07:02,823 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 12:07:02,824 INFO Image Vault initialized
+2025-11-06 12:07:02,924 INFO OpenAI Images provider initialized
+2025-11-06 12:07:02,925 INFO Black Forest Labs direct API initialized
+2025-11-06 12:07:02,925 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:07:02,926 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:07:02,937 INFO OpenAI Images provider initialized
+2025-11-06 12:07:02,937 INFO Black Forest Labs direct API initialized
+2025-11-06 12:07:02,938 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:07:02,939 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:07:44,070 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-06 12:07:44,123 INFO OpenAI Images provider initialized
+2025-11-06 12:07:44,123 INFO Black Forest Labs direct API initialized
+2025-11-06 12:07:44,123 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:07:44,124 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:07:44,132 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 12:07:44,132 INFO Image Vault initialized
+2025-11-06 12:07:44,142 INFO OpenAI Images provider initialized
+2025-11-06 12:07:44,142 INFO Black Forest Labs direct API initialized
+2025-11-06 12:07:44,143 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:07:44,144 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:07:49,512 INFO OpenAI Images provider initialized
+2025-11-06 12:07:49,512 INFO Black Forest Labs direct API initialized
+2025-11-06 12:07:49,513 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:07:49,514 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:07:49,528 INFO OpenAI Images provider initialized
+2025-11-06 12:07:49,528 INFO Black Forest Labs direct API initialized
+2025-11-06 12:07:49,529 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:07:49,530 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:30:48,505 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-06 12:30:48,621 INFO OpenAI Images provider initialized
+2025-11-06 12:30:48,622 INFO Black Forest Labs direct API initialized
+2025-11-06 12:30:48,622 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:30:48,624 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:30:48,635 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 12:30:48,635 INFO Image Vault initialized
+2025-11-06 12:30:48,650 INFO OpenAI Images provider initialized
+2025-11-06 12:30:48,651 INFO Black Forest Labs direct API initialized
+2025-11-06 12:30:48,651 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:30:48,653 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:30:55,907 INFO OpenAI Images provider initialized
+2025-11-06 12:30:55,907 INFO Black Forest Labs direct API initialized
+2025-11-06 12:30:55,908 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:30:55,909 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:30:55,922 INFO OpenAI Images provider initialized
+2025-11-06 12:30:55,923 INFO Black Forest Labs direct API initialized
+2025-11-06 12:30:55,923 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:30:55,924 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:31:47,675 INFO OpenAI Images provider initialized
+2025-11-06 12:31:47,676 INFO Black Forest Labs direct API initialized
+2025-11-06 12:31:47,676 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:31:47,677 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:31:47,688 INFO OpenAI Images provider initialized
+2025-11-06 12:31:47,688 INFO Black Forest Labs direct API initialized
+2025-11-06 12:31:47,688 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:31:47,689 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:31:47,704 INFO OpenAI Images provider initialized
+2025-11-06 12:31:47,705 INFO Black Forest Labs direct API initialized
+2025-11-06 12:31:47,705 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:31:47,706 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:31:47,712 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 12:31:47,713 INFO Image Vault initialized
+2025-11-06 12:31:47,816 INFO OpenAI Images provider initialized
+2025-11-06 12:31:47,816 INFO Black Forest Labs direct API initialized
+2025-11-06 12:31:47,817 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:31:47,818 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:31:47,833 INFO OpenAI Images provider initialized
+2025-11-06 12:31:47,834 INFO Black Forest Labs direct API initialized
+2025-11-06 12:31:47,834 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:31:47,835 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 04:31:54,648 INFO OpenAI Images provider initialized
+2025-11-06 04:31:54,648 INFO Black Forest Labs direct API initialized
+2025-11-06 04:31:54,648 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 04:31:54,678 INFO ComfyUI server reachable at 127.0.0.1:8188 (checked /system_stats)
+2025-11-06 04:31:54,809 INFO Found 2 available models: sd_xl_base_1.0.safetensors, sd_xl_refiner_1.0.safetensors
+2025-11-06 04:31:54,813 INFO ComfyUI provider initialized (server: 127.0.0.1:8188)
+2025-11-06 04:31:54,813 INFO ComfyUI provider initialized (server: 127.0.0.1:8188)
+2025-11-06 04:31:54,815 INFO Image Vault initialized at: D:\GitHub\Flux Generator\flux_generator_comfy\vault\images
+2025-11-06 04:31:54,815 INFO Image Vault initialized
+2025-11-06 12:44:38,798 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-06 12:44:38,977 INFO OpenAI Images provider initialized
+2025-11-06 12:44:38,977 INFO Black Forest Labs direct API initialized
+2025-11-06 12:44:38,978 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:44:38,979 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:44:38,988 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 12:44:38,989 INFO Image Vault initialized
+2025-11-06 12:44:38,999 INFO OpenAI Images provider initialized
+2025-11-06 12:44:38,999 INFO Black Forest Labs direct API initialized
+2025-11-06 12:44:38,999 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:44:39,001 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:44:51,925 INFO OpenAI Images provider initialized
+2025-11-06 12:44:51,926 INFO Black Forest Labs direct API initialized
+2025-11-06 12:44:51,926 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:44:51,927 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:44:55,116 INFO OpenAI Images provider initialized
+2025-11-06 12:44:55,117 INFO Black Forest Labs direct API initialized
+2025-11-06 12:44:55,117 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:44:55,119 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:44:56,714 INFO OpenAI Images provider initialized
+2025-11-06 12:44:56,715 INFO Black Forest Labs direct API initialized
+2025-11-06 12:44:56,716 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:44:56,718 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:44:56,746 INFO OpenAI Images provider initialized
+2025-11-06 12:44:56,747 INFO Black Forest Labs direct API initialized
+2025-11-06 12:44:56,748 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 12:44:56,749 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 12:44:56,759 INFO Available providers in UI: ['openai', 'flux']
+2025-11-06 21:07:30,999 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-06 21:07:31,196 INFO OpenAI Images provider initialized
+2025-11-06 21:07:31,197 INFO Black Forest Labs direct API initialized
+2025-11-06 21:07:31,197 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:07:31,199 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:07:31,216 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 21:07:31,216 INFO Image Vault initialized
+2025-11-06 21:07:31,227 INFO OpenAI Images provider initialized
+2025-11-06 21:07:31,227 INFO Black Forest Labs direct API initialized
+2025-11-06 21:07:31,228 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:07:31,229 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:09:43,899 INFO OpenAI Images provider initialized
+2025-11-06 21:09:43,900 INFO Black Forest Labs direct API initialized
+2025-11-06 21:09:43,900 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:09:43,902 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:09:43,918 INFO OpenAI Images provider initialized
+2025-11-06 21:09:43,918 INFO Black Forest Labs direct API initialized
+2025-11-06 21:09:43,919 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:09:43,920 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:09:43,936 INFO Available providers in UI: ['openai', 'flux']
+2025-11-06 21:27:40,730 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-06 21:27:40,823 INFO OpenAI Images provider initialized
+2025-11-06 21:27:40,824 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:40,824 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:40,827 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:40,835 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 21:27:40,836 INFO Image Vault initialized
+2025-11-06 21:27:40,847 INFO OpenAI Images provider initialized
+2025-11-06 21:27:40,847 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:40,848 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:40,849 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:44,827 INFO OpenAI Images provider initialized
+2025-11-06 21:27:44,828 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:44,829 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:44,830 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:44,843 INFO OpenAI Images provider initialized
+2025-11-06 21:27:44,844 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:44,844 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:44,846 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:44,859 INFO Available providers in UI: ['openai', 'flux']
+2025-11-06 21:27:52,480 INFO OpenAI Images provider initialized
+2025-11-06 21:27:52,481 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:52,481 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:52,482 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:52,497 INFO OpenAI Images provider initialized
+2025-11-06 21:27:52,497 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:52,498 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:52,498 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:52,515 INFO OpenAI Images provider initialized
+2025-11-06 21:27:52,515 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:52,516 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:52,517 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:52,526 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 21:27:52,527 INFO Image Vault initialized
+2025-11-06 21:27:52,622 INFO OpenAI Images provider initialized
+2025-11-06 21:27:52,622 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:52,622 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:52,623 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:52,635 INFO OpenAI Images provider initialized
+2025-11-06 21:27:52,636 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:52,636 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:52,637 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:52,642 INFO Available providers in UI: ['openai', 'flux']
+2025-11-06 21:27:54,662 INFO OpenAI Images provider initialized
+2025-11-06 21:27:54,663 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:54,664 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:54,666 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:54,704 INFO OpenAI Images provider initialized
+2025-11-06 21:27:54,705 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:54,705 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:54,706 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:54,742 INFO OpenAI Images provider initialized
+2025-11-06 21:27:54,743 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:54,743 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:54,745 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:54,760 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 21:27:54,760 INFO Image Vault initialized
+2025-11-06 21:27:54,863 INFO OpenAI Images provider initialized
+2025-11-06 21:27:54,863 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:54,864 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:54,865 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:54,881 INFO OpenAI Images provider initialized
+2025-11-06 21:27:54,882 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:54,882 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:54,883 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:54,890 INFO Available providers in UI: ['openai', 'flux']
+2025-11-06 21:27:57,662 INFO OpenAI Images provider initialized
+2025-11-06 21:27:57,663 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:57,664 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:57,667 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:57,701 INFO OpenAI Images provider initialized
+2025-11-06 21:27:57,702 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:57,703 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:57,704 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:57,736 INFO OpenAI Images provider initialized
+2025-11-06 21:27:57,736 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:57,737 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:57,739 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:57,754 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 21:27:57,755 INFO Image Vault initialized
+2025-11-06 21:27:57,875 INFO OpenAI Images provider initialized
+2025-11-06 21:27:57,876 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:57,877 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:57,879 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:57,897 INFO OpenAI Images provider initialized
+2025-11-06 21:27:57,897 INFO Black Forest Labs direct API initialized
+2025-11-06 21:27:57,898 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:27:57,899 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:27:57,908 INFO Available providers in UI: ['openai', 'flux']
+2025-11-06 21:30:31,191 INFO OpenAI Images provider initialized
+2025-11-06 21:30:31,192 INFO Black Forest Labs direct API initialized
+2025-11-06 21:30:31,192 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:30:31,194 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:30:31,204 INFO OpenAI Images provider initialized
+2025-11-06 21:30:31,205 INFO Black Forest Labs direct API initialized
+2025-11-06 21:30:31,205 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:30:31,206 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:30:31,221 INFO OpenAI Images provider initialized
+2025-11-06 21:30:31,221 INFO Black Forest Labs direct API initialized
+2025-11-06 21:30:31,222 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:30:31,222 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:30:31,227 INFO Image Vault initialized at: /app/vault/images
+2025-11-06 21:30:31,228 INFO Image Vault initialized
+2025-11-06 21:30:31,329 INFO OpenAI Images provider initialized
+2025-11-06 21:30:31,330 INFO Black Forest Labs direct API initialized
+2025-11-06 21:30:31,331 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:30:31,332 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:30:31,344 INFO OpenAI Images provider initialized
+2025-11-06 21:30:31,344 INFO Black Forest Labs direct API initialized
+2025-11-06 21:30:31,345 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-06 21:30:31,346 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-06 21:30:31,352 INFO Available providers in UI: ['openai', 'flux']
+2025-11-07 04:28:25,178 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-07 04:28:25,312 INFO OpenAI Images provider initialized
+2025-11-07 04:28:25,313 INFO Black Forest Labs direct API initialized
+2025-11-07 04:28:25,313 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 04:28:25,315 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 04:28:25,331 INFO Image Vault initialized at: /app/vault/images
+2025-11-07 04:28:25,331 INFO Image Vault initialized
+2025-11-07 04:28:25,342 INFO OpenAI Images provider initialized
+2025-11-07 04:28:25,343 INFO Black Forest Labs direct API initialized
+2025-11-07 04:28:25,343 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 04:28:25,345 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 04:28:39,129 INFO OpenAI Images provider initialized
+2025-11-07 04:28:39,129 INFO Black Forest Labs direct API initialized
+2025-11-07 04:28:39,130 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 04:28:39,131 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 04:28:42,472 INFO OpenAI Images provider initialized
+2025-11-07 04:28:42,473 INFO Black Forest Labs direct API initialized
+2025-11-07 04:28:42,474 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 04:28:42,476 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 04:28:42,506 INFO OpenAI Images provider initialized
+2025-11-07 04:28:42,507 INFO Black Forest Labs direct API initialized
+2025-11-07 04:28:42,507 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 04:28:42,509 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 04:28:42,525 INFO Available providers in UI: ['openai', 'flux']
+2025-11-07 04:49:38,274 INFO OpenAI Images provider initialized
+2025-11-07 04:49:38,275 INFO Black Forest Labs direct API initialized
+2025-11-07 04:49:38,275 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 04:49:38,277 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 05:27:31,941 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-07 05:27:32,139 INFO OpenAI Images provider initialized
+2025-11-07 05:27:32,139 INFO Black Forest Labs direct API initialized
+2025-11-07 05:27:32,139 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 05:27:32,141 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 05:27:32,158 INFO Image Vault initialized at: /app/vault/images
+2025-11-07 05:27:32,158 INFO Image Vault initialized
+2025-11-07 05:27:32,169 INFO OpenAI Images provider initialized
+2025-11-07 05:27:32,169 INFO Black Forest Labs direct API initialized
+2025-11-07 05:27:32,170 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 05:27:32,171 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 05:30:28,471 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-07 05:30:28,544 INFO OpenAI Images provider initialized
+2025-11-07 05:30:28,545 INFO Black Forest Labs direct API initialized
+2025-11-07 05:30:28,545 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 05:30:28,547 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 05:30:28,558 INFO Image Vault initialized at: /app/vault/images
+2025-11-07 05:30:28,558 INFO Image Vault initialized
+2025-11-07 05:30:28,570 INFO OpenAI Images provider initialized
+2025-11-07 05:30:28,571 INFO Black Forest Labs direct API initialized
+2025-11-07 05:30:28,571 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 05:30:28,573 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 07:05:11,230 INFO OpenAI Images provider initialized
+2025-11-07 07:05:11,234 INFO Black Forest Labs direct API initialized
+2025-11-07 07:05:11,235 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 07:05:11,238 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 07:05:51,452 INFO OpenAI Images provider initialized
+2025-11-07 07:05:51,453 INFO Black Forest Labs direct API initialized
+2025-11-07 07:05:51,453 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 07:05:51,454 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 07:06:06,999 INFO OpenAI Images provider initialized
+2025-11-07 07:06:07,000 INFO Black Forest Labs direct API initialized
+2025-11-07 07:06:07,001 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 07:06:07,003 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 07:06:09,372 INFO OpenAI Images provider initialized
+2025-11-07 07:06:09,372 INFO Black Forest Labs direct API initialized
+2025-11-07 07:06:09,373 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 07:06:09,374 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 08:10:02,490 INFO OpenAI Images provider initialized
+2025-11-07 08:10:02,921 INFO Black Forest Labs direct API initialized
+2025-11-07 08:10:02,925 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 08:10:02,955 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 08:10:13,873 INFO OpenAI Images provider initialized
+2025-11-07 08:10:13,874 INFO Black Forest Labs direct API initialized
+2025-11-07 08:10:13,875 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 08:10:13,876 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 18:36:44,723 INFO OpenAI Images provider initialized
+2025-11-07 18:36:44,836 INFO Black Forest Labs direct API initialized
+2025-11-07 18:36:44,836 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 18:36:44,844 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 18:36:46,578 INFO OpenAI Images provider initialized
+2025-11-07 18:36:46,579 INFO Black Forest Labs direct API initialized
+2025-11-07 18:36:46,579 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 18:36:46,584 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 18:36:59,873 INFO OpenAI Images provider initialized
+2025-11-07 18:36:59,873 INFO Black Forest Labs direct API initialized
+2025-11-07 18:36:59,874 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 18:36:59,875 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 18:37:05,258 INFO OpenAI Images provider initialized
+2025-11-07 18:37:05,259 INFO Black Forest Labs direct API initialized
+2025-11-07 18:37:05,260 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 18:37:05,261 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 18:37:19,805 INFO OpenAI Images provider initialized
+2025-11-07 18:37:19,806 INFO Black Forest Labs direct API initialized
+2025-11-07 18:37:19,806 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 18:37:19,808 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-07 18:37:23,762 INFO OpenAI Images provider initialized
+2025-11-07 18:37:23,763 INFO Black Forest Labs direct API initialized
+2025-11-07 18:37:23,794 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-07 18:37:23,796 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 01:56:04,407 INFO OpenAI Images provider initialized
+2025-11-08 01:56:04,784 INFO Black Forest Labs direct API initialized
+2025-11-08 01:56:04,785 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 01:56:04,793 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 01:56:48,109 INFO OpenAI Images provider initialized
+2025-11-08 01:56:48,109 INFO Black Forest Labs direct API initialized
+2025-11-08 01:56:48,110 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 01:56:48,114 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 04:53:27,960 INFO OpenAI Images provider initialized
+2025-11-08 04:53:27,962 INFO Black Forest Labs direct API initialized
+2025-11-08 04:53:27,962 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 04:53:27,964 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 04:53:30,428 INFO OpenAI Images provider initialized
+2025-11-08 04:53:30,699 INFO Black Forest Labs direct API initialized
+2025-11-08 04:53:30,701 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 04:53:30,703 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 04:53:36,713 INFO OpenAI Images provider initialized
+2025-11-08 04:53:36,713 INFO Black Forest Labs direct API initialized
+2025-11-08 04:53:36,714 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 04:53:36,715 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 21:33:52,100 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-08 21:33:52,372 INFO OpenAI Images provider initialized
+2025-11-08 21:33:52,373 INFO Black Forest Labs direct API initialized
+2025-11-08 21:33:52,373 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 21:33:52,375 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 21:33:52,400 INFO Image Vault initialized at: /app/vault/images
+2025-11-08 21:33:52,401 INFO Image Vault initialized
+2025-11-08 21:33:52,412 INFO OpenAI Images provider initialized
+2025-11-08 21:33:52,412 INFO Black Forest Labs direct API initialized
+2025-11-08 21:33:52,413 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 21:33:52,414 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 21:39:11,292 INFO OpenAI Images provider initialized
+2025-11-08 21:39:11,293 INFO Black Forest Labs direct API initialized
+2025-11-08 21:39:11,293 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 21:39:11,294 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 21:39:18,846 INFO OpenAI Images provider initialized
+2025-11-08 21:39:18,847 INFO Black Forest Labs direct API initialized
+2025-11-08 21:39:18,847 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 21:39:18,848 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 22:38:24,621 INFO OpenAI Images provider initialized
+2025-11-08 22:38:24,624 INFO Black Forest Labs direct API initialized
+2025-11-08 22:38:24,625 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 22:38:24,630 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 22:38:25,122 INFO OpenAI Images provider initialized
+2025-11-08 22:38:25,122 INFO Black Forest Labs direct API initialized
+2025-11-08 22:38:25,123 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 22:38:25,124 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 22:49:35,849 INFO OpenAI Images provider initialized
+2025-11-08 22:49:35,849 INFO Black Forest Labs direct API initialized
+2025-11-08 22:49:35,850 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 22:49:35,851 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 22:49:45,830 INFO OpenAI Images provider initialized
+2025-11-08 22:49:45,830 INFO Black Forest Labs direct API initialized
+2025-11-08 22:49:45,832 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 22:49:45,833 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 23:01:11,601 INFO OpenAI Images provider initialized
+2025-11-08 23:01:11,602 INFO Black Forest Labs direct API initialized
+2025-11-08 23:01:11,602 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 23:01:11,603 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 23:01:11,722 INFO OpenAI Images provider initialized
+2025-11-08 23:01:11,722 INFO Black Forest Labs direct API initialized
+2025-11-08 23:01:11,723 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 23:01:11,724 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 23:03:06,654 INFO OpenAI Images provider initialized
+2025-11-08 23:03:06,655 INFO Black Forest Labs direct API initialized
+2025-11-08 23:03:06,655 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 23:03:06,657 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 23:03:06,672 INFO OpenAI Images provider initialized
+2025-11-08 23:03:06,673 INFO Black Forest Labs direct API initialized
+2025-11-08 23:03:06,673 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 23:03:06,674 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 23:03:06,682 INFO Available providers in UI: ['openai', 'flux']
+2025-11-08 23:03:12,775 INFO OpenAI Images provider initialized
+2025-11-08 23:03:12,776 INFO Black Forest Labs direct API initialized
+2025-11-08 23:03:12,776 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 23:03:12,777 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 23:10:18,065 INFO OpenAI Images provider initialized
+2025-11-08 23:10:18,065 INFO Black Forest Labs direct API initialized
+2025-11-08 23:10:18,066 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 23:10:18,069 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 23:10:18,239 INFO OpenAI Images provider initialized
+2025-11-08 23:10:18,240 INFO Black Forest Labs direct API initialized
+2025-11-08 23:10:18,240 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 23:10:18,242 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 23:15:08,572 INFO OpenAI Images provider initialized
+2025-11-08 23:15:08,572 INFO Black Forest Labs direct API initialized
+2025-11-08 23:15:08,573 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 23:15:08,574 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 23:15:15,607 INFO OpenAI Images provider initialized
+2025-11-08 23:15:15,608 INFO Black Forest Labs direct API initialized
+2025-11-08 23:15:15,608 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 23:15:15,610 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 23:15:15,624 INFO OpenAI Images provider initialized
+2025-11-08 23:15:15,624 INFO Black Forest Labs direct API initialized
+2025-11-08 23:15:15,625 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 23:15:15,626 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 23:15:15,634 INFO Available providers in UI: ['openai', 'flux']
+2025-11-08 23:15:18,799 INFO OpenAI Images provider initialized
+2025-11-08 23:15:18,800 INFO Black Forest Labs direct API initialized
+2025-11-08 23:15:18,800 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 23:15:18,803 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 23:16:30,093 INFO OpenAI Images provider initialized
+2025-11-08 23:16:30,094 INFO Black Forest Labs direct API initialized
+2025-11-08 23:16:30,094 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 23:16:30,096 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 23:16:30,206 INFO OpenAI Images provider initialized
+2025-11-08 23:16:30,207 INFO Black Forest Labs direct API initialized
+2025-11-08 23:16:30,207 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 23:16:30,208 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 23:18:29,122 INFO OpenAI Images provider initialized
+2025-11-08 23:18:29,122 INFO Black Forest Labs direct API initialized
+2025-11-08 23:18:29,123 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 23:18:29,124 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 23:18:29,140 INFO OpenAI Images provider initialized
+2025-11-08 23:18:29,141 INFO Black Forest Labs direct API initialized
+2025-11-08 23:18:29,141 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 23:18:29,142 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-08 23:18:29,150 INFO Available providers in UI: ['openai', 'flux']
+2025-11-08 23:18:33,885 INFO OpenAI Images provider initialized
+2025-11-08 23:18:33,886 INFO Black Forest Labs direct API initialized
+2025-11-08 23:18:33,886 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-08 23:18:33,887 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 00:22:29,783 INFO OpenAI Images provider initialized
+2025-11-09 00:22:29,785 INFO Black Forest Labs direct API initialized
+2025-11-09 00:22:29,786 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 00:22:29,794 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 00:22:30,303 INFO OpenAI Images provider initialized
+2025-11-09 00:22:30,304 INFO Black Forest Labs direct API initialized
+2025-11-09 00:22:30,305 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 00:22:30,306 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 00:32:27,194 INFO OpenAI Images provider initialized
+2025-11-09 00:32:27,195 INFO Black Forest Labs direct API initialized
+2025-11-09 00:32:27,195 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 00:32:27,197 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 00:32:27,219 INFO OpenAI Images provider initialized
+2025-11-09 00:32:27,220 INFO Black Forest Labs direct API initialized
+2025-11-09 00:32:27,220 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 00:32:27,222 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 00:32:27,230 INFO Available providers in UI: ['openai', 'flux']
+2025-11-09 00:32:37,549 INFO OpenAI Images provider initialized
+2025-11-09 00:32:37,550 INFO Black Forest Labs direct API initialized
+2025-11-09 00:32:37,551 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 00:32:37,553 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 00:33:46,147 INFO OpenAI Images provider initialized
+2025-11-09 00:33:46,148 INFO Black Forest Labs direct API initialized
+2025-11-09 00:33:46,149 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 00:33:46,151 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 00:33:46,300 INFO OpenAI Images provider initialized
+2025-11-09 00:33:46,300 INFO Black Forest Labs direct API initialized
+2025-11-09 00:33:46,301 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 00:33:46,302 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 08:27:54,427 INFO OpenAI Images provider initialized
+2025-11-09 08:27:54,430 INFO Black Forest Labs direct API initialized
+2025-11-09 08:27:54,431 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 08:27:54,436 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 08:27:54,450 INFO OpenAI Images provider initialized
+2025-11-09 08:27:54,450 INFO Black Forest Labs direct API initialized
+2025-11-09 08:27:54,451 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 08:27:54,452 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 08:27:54,490 INFO Available providers in UI: ['openai', 'flux']
+2025-11-09 08:27:57,941 INFO OpenAI Images provider initialized
+2025-11-09 08:27:57,942 INFO Black Forest Labs direct API initialized
+2025-11-09 08:27:57,943 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 08:27:57,945 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 08:28:45,959 INFO OpenAI Images provider initialized
+2025-11-09 08:28:45,959 INFO Black Forest Labs direct API initialized
+2025-11-09 08:28:45,960 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 08:28:45,961 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 08:59:05,580 INFO OpenAI Images provider initialized
+2025-11-09 08:59:05,585 INFO Black Forest Labs direct API initialized
+2025-11-09 08:59:05,586 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 08:59:05,589 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 08:59:23,716 INFO OpenAI Images provider initialized
+2025-11-09 08:59:23,717 INFO Black Forest Labs direct API initialized
+2025-11-09 08:59:23,717 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 08:59:23,719 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 08:59:34,642 INFO OpenAI Images provider initialized
+2025-11-09 08:59:34,643 INFO Black Forest Labs direct API initialized
+2025-11-09 08:59:34,644 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 08:59:34,645 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 08:59:36,381 INFO OpenAI Images provider initialized
+2025-11-09 08:59:36,382 INFO Black Forest Labs direct API initialized
+2025-11-09 08:59:36,383 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 08:59:36,384 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 16:52:29,378 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-09 16:52:29,708 INFO OpenAI Images provider initialized
+2025-11-09 16:52:29,710 INFO Black Forest Labs direct API initialized
+2025-11-09 16:52:29,710 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 16:52:29,721 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 16:52:29,760 INFO Image Vault initialized at: /app/vault/images
+2025-11-09 16:52:29,761 INFO Image Vault initialized
+2025-11-09 16:52:29,806 INFO OpenAI Images provider initialized
+2025-11-09 16:52:29,806 INFO Black Forest Labs direct API initialized
+2025-11-09 16:52:29,807 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 16:52:29,807 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 16:52:42,917 INFO OpenAI Images provider initialized
+2025-11-09 16:52:42,917 INFO Black Forest Labs direct API initialized
+2025-11-09 16:52:42,918 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 16:52:42,919 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 17:07:49,572 INFO OpenAI Images provider initialized
+2025-11-09 17:07:49,573 INFO Black Forest Labs direct API initialized
+2025-11-09 17:07:49,573 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 17:07:49,575 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 23:29:33,644 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-09 23:29:33,646 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-09 23:29:33,882 INFO OpenAI Images provider initialized
+2025-11-09 23:29:33,884 INFO Black Forest Labs direct API initialized
+2025-11-09 23:29:33,886 INFO OpenAI Images provider initialized
+2025-11-09 23:29:33,887 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 23:29:33,887 INFO Black Forest Labs direct API initialized
+2025-11-09 23:29:33,893 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 23:29:33,896 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 23:29:33,896 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 23:29:33,917 INFO Image Vault initialized at: /app/vault/images
+2025-11-09 23:29:33,917 INFO Image Vault initialized
+2025-11-09 23:29:33,918 INFO Image Vault initialized at: /app/vault/images
+2025-11-09 23:29:33,919 INFO Image Vault initialized
+2025-11-09 23:29:33,931 INFO OpenAI Images provider initialized
+2025-11-09 23:29:33,932 INFO Black Forest Labs direct API initialized
+2025-11-09 23:29:33,932 INFO OpenAI Images provider initialized
+2025-11-09 23:29:33,932 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 23:29:33,933 INFO Black Forest Labs direct API initialized
+2025-11-09 23:29:33,934 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-09 23:29:33,934 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-09 23:29:34,411 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-10 18:17:36,223 INFO OpenAI Images provider initialized
+2025-11-10 18:17:36,226 INFO Black Forest Labs direct API initialized
+2025-11-10 18:17:36,226 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-10 18:17:36,229 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-10 18:20:04,096 INFO OpenAI Images provider initialized
+2025-11-10 18:20:04,097 INFO Black Forest Labs direct API initialized
+2025-11-10 18:20:04,098 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-10 18:20:04,099 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-11 17:57:01,247 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-11 17:57:01,523 INFO OpenAI Images provider initialized
+2025-11-11 17:57:01,523 INFO Black Forest Labs direct API initialized
+2025-11-11 17:57:01,524 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-11 17:57:01,526 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-11 17:57:01,562 INFO Image Vault initialized at: /app/vault/images
+2025-11-11 17:57:01,563 INFO Image Vault initialized
+2025-11-11 17:57:01,592 INFO OpenAI Images provider initialized
+2025-11-11 17:57:01,593 INFO Black Forest Labs direct API initialized
+2025-11-11 17:57:01,595 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-11 17:57:01,597 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-11 18:03:48,963 INFO OpenAI Images provider initialized
+2025-11-11 18:03:48,964 INFO Black Forest Labs direct API initialized
+2025-11-11 18:03:48,964 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-11 18:03:48,965 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-11 18:08:36,763 INFO OpenAI Images provider initialized
+2025-11-11 18:08:36,764 INFO Black Forest Labs direct API initialized
+2025-11-11 18:08:36,764 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-11 18:08:36,766 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-11 19:32:59,357 INFO OpenAI Images provider initialized
+2025-11-11 19:32:59,358 INFO Black Forest Labs direct API initialized
+2025-11-11 19:32:59,358 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-11 19:32:59,360 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-11 19:33:03,161 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-11 19:33:03,212 INFO OpenAI Images provider initialized
+2025-11-11 19:33:03,212 INFO Black Forest Labs direct API initialized
+2025-11-11 19:33:03,213 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-11 19:33:03,214 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-11 19:33:03,221 INFO Image Vault initialized at: /app/vault/images
+2025-11-11 19:33:03,221 INFO Image Vault initialized
+2025-11-11 19:33:03,230 INFO OpenAI Images provider initialized
+2025-11-11 19:33:03,231 INFO Black Forest Labs direct API initialized
+2025-11-11 19:33:03,231 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-11 19:33:03,232 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-11 19:33:25,639 INFO OpenAI Images provider initialized
+2025-11-11 19:33:25,640 INFO Black Forest Labs direct API initialized
+2025-11-11 19:33:25,641 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-11 19:33:25,643 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-11 19:33:25,775 INFO OpenAI Images provider initialized
+2025-11-11 19:33:25,775 INFO Black Forest Labs direct API initialized
+2025-11-11 19:33:25,776 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-11 19:33:25,777 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-11 22:12:52,039 INFO OpenAI Images provider initialized
+2025-11-11 22:12:52,144 INFO Black Forest Labs direct API initialized
+2025-11-11 22:12:52,145 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-11 22:12:52,150 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-11 22:12:56,282 INFO OpenAI Images provider initialized
+2025-11-11 22:12:56,283 INFO Black Forest Labs direct API initialized
+2025-11-11 22:12:56,284 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-11 22:12:56,286 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-11 22:13:02,309 INFO OpenAI Images provider initialized
+2025-11-11 22:13:02,310 INFO Black Forest Labs direct API initialized
+2025-11-11 22:13:02,311 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-11 22:13:02,312 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-18 23:53:33,142 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-18 23:53:33,503 INFO OpenAI Images provider initialized
+2025-11-18 23:53:33,503 INFO Black Forest Labs direct API initialized
+2025-11-18 23:53:33,503 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-18 23:53:33,505 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-18 23:53:33,537 INFO Image Vault initialized at: /app/vault/images
+2025-11-18 23:53:33,538 INFO Image Vault initialized
+2025-11-18 23:53:33,594 INFO OpenAI Images provider initialized
+2025-11-18 23:53:33,595 INFO Black Forest Labs direct API initialized
+2025-11-18 23:53:33,596 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-18 23:53:33,597 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-18 23:59:48,979 INFO OpenAI Images provider initialized
+2025-11-18 23:59:48,980 INFO Black Forest Labs direct API initialized
+2025-11-18 23:59:48,980 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-18 23:59:48,982 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-19 00:03:36,703 INFO OpenAI Images provider initialized
+2025-11-19 00:03:36,703 INFO Black Forest Labs direct API initialized
+2025-11-19 00:03:36,704 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-19 00:03:36,707 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-20 16:09:18,417 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-20 16:09:18,631 INFO OpenAI Images provider initialized
+2025-11-20 16:09:18,632 INFO Black Forest Labs direct API initialized
+2025-11-20 16:09:18,633 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-20 16:09:18,637 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-20 16:09:18,681 INFO Image Vault initialized at: /app/vault/images
+2025-11-20 16:09:18,681 INFO Image Vault initialized
+2025-11-20 16:09:18,704 INFO OpenAI Images provider initialized
+2025-11-20 16:09:18,705 INFO Black Forest Labs direct API initialized
+2025-11-20 16:09:18,705 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-20 16:09:18,707 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-20 16:10:17,077 INFO OpenAI Images provider initialized
+2025-11-20 16:10:17,077 INFO Black Forest Labs direct API initialized
+2025-11-20 16:10:17,078 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-20 16:10:17,079 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-20 16:25:03,086 INFO OpenAI Images provider initialized
+2025-11-20 16:25:03,086 INFO Black Forest Labs direct API initialized
+2025-11-20 16:25:03,087 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-20 16:25:03,088 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-20 16:47:21,810 INFO OpenAI Images provider initialized
+2025-11-20 16:47:21,811 INFO Black Forest Labs direct API initialized
+2025-11-20 16:47:21,812 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-20 16:47:21,813 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-24 17:42:04,530 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-24 17:42:04,919 INFO OpenAI Images provider initialized
+2025-11-24 17:42:04,920 INFO Black Forest Labs direct API initialized
+2025-11-24 17:42:04,920 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-24 17:42:04,923 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-24 17:42:04,963 INFO Image Vault initialized at: /app/vault/images
+2025-11-24 17:42:04,964 INFO Image Vault initialized
+2025-11-24 17:42:04,976 INFO OpenAI Images provider initialized
+2025-11-24 17:42:04,977 INFO Black Forest Labs direct API initialized
+2025-11-24 17:42:04,977 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-24 17:42:04,978 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-29 08:51:50,269 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-11-29 08:51:50,622 INFO OpenAI Images provider initialized
+2025-11-29 08:51:50,622 INFO Black Forest Labs direct API initialized
+2025-11-29 08:51:50,623 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-29 08:51:50,627 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-29 08:51:50,663 INFO Image Vault initialized at: /app/vault/images
+2025-11-29 08:51:50,664 INFO Image Vault initialized
+2025-11-29 08:51:50,686 INFO OpenAI Images provider initialized
+2025-11-29 08:51:50,687 INFO Black Forest Labs direct API initialized
+2025-11-29 08:51:50,688 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-29 08:51:50,690 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-29 08:51:57,501 INFO OpenAI Images provider initialized
+2025-11-29 08:51:57,502 INFO Black Forest Labs direct API initialized
+2025-11-29 08:51:57,503 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-29 08:51:57,528 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-29 08:54:52,422 INFO OpenAI Images provider initialized
+2025-11-29 08:54:52,423 INFO Black Forest Labs direct API initialized
+2025-11-29 08:54:52,424 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-29 08:54:52,427 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-29 23:15:43,620 INFO OpenAI Images provider initialized
+2025-11-29 23:15:43,621 INFO Black Forest Labs direct API initialized
+2025-11-29 23:15:43,622 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-29 23:15:43,624 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-29 23:15:52,377 INFO OpenAI Images provider initialized
+2025-11-29 23:15:52,378 INFO Black Forest Labs direct API initialized
+2025-11-29 23:15:52,379 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-29 23:15:52,381 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-29 23:15:56,950 INFO OpenAI Images provider initialized
+2025-11-29 23:15:56,950 INFO Black Forest Labs direct API initialized
+2025-11-29 23:15:56,951 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-29 23:15:56,953 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-30 02:04:57,948 INFO OpenAI Images provider initialized
+2025-11-30 02:04:57,949 INFO Black Forest Labs direct API initialized
+2025-11-30 02:04:57,949 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-30 02:04:57,951 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-30 02:04:58,489 INFO OpenAI Images provider initialized
+2025-11-30 02:04:58,489 INFO Black Forest Labs direct API initialized
+2025-11-30 02:04:58,491 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-30 02:04:58,493 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-30 02:05:22,089 INFO OpenAI Images provider initialized
+2025-11-30 02:05:22,089 INFO Black Forest Labs direct API initialized
+2025-11-30 02:05:22,090 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-30 02:05:22,093 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-11-30 02:05:29,490 INFO OpenAI Images provider initialized
+2025-11-30 02:05:29,490 INFO Black Forest Labs direct API initialized
+2025-11-30 02:05:29,491 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-11-30 02:05:29,492 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-12-05 03:22:45,545 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-12-05 03:22:45,820 INFO OpenAI Images provider initialized
+2025-12-05 03:22:45,821 INFO Black Forest Labs direct API initialized
+2025-12-05 03:22:45,821 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-12-05 03:22:45,823 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-12-05 03:22:45,855 INFO Image Vault initialized at: /app/vault/images
+2025-12-05 03:22:45,856 INFO Image Vault initialized
+2025-12-05 03:22:45,873 INFO OpenAI Images provider initialized
+2025-12-05 03:22:45,874 INFO Black Forest Labs direct API initialized
+2025-12-05 03:22:45,874 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-12-05 03:22:45,877 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-12-05 03:42:51,126 INFO OpenAI Images provider initialized
+2025-12-05 03:42:51,126 INFO Black Forest Labs direct API initialized
+2025-12-05 03:42:51,127 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-12-05 03:42:51,128 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-12-05 03:46:41,850 INFO OpenAI Images provider initialized
+2025-12-05 03:46:41,851 INFO Black Forest Labs direct API initialized
+2025-12-05 03:46:41,959 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-12-05 03:46:41,963 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-12-05 03:48:09,769 INFO OpenAI Images provider initialized
+2025-12-05 03:48:09,770 INFO Black Forest Labs direct API initialized
+2025-12-05 03:48:09,770 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-12-05 03:48:09,773 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-12-05 06:00:11,462 INFO OpenAI Images provider initialized
+2025-12-05 06:00:11,463 INFO Black Forest Labs direct API initialized
+2025-12-05 06:00:11,464 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-12-05 06:00:11,467 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-12-05 06:00:18,869 INFO OpenAI Images provider initialized
+2025-12-05 06:00:18,870 INFO Black Forest Labs direct API initialized
+2025-12-05 06:00:18,870 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-12-05 06:00:18,871 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-12-05 06:00:23,355 INFO OpenAI Images provider initialized
+2025-12-05 06:00:23,356 INFO Black Forest Labs direct API initialized
+2025-12-05 06:00:23,356 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-12-05 06:00:23,358 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-12-05 07:00:17,395 INFO OpenAI Images provider initialized
+2025-12-05 07:00:17,410 INFO Black Forest Labs direct API initialized
+2025-12-05 07:00:17,411 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-12-05 07:00:17,412 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-12-05 07:02:12,264 INFO OpenAI Images provider initialized
+2025-12-05 07:02:12,265 INFO Black Forest Labs direct API initialized
+2025-12-05 07:02:12,265 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-12-05 07:02:12,268 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-12-06 19:06:51,918 INFO Initialized PromptDataManager with CSV path: /app/prompts/prompts.csv
+2025-12-06 19:06:52,162 INFO OpenAI Images provider initialized
+2025-12-06 19:06:52,162 INFO Black Forest Labs direct API initialized
+2025-12-06 19:06:52,163 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-12-06 19:06:52,165 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.
+2025-12-06 19:06:52,198 INFO Image Vault initialized at: /app/vault/images
+2025-12-06 19:06:52,198 INFO Image Vault initialized
+2025-12-06 19:06:52,213 INFO OpenAI Images provider initialized
+2025-12-06 19:06:52,213 INFO Black Forest Labs direct API initialized
+2025-12-06 19:06:52,214 INFO Flux provider initialized (host: bfl, model: flux-pro)
+2025-12-06 19:06:52,215 WARNING ComfyUI server not reachable at 127.0.0.1:8188. Skipping ComfyUI provider.

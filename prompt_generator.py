@@ -9,7 +9,7 @@ class PromptGenerator:
     def __init__(self):
         self.config = Config()
         # Initialize OpenAI client
-        self.client = openai.OpenAI(api_key=self.config.api_key)
+        self.client = openai.OpenAI(api_key=self.config.get_openai_api_key())
         # Initialize prompt repository
         self.repository = PromptRepository()
         self.parameter_order = [

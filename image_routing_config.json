@@ -1,0 +1,65 @@
+{
+  "default_provider": "comfyui",
+  "style_routing": {
+    "fast_draft": {
+      "provider": "comfyui",
+      "model": "sd_xl_base_1.0.safetensors",
+      "priority": 1,
+      "note": "Using SDXL via ComfyUI for fast generation"
+    },
+    "photoreal": {
+      "provider": "comfyui",
+      "model": "sd_xl_base_1.0.safetensors",
+      "priority": 1
+    },
+    "brand_layout": {
+      "provider": "openai",
+      "priority": 1
+    },
+    "logo_text": {
+      "provider": "openai",
+      "priority": 1
+    },
+    "portrait": {
+      "provider": "comfyui",
+      "model": "sd_xl_base_1.0.safetensors",
+      "priority": 1
+    },
+    "product": {
+      "provider": "openai",
+      "priority": 1
+    },
+    "artistic": {
+      "provider": "comfyui",
+      "model": "sd_xl_base_1.0.safetensors",
+      "priority": 1
+    },
+    "cinematic": {
+      "provider": "comfyui",
+      "model": "sd_xl_base_1.0.safetensors",
+      "priority": 1
+    }
+  },
+  "feature_routing": {
+    "img2img": {
+      "provider": "comfyui",
+      "model": "sd_xl_base_1.0.safetensors",
+      "required": true
+    },
+    "inpainting": {
+      "provider": "comfyui",
+      "model": "sd_xl_base_1.0.safetensors",
+      "required": true
+    },
+    "negative_prompts": {
+      "provider": "comfyui",
+      "required": false
+    },
+    "seeds": {
+      "provider": "comfyui",
+      "required": false
+    }
+  },
+  "fallback_chain": ["comfyui", "flux", "openai"]
+}
+

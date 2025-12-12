@@ -14,12 +14,16 @@ RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements-web.
 # Copy application files
 COPY *.py ./
 COPY styles.css ./
+COPY image_routing_config.json ./
 # Do not bake secrets or local configs into the image
 # .env is mounted at runtime via docker-compose
+# workflows directory is mounted at runtime via docker-compose
 
-# Create data directory
+# Create data directories
 RUN mkdir -p /app/data
 RUN mkdir -p /app/logs
+RUN mkdir -p /app/workflows/comfyui
+RUN mkdir -p /app/temp_uploads
 
 # Create Streamlit config directory and config file
 RUN mkdir -p ~/.streamlit \

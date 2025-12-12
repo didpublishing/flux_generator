@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "images": [
+    {
+      "url": "https://bfldeliveryprodeu4.blob.core.windows.net/results/5e/254710f6c27bb0/f6c27bb0b4cc48ad8708f8ebc08ec2db/sample.jpeg?se=2025-11-03T18%3A17%3A35Z&sp=r&sv=2024-11-04&sr=b&rsct=image/jpeg&sig=shP1T/jrCx%2BSS2vRFGgYhy/CKDw9pjFCAGJ934kQBIs%3D"
+    }
+  ],
+  "provider": "flux_bfl",
+  "model": "flux-pro",
+  "error": null,
+  "metadata": {
+    "bfl_polling_url": "https://api.eu4.bfl.ai/v1/get_result?id=1a4ffe3d-97ed-4718-99d1-d6366a88e102",
+    "bfl_status": "Ready"
+  },
+  "cached_at": "2025-11-03T18:07:35.157588"
+}

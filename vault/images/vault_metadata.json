@@ -1,0 +1,429 @@
+{
+  "images": {
+    "00b28985": {
+      "id": "00b28985",
+      "filename": "00b28985.png",
+      "prompt": "Edit: Add more light to the room to see the woman dressed in hospital scrubs more clearly.",
+      "provider": "flux_bfl",
+      "model": "flux-dev",
+      "style": null,
+      "source_type": "edited",
+      "timestamp": "2025-11-01T09:00:51.937172",
+      "date": "2025-11-01",
+      "time": "09:00:51",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": 0.5,
+        "bfl_polling_url": "https://api.eu2.bfl.ai/v1/get_result?id=d24ef7b1-b6f9-4427-8b07-3ed3326d909e",
+        "bfl_status": "Ready"
+      }
+    },
+    "fe6bbe71": {
+      "id": "fe6bbe71",
+      "filename": "fe6bbe71.png",
+      "prompt": "Edit: Add more light to the room to see the woman dressed in hospital scrubs more clearly.",
+      "provider": "flux_bfl",
+      "model": "flux-dev",
+      "style": null,
+      "source_type": "edited",
+      "timestamp": "2025-11-01T09:01:18.196383",
+      "date": "2025-11-01",
+      "time": "09:01:18",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": 0.3,
+        "bfl_polling_url": "https://api.eu2.bfl.ai/v1/get_result?id=8f9f7611-ca25-418b-aa7d-12b3397c341c",
+        "bfl_status": "Ready"
+      }
+    },
+    "4c60ba43": {
+      "id": "4c60ba43",
+      "filename": "4c60ba43.png",
+      "prompt": "Edit: Add more light to the room to see the woman dressed in hospital scrubs more clearly. Keep the elements of the scene as is. Just lighten for clearity.",
+      "provider": "flux_bfl",
+      "model": "flux-dev",
+      "style": null,
+      "source_type": "edited",
+      "timestamp": "2025-11-01T09:02:17.153191",
+      "date": "2025-11-01",
+      "time": "09:02:17",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": 0.2,
+        "bfl_polling_url": "https://api.eu4.bfl.ai/v1/get_result?id=0b20be3c-d00e-4930-ae2d-86a380c4bcb1",
+        "bfl_status": "Ready"
+      }
+    },
+    "59cbf612": {
+      "id": "59cbf612",
+      "filename": "59cbf612.png",
+      "prompt": "Edit: Add more light to the room to see the woman dressed in hospital scrubs more clearly. Keep the elements of the scene as is. Just lighten for clearity.",
+      "provider": "flux_bfl",
+      "model": "flux-dev",
+      "style": "cinematic",
+      "source_type": "edited",
+      "timestamp": "2025-11-01T09:03:24.332934",
+      "date": "2025-11-01",
+      "time": "09:03:24",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": 869198231527970,
+        "negative_prompt": null,
+        "strength": 0.1,
+        "bfl_polling_url": "https://api.eu1.bfl.ai/v1/get_result?id=f8ccdb5b-cf98-4dec-a0c7-39458b1fd01e",
+        "bfl_status": "Ready"
+      }
+    },
+    "70296548": {
+      "id": "70296548",
+      "filename": "70296548.png",
+      "prompt": "Edit: Lighten the image. Capture a cinematic tableau of a [bedroom scene] with two figures: [a man seated on the bed] in the foreground and [a woman in green hospital scrubs] standing near the foot of the bed, gesturing towards him, dramatic chiaroscuro lighting creates an intimate atmosphere, hard focus on the standing figure, low angle shot from behind the seated figure, bold composition emphasizing the narrative and tension, detailed textures on furniture and fabrics, color palette of muted earth tones, blue, and yellow, --neg [bright colors, cluttered background, soft focus], --ar 16:9, Camera: Canon EOS 5D Mark IV, Lens: EF 24-70mm f/2.8L II USM, Exposure: ISO 400, f/4, 1/60 sec.",
+      "provider": "flux_bfl",
+      "model": "flux-dev",
+      "style": "cinematic",
+      "source_type": "edited",
+      "timestamp": "2025-11-01T09:05:22.176789",
+      "date": "2025-11-01",
+      "time": "09:05:22",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": 869198231527970,
+        "negative_prompt": null,
+        "strength": 0.2,
+        "bfl_polling_url": "https://api.eu4.bfl.ai/v1/get_result?id=42e5ac78-072c-4313-9ff9-17c192dfd792",
+        "bfl_status": "Ready"
+      }
+    },
+    "89618292": {
+      "id": "89618292",
+      "filename": "89618292.png",
+      "prompt": "Edit: more light on the woman in the green hospital scrubs. sunlight streaming from the window on her left. leave stile, composition and elements as is.",
+      "provider": "flux_bfl",
+      "model": "flux-kontext-pro",
+      "style": null,
+      "source_type": "edited",
+      "timestamp": "2025-11-01T09:16:40.223551",
+      "date": "2025-11-01",
+      "time": "09:16:40",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": 0.4,
+        "bfl_polling_url": "https://api.eu4.bfl.ai/v1/get_result?id=25445b69-1872-462f-b009-efb5c1209fd1",
+        "bfl_status": "Ready"
+      }
+    },
+    "1c3a7b4c": {
+      "id": "1c3a7b4c",
+      "filename": "1c3a7b4c.png",
+      "prompt": "Edit: more light on the woman in the green hospital scrubs. sunlight streaming from the window on her left. leave stile, composition and elements as is.",
+      "provider": "flux_bfl",
+      "model": "flux-kontext-pro",
+      "style": null,
+      "source_type": "edited",
+      "timestamp": "2025-11-01T09:18:22.879826",
+      "date": "2025-11-01",
+      "time": "09:18:22",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": 0.2,
+        "bfl_polling_url": "https://api.eu4.bfl.ai/v1/get_result?id=997dd551-d7ab-45f6-a36f-1bcc6b19fc14",
+        "bfl_status": "Ready"
+      }
+    },
+    "94ace7fc": {
+      "id": "94ace7fc",
+      "filename": "94ace7fc.png",
+      "prompt": "Edit: more light in the room.  leave style, composition and elements as is.",
+      "provider": "flux_bfl",
+      "model": "flux-kontext-pro",
+      "style": null,
+      "source_type": "edited",
+      "timestamp": "2025-11-01T09:19:19.487108",
+      "date": "2025-11-01",
+      "time": "09:19:19",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": 0.2,
+        "bfl_polling_url": "https://api.eu4.bfl.ai/v1/get_result?id=5623c30f-65c7-41fa-867a-ba00b0505651",
+        "bfl_status": "Ready"
+      }
+    },
+    "35205ce1": {
+      "id": "35205ce1",
+      "filename": "35205ce1.png",
+      "prompt": "Edit: Add more light. lighten the figure in the green hospital scrubs. Leave everything else as is.",
+      "provider": "flux_bfl",
+      "model": "flux-kontext-pro",
+      "style": "photoreal",
+      "source_type": "edited",
+      "timestamp": "2025-11-01T09:25:08.639795",
+      "date": "2025-11-01",
+      "time": "09:25:08",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": 0.3,
+        "bfl_polling_url": "https://api.eu4.bfl.ai/v1/get_result?id=f20db352-09a5-44fa-be10-a5a1b8e7ad1c",
+        "bfl_status": "Ready"
+      }
+    },
+    "de87a9e9": {
+      "id": "de87a9e9",
+      "filename": "de87a9e9.png",
+      "prompt": "Edit: Add more light. lighten the figure in the green hospital scrubs. Leave everything else as is.",
+      "provider": "flux_bfl",
+      "model": "flux-kontext-pro",
+      "style": "photoreal",
+      "source_type": "edited",
+      "timestamp": "2025-11-01T09:26:05.505906",
+      "date": "2025-11-01",
+      "time": "09:26:05",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": 0.7,
+        "bfl_polling_url": "https://api.eu1.bfl.ai/v1/get_result?id=766bcecd-3df9-4b4b-b0df-f009a43172b2",
+        "bfl_status": "Ready"
+      }
+    },
+    "23e5b4b5": {
+      "id": "23e5b4b5",
+      "filename": "23e5b4b5.png",
+      "prompt": "Here’s a highly optimized Flux prompt based on your context:\n\n**Prompt:** [A woman in a business suit holding a large wrench], 35mm photography, 3/4 shot angle, industrial environment, dramatic lighting, center focus, analogous color palette, asymmetrical composition, smiling with a great sense of satisfaction, a small group of men in hard hats slightly out of focus in the background, --neg [blurry subjects, cluttered background] --ar 16:9 --camera Canon EOS 5D Mark IV --lens 35mm f/1.4 --exposure 1/125 sec, ISO 200, f/2.8.",
+      "provider": "flux_bfl",
+      "model": "flux-pro",
+      "style": "photoreal",
+      "source_type": "generated",
+      "timestamp": "2025-11-03T18:07:35.168582",
+      "date": "2025-11-03",
+      "time": "18:07:35",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": null,
+        "bfl_polling_url": "https://api.eu4.bfl.ai/v1/get_result?id=1a4ffe3d-97ed-4718-99d1-d6366a88e102",
+        "bfl_status": "Ready"
+      }
+    },
+    "6670c6fe": {
+      "id": "6670c6fe",
+      "filename": "6670c6fe.png",
+      "prompt": "Edit: full color image of man holding a pencil and writing in a word search magazine on the table.",
+      "provider": "flux_bfl",
+      "model": "flux-kontext-pro",
+      "style": "photoreal",
+      "source_type": "edited",
+      "timestamp": "2025-11-04T02:19:14.674081",
+      "date": "2025-11-04",
+      "time": "02:19:14",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": 0.7,
+        "bfl_polling_url": "https://api.eu4.bfl.ai/v1/get_result?id=0086109a-20c9-4662-a99a-a8057dd3a5e5",
+        "bfl_status": "Ready"
+      }
+    },
+    "98d8af7d": {
+      "id": "98d8af7d",
+      "filename": "98d8af7d.png",
+      "prompt": "Edit: full color image of man holding a pencil and writing in a word search magazine on the table.",
+      "provider": "flux_bfl",
+      "model": "flux-kontext-pro",
+      "style": "photoreal",
+      "source_type": "edited",
+      "timestamp": "2025-11-04T02:19:57.186753",
+      "date": "2025-11-04",
+      "time": "02:19:57",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": 0.3,
+        "bfl_polling_url": "https://api.eu4.bfl.ai/v1/get_result?id=dbfefe5c-9077-44d7-ac2f-9fe79a0438fa",
+        "bfl_status": "Ready"
+      }
+    },
+    "d793744d": {
+      "id": "d793744d",
+      "filename": "d793744d.png",
+      "prompt": "Edit: full color image of man holding a pencil and writing in a word search magazine on the table.",
+      "provider": "flux_bfl",
+      "model": "flux-kontext-pro",
+      "style": "photoreal",
+      "source_type": "edited",
+      "timestamp": "2025-11-04T02:20:40.439364",
+      "date": "2025-11-04",
+      "time": "02:20:40",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": 0.1,
+        "bfl_polling_url": "https://api.eu2.bfl.ai/v1/get_result?id=e2a4f64b-2712-497c-a475-c9a2aba8d0d8",
+        "bfl_status": "Ready"
+      }
+    },
+    "595fe390": {
+      "id": "595fe390",
+      "filename": "595fe390.png",
+      "prompt": "Edit: full color image of man holding a pencil and writing in a word search magazine.",
+      "provider": "flux_bfl",
+      "model": "flux-kontext-pro",
+      "style": "photoreal",
+      "source_type": "edited",
+      "timestamp": "2025-11-04T02:23:11.567458",
+      "date": "2025-11-04",
+      "time": "02:23:11",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": 0.2,
+        "bfl_polling_url": "https://api.eu2.bfl.ai/v1/get_result?id=6ba403c8-e201-44be-902e-8f11f5675723",
+        "bfl_status": "Ready"
+      }
+    },
+    "094e5506": {
+      "id": "094e5506",
+      "filename": "094e5506.png",
+      "prompt": "Edit: full color image of man holding a pencil and writing in a word search magazine.",
+      "provider": "flux_bfl",
+      "model": "flux-kontext-pro",
+      "style": "photoreal",
+      "source_type": "edited",
+      "timestamp": "2025-11-04T02:23:51.491248",
+      "date": "2025-11-04",
+      "time": "02:23:51",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": 0.1,
+        "bfl_polling_url": "https://api.eu2.bfl.ai/v1/get_result?id=28823c8a-9b40-40db-9f66-8a58bf9b2778",
+        "bfl_status": "Ready"
+      }
+    },
+    "f352ddd4": {
+      "id": "f352ddd4",
+      "filename": "f352ddd4.png",
+      "prompt": "A realistic photograph of an elderly person laughing while pointing at sheet music, taken at eye-level with a medium close-up shot. The setting is indoors with a warm, cozy atmosphere, featuring a wooden table. The lighting is warm and focused, creating an intimate mood. The color palette consists of warm tones with browns and soft highlights. The composition centers the subject with a shallow depth of field, emphasizing the joyful expression and engagement.",
+      "provider": "flux_bfl",
+      "model": "flux-kontext-pro",
+      "style": "fast_draft",
+      "source_type": "generated",
+      "timestamp": "2025-11-04T02:26:01.959707",
+      "date": "2025-11-04",
+      "time": "02:26:01",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": null,
+        "bfl_polling_url": "https://api.eu2.bfl.ai/v1/get_result?id=6dfb2f4f-5dea-410d-ac7d-469d4fc7780f",
+        "bfl_status": "Ready"
+      }
+    },
+    "f19e5eb3": {
+      "id": "f19e5eb3",
+      "filename": "f19e5eb3.png",
+      "prompt": "A realistic photograph of an elderly person laughing while pointing at sheet music, taken at eye-level with a medium close-up shot. The setting is indoors with a  cozy atmosphere, featuring a wooden table. The lighting is cool on the left and warm on the right, and focused, creating an intimate mood. The color palette consists of warm tones with browns and soft highlights on the right and cool tones on the left. The composition places the subject left  of center with a shallow depth of field, emphasizing the joyful expression and engagement.",
+      "provider": "flux_bfl",
+      "model": "flux-dev",
+      "style": "fast_draft",
+      "source_type": "generated",
+      "timestamp": "2025-11-04T02:28:53.621417",
+      "date": "2025-11-04",
+      "time": "02:28:53",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": null,
+        "bfl_polling_url": "https://api.eu1.bfl.ai/v1/get_result?id=689c4c86-671e-4b7d-aca5-fc6671d207ed",
+        "bfl_status": "Ready"
+      }
+    },
+    "fbf33dc6": {
+      "id": "fbf33dc6",
+      "filename": "fbf33dc6.png",
+      "prompt": "A realistic photograph of an elderly person laughing while pointing at sheet music, taken at eye-level with a medium close-up shot. The setting is indoors with a  cozy atmosphere, featuring a wooden table. The lighting is cool on the left and warm on the right, and focused, creating an intimate mood. The color palette consists of warm tones with browns and soft highlights on the right and cool tones on the left. The composition places the subject left  of center with a shallow depth of field, emphasizing the joyful expression and engagement. pencil in his hand.",
+      "provider": "flux_bfl",
+      "model": "flux-dev",
+      "style": "fast_draft",
+      "source_type": "generated",
+      "timestamp": "2025-11-04T02:29:48.357291",
+      "date": "2025-11-04",
+      "time": "02:29:48",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": null,
+        "bfl_polling_url": "https://api.eu1.bfl.ai/v1/get_result?id=5198f162-cfe9-4b3e-af21-cebaa53e8782",
+        "bfl_status": "Ready"
+      }
+    },
+    "d96cda92": {
+      "id": "d96cda92",
+      "filename": "d96cda92.png",
+      "prompt": "Middle-aged male guard checking IDs at automatic doors, fluorescent lighting and reflections, cinematic realism, clean composition",
+      "provider": "flux_bfl",
+      "model": "flux-pro",
+      "style": "artistic",
+      "source_type": "generated",
+      "timestamp": "2025-11-06T10:50:30.516698",
+      "date": "2025-11-06",
+      "time": "10:50:30",
+      "metadata": {
+        "width": 1024,
+        "height": 1024,
+        "seed": null,
+        "negative_prompt": null,
+        "strength": null,
+        "bfl_polling_url": "https://api.eu2.bfl.ai/v1/get_result?id=c9012dad-59c6-4683-bcc2-b1c3cdb0f4c6",
+        "bfl_status": "Ready"
+      }
+    }
+  },
+  "metadata": {
+    "created": "2025-11-01T08:58:43.713715",
+    "total_images": 20,
+    "last_updated": "2025-11-06T10:50:31.788971"
+  }
+}

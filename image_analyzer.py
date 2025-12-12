@@ -10,7 +10,7 @@ logger = logging.getLogger("flux_prompt")
 class ImageAnalyzer:
     def __init__(self):
         self.config = Config()
-        self.client = openai.OpenAI(api_key=self.config.api_key)
+        self.client = openai.OpenAI(api_key=self.config.get_openai_api_key())
     
     def analyze_image(self, image_data, analysis_type="detailed"):
         """

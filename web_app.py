@@ -13,10 +13,12 @@ from image_analyzer import ImageAnalyzer
 from prompt_repository import PromptRepository
 from prompt_options_parser import PromptOptionsParser
 from scrollable_dropdown import create_parameter_input
+from image_generator import ImageGenerator
+from image_provider import ImageStyle
 
 # Configure Streamlit page
 st.set_page_config(
-    page_title="Flux Prompt Generator", 
+    page_title="Flux Generator with ComfyUI", 
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -36,6 +38,29 @@ def initialize_components():
             st.session_state.prompt_repository = PromptRepository()
         if 'options_parser' not in st.session_state:
             st.session_state.options_parser = PromptOptionsParser()
+        if 'image_generator' not in st.session_state:
+            try:
+                st.session_state.image_generator = ImageGenerator()
+            except Exception as e:
+                logger.warning(f"Image generator not initialized: {e}")
+        
+        # Force refresh providers if ComfyUI might be available now
+        # This helps when ComfyUI starts after the app
+        if 'image_generator' in st.session_state:
+            try:
+                # Check if we should refresh providers (e.g., ComfyUI might have started)
+                providers = st.session_state.image_generator.get_available_providers()
+                if "comfyui" not in providers:
+                    # Try to reinitialize router to pick up ComfyUI if it's now available
+                    from image_provider_router import ImageProviderRouter
+                    config = Config()
+                    router = ImageProviderRouter(config)
+                    if "comfyui" in router.get_available_providers():
+                        # ComfyUI is now available, reinitialize generator
+                        st.session_state.image_generator = ImageGenerator()
+                        logger.info("Refreshed ImageGenerator to include ComfyUI provider")
+            except Exception as e:
+                logger.debug(f"Provider refresh check failed: {e}")
         return True
     except Exception as e:
         st.error(f"Initialization error: {str(e)}")
@@ -790,7 +815,7 @@ def render_sidebar():
         ('Prompt Repository', '📚'),
         ('Manage Prompts', '⚙️'),
         ('Generate Images', '🎨'),
-        ('Generate Videos', '🎬'),
+        ('Image Editing', '✏️'),
     ]
     
     # Render navigation items
@@ -889,13 +914,14 @@ def dashboard_page():
             "page": "Generate Images"
         },
         {
-            "title": "Generate Videos",
+            "title": "Image Editing",
             "instructions": [
-                "Select a video model/workflow.",
-                "Provide the prompt or starting frame(s).",
-                "Render, review, and download."
+                "Upload an image to edit.",
+                "Enter a prompt describing the changes.",
+                "Adjust strength to control how much to change.",
+                "Generate and download the edited image."
             ],
-            "page": "Generate Videos"
+            "page": "Image Editing"
         },
     ]
     
@@ -961,17 +987,14 @@ def main():
     elif current_page == 'Manage Prompts':
         manage_prompts_tab()
     elif current_page == 'Generate Images':
-        st.header("Generate Images")
-        st.info("This feature will be upgraded later.")
-    elif current_page == 'Generate Videos':
-        st.header("Generate Videos")
-        st.info("This feature will be upgraded later.")
+        generate_images_tab()
+    elif current_page == 'Image Editing':
+        image_editing_tab()
     elif current_page == 'Settings':
         st.header("Settings")
         st.info("Settings page coming soon.")
     elif current_page == 'Image Vault':
-        st.header("Image Vault")
-        st.info("Image Vault coming soon.")
+        image_vault_tab()
 
 def generate_prompt_tab():
     """Tab for generating new prompts"""
@@ -979,6 +1002,13 @@ def generate_prompt_tab():
         <h1 class="page-header">Generate New Prompt</h1>
         <p class="page-subtitle">Generate, save, and manage your Stable Diffusion Flux prompts</p>
     """, unsafe_allow_html=True)
+    
+    # Show notification if a prompt was loaded
+    if st.session_state.get('prompt_loaded', False):
+        loaded_id = st.session_state.get('loaded_prompt_id', '')
+        st.success(f"✅ Prompt {loaded_id} loaded successfully! Form fields are populated below.")
+        # Clear the flag after showing
+        st.session_state['prompt_loaded'] = False
     
     generator = st.session_state.prompt_generator
     data_manager = st.session_state.data_manager
@@ -1143,13 +1173,16 @@ def manage_prompts_tab():
     try:
         # Search functionality
         st.subheader("🔍 Search & Filter")
-        col1, col2 = st.columns([3, 1])
+        col1, col2, col3 = st.columns([2, 1, 1])
         
         with col1:
             search_term = st.text_input("Search prompts", placeholder="Enter search term...", help="Search in all prompt fields")
         
         with col2:
             search_field = st.selectbox("Search in", ["All fields", "Context", "Image Style", "Environment", "Generated Prompt"])
+        
+        with col3:
+            sort_by = st.selectbox("Sort by", ["Timestamp (Newest)", "Timestamp (Oldest)", "ID", "Context"])
         
         # Load and filter prompts
         if search_term:
@@ -1165,6 +1198,17 @@ def manage_prompts_tab():
         else:
             prompts = data_manager.load_all_prompts()
         
+        # Sort prompts
+        if prompts:
+            if sort_by == "Timestamp (Newest)":
+                prompts.sort(key=lambda x: x.get('timestamp', ''), reverse=True)
+            elif sort_by == "Timestamp (Oldest)":
+                prompts.sort(key=lambda x: x.get('timestamp', ''))
+            elif sort_by == "ID":
+                prompts.sort(key=lambda x: x.get('id', ''))
+            elif sort_by == "Context":
+                prompts.sort(key=lambda x: x.get('context', '').lower())
+        
         if not prompts:
             if search_term:
                 st.info(f"No prompts found matching '{search_term}'")
@@ -1172,20 +1216,30 @@ def manage_prompts_tab():
                 st.info("No saved prompts found. Generate and save some prompts first!")
             return
         
+        # Display options
+        st.subheader("📋 Display Options")
+        show_extended = st.checkbox("Show extended columns (Image Style, Environment, etc.)", value=False)
+        
         # Create DataFrame for display
         df_display = []
         for prompt in prompts:
-            df_display.append({
+            row = {
                 'ID': prompt['id'],
                 'Timestamp': prompt['timestamp'],
                 'Context': prompt.get('context', '')[:100] + ('...' if len(prompt.get('context', '')) > 100 else ''),
                 'Generated Prompt': prompt.get('generated_prompt', '')[:150] + ('...' if len(prompt.get('generated_prompt', '')) > 150 else '')
-            })
+            }
+            if show_extended:
+                row['Image Style'] = prompt.get('art_style', '')[:50] + ('...' if len(prompt.get('art_style', '')) > 50 else '')
+                row['Environment'] = prompt.get('environment', '')[:50] + ('...' if len(prompt.get('environment', '')) > 50 else '')
+                row['Camera Angle'] = prompt.get('camera_angle', '')[:30] + ('...' if len(prompt.get('camera_angle', '')) > 30 else '')
+                row['Lighting'] = prompt.get('lighting', '')[:30] + ('...' if len(prompt.get('lighting', '')) > 30 else '')
+            df_display.append(row)
         
         df = pd.DataFrame(df_display)
         
         # Display prompts table
-        st.subheader("Saved Prompts")
+        st.subheader(f"Saved Prompts ({len(prompts)} total)")
         
         # Add selection functionality
         selected_indices = st.multiselect(
@@ -1197,10 +1251,10 @@ def manage_prompts_tab():
         st.dataframe(df, use_container_width=True)
         
         # Management buttons
-        col1, col2, col3 = st.columns(3)
+        col1, col2, col3, col4 = st.columns(4)
         
         with col1:
-            if st.button("Load Selected"):
+            if st.button("📥 Load Selected", help="Load the first selected prompt into the generator"):
                 if selected_indices:
                     idx = selected_indices[0]  # Load first selected
                     prompt_id = df.iloc[idx]['ID']
@@ -1209,14 +1263,38 @@ def manage_prompts_tab():
                     st.warning("Please select a prompt to load")
         
         with col2:
-            if st.button("Delete Selected"):
+            # Initialize delete confirmation state
+            if 'delete_confirmation' not in st.session_state:
+                st.session_state.delete_confirmation = None
+            
+            if st.button("🗑️ Delete Selected", help="Delete selected prompts (with confirmation)"):
                 if selected_indices:
-                    delete_prompts(selected_indices, df)
+                    st.session_state.delete_confirmation = selected_indices.copy()
+                    st.rerun()
                 else:
                     st.warning("Please select prompts to delete")
+            
+            # Show delete confirmation if pending
+            if st.session_state.delete_confirmation is not None:
+                # Validate that confirmation indices are still valid
+                valid_indices = [idx for idx in st.session_state.delete_confirmation if 0 <= idx < len(df)]
+                if valid_indices:
+                    delete_prompts(valid_indices, df, prompts)
+                else:
+                    # Clear invalid confirmation state
+                    st.session_state.delete_confirmation = None
+                    st.warning("Delete confirmation cancelled - selected prompts are no longer visible.")
         
         with col3:
-            if st.button("Export CSV"):
+            if st.button("📤 Export Selected", help="Export selected prompts as CSV"):
+                if selected_indices:
+                    selected_prompts = [prompts[i] for i in selected_indices]
+                    export_csv(selected_prompts)
+                else:
+                    st.warning("Please select prompts to export")
+        
+        with col4:
+            if st.button("📋 Export All", help="Export all prompts as CSV"):
                 export_csv(prompts)
         
         # Import/Export section
@@ -1224,7 +1302,7 @@ def manage_prompts_tab():
         col1, col2 = st.columns(2)
         
         with col1:
-            if st.button("📤 Export All Prompts"):
+            if st.button("📤 Export All to File"):
                 try:
                     export_file = data_manager.export_to_csv()
                     st.success(f"✅ Prompts exported to: {export_file}")
@@ -1257,7 +1335,7 @@ def manage_prompts_tab():
         
         # Show detailed view if one prompt is selected
         if len(selected_indices) == 1:
-            show_prompt_details(prompts[selected_indices[0]])
+            show_prompt_details(prompts[selected_indices[0]], data_manager)
             
     except Exception as e:
         st.error(f"Error loading prompts: {str(e)}")
@@ -1274,7 +1352,12 @@ def load_prompt(prompt_id):
                 value = prompt_data.get(param, '')
                 st.session_state[f"param_{param}"] = value
             
-            st.success(f"Loaded prompt {prompt_id}. Switch to 'Generate Prompt' tab to view.")
+            # Store flag to show success message on Generate Prompt tab
+            st.session_state['prompt_loaded'] = True
+            st.session_state['loaded_prompt_id'] = prompt_id
+            
+            st.success(f"✅ Prompt {prompt_id} loaded successfully! Switch to 'Generate Prompt' tab to view and edit.")
+            st.info("💡 Tip: The form fields are now populated with the loaded prompt values.")
             st.rerun()  # Refresh to show loaded values
         else:
             st.error("Prompt not found")
@@ -1282,20 +1365,48 @@ def load_prompt(prompt_id):
     except Exception as e:
         st.error(f"Error loading prompt: {str(e)}")
 
-def delete_prompts(selected_indices, df):
-    """Delete selected prompts"""
+def delete_prompts(selected_indices, df, prompts):
+    """Delete selected prompts with confirmation"""
     try:
-        data_manager = st.session_state.data_manager
+        # Show confirmation
+        st.markdown("---")
+        if len(selected_indices) == 1:
+            prompt_id = df.iloc[selected_indices[0]]['ID']
+            context_preview = prompts[selected_indices[0]].get('context', '')[:50]
+            st.warning(f"⚠️ **Delete Confirmation** - Are you sure you want to delete prompt {prompt_id}?")
+            st.info(f"**Context:** {context_preview}...")
+        else:
+            st.warning(f"⚠️ **Delete Confirmation** - Are you sure you want to delete {len(selected_indices)} prompts?")
+            st.info("This action cannot be undone.")
         
-        for idx in selected_indices:
-            prompt_id = df.iloc[idx]['ID']
-            data_manager.delete_prompt(prompt_id)
+        # Confirmation buttons
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("✅ Confirm Delete", type="primary", key="confirm_delete_btn"):
+                data_manager = st.session_state.data_manager
+                deleted_count = 0
+                
+                for idx in selected_indices:
+                    prompt_id = df.iloc[idx]['ID']
+                    if data_manager.delete_prompt(prompt_id):
+                        deleted_count += 1
+                
+                # Clear confirmation state
+                st.session_state.delete_confirmation = None
+                st.success(f"✅ Deleted {deleted_count} prompt(s) successfully")
+                st.rerun()
         
-        st.success(f"Deleted {len(selected_indices)} prompt(s)")
-        st.rerun()
+        with col2:
+            if st.button("❌ Cancel", key="cancel_delete_btn"):
+                # Clear confirmation state
+                st.session_state.delete_confirmation = None
+                st.info("Deletion cancelled")
+                st.rerun()
         
     except Exception as e:
         st.error(f"Error deleting prompts: {str(e)}")
+        # Clear confirmation state on error
+        st.session_state.delete_confirmation = None
 
 def export_csv(prompts):
     """Export prompts as CSV download"""
@@ -1313,29 +1424,122 @@ def export_csv(prompts):
     except Exception as e:
         st.error(f"Error exporting CSV: {str(e)}")
 
-def show_prompt_details(prompt):
-    """Show detailed view of a selected prompt"""
-    st.subheader("Prompt Details")
+def show_prompt_details(prompt, data_manager):
+    """Show detailed view of a selected prompt with edit functionality"""
+    st.subheader("📝 Prompt Details")
     
-    with st.expander("View Full Details", expanded=True):
+    # Initialize edit mode in session state if not exists
+    if f"edit_mode_{prompt['id']}" not in st.session_state:
+        st.session_state[f"edit_mode_{prompt['id']}"] = False
+    
+    edit_mode = st.session_state[f"edit_mode_{prompt['id']}"]
+    
+    # Edit mode toggle
+    col1, col2 = st.columns([3, 1])
+    with col1:
+        st.markdown(f"**Prompt ID:** {prompt['id']} | **Created:** {prompt['timestamp']}")
+    with col2:
+        if st.button("✏️ Edit" if not edit_mode else "👁️ View Only", key=f"toggle_edit_{prompt['id']}"):
+            st.session_state[f"edit_mode_{prompt['id']}"] = not edit_mode
+            st.rerun()
+    
+    with st.expander("View/Edit Full Details", expanded=True):
+        # Store edited values
+        edited_data = {}
+        
         col1, col2 = st.columns(2)
         
         with col1:
-            st.text_input("ID", value=prompt['id'], disabled=True)
-            st.text_input("Timestamp", value=prompt['timestamp'], disabled=True)
-            st.text_area("Context", value=prompt.get('context', ''), disabled=True)
-            st.text_input("Image Style", value=prompt.get('art_style', ''), disabled=True)
-            st.text_input("Camera Angle", value=prompt.get('camera_angle', ''), disabled=True)
+            st.text_input("ID", value=prompt['id'], disabled=True, key=f"id_{prompt['id']}")
+            st.text_input("Timestamp", value=prompt['timestamp'], disabled=True, key=f"timestamp_{prompt['id']}")
+            
+            edited_data['context'] = st.text_area(
+                "Context", 
+                value=prompt.get('context', ''), 
+                disabled=not edit_mode,
+                key=f"context_{prompt['id']}",
+                height=100
+            )
+            edited_data['art_style'] = st.text_input(
+                "Image Style", 
+                value=prompt.get('art_style', ''), 
+                disabled=not edit_mode,
+                key=f"art_style_{prompt['id']}"
+            )
+            edited_data['camera_angle'] = st.text_input(
+                "Camera Angle", 
+                value=prompt.get('camera_angle', ''), 
+                disabled=not edit_mode,
+                key=f"camera_angle_{prompt['id']}"
+            )
         
         with col2:
-            st.text_input("Environment", value=prompt.get('environment', ''), disabled=True)
-            st.text_input("Lighting", value=prompt.get('lighting', ''), disabled=True)
-            st.text_input("Focus", value=prompt.get('focus', ''), disabled=True)
-            st.text_input("Color Palette", value=prompt.get('color_palette', ''), disabled=True)
-            st.text_input("Composition", value=prompt.get('composition', ''), disabled=True)
+            edited_data['environment'] = st.text_input(
+                "Environment", 
+                value=prompt.get('environment', ''), 
+                disabled=not edit_mode,
+                key=f"environment_{prompt['id']}"
+            )
+            edited_data['lighting'] = st.text_input(
+                "Lighting", 
+                value=prompt.get('lighting', ''), 
+                disabled=not edit_mode,
+                key=f"lighting_{prompt['id']}"
+            )
+            edited_data['focus'] = st.text_input(
+                "Focus", 
+                value=prompt.get('focus', ''), 
+                disabled=not edit_mode,
+                key=f"focus_{prompt['id']}"
+            )
+            edited_data['color_palette'] = st.text_input(
+                "Color Palette", 
+                value=prompt.get('color_palette', ''), 
+                disabled=not edit_mode,
+                key=f"color_palette_{prompt['id']}"
+            )
+            edited_data['composition'] = st.text_input(
+                "Composition", 
+                value=prompt.get('composition', ''), 
+                disabled=not edit_mode,
+                key=f"composition_{prompt['id']}"
+            )
         
-        st.text_area("Modifiers", value=prompt.get('modifiers', ''), disabled=True)
-        st.text_area("Generated Prompt", value=prompt.get('generated_prompt', ''), height=150, disabled=True)
+        edited_data['modifiers'] = st.text_area(
+            "Modifiers", 
+            value=prompt.get('modifiers', ''), 
+            disabled=not edit_mode,
+            key=f"modifiers_{prompt['id']}",
+            height=80
+        )
+        edited_data['generated_prompt'] = st.text_area(
+            "Generated Prompt", 
+            value=prompt.get('generated_prompt', ''), 
+            disabled=not edit_mode,
+            key=f"generated_prompt_{prompt['id']}",
+            height=150
+        )
+        
+        # Save button (only shown in edit mode)
+        if edit_mode:
+            col1, col2, col3 = st.columns([1, 1, 2])
+            with col1:
+                if st.button("💾 Save Changes", type="primary", key=f"save_{prompt['id']}"):
+                    try:
+                        # Update the prompt
+                        if data_manager.update_prompt(prompt['id'], edited_data):
+                            st.success("✅ Prompt updated successfully!")
+                            st.session_state[f"edit_mode_{prompt['id']}"] = False
+                            st.rerun()
+                        else:
+                            st.error("Failed to update prompt")
+                    except Exception as e:
+                        st.error(f"Error updating prompt: {str(e)}")
+            
+            with col2:
+                if st.button("❌ Cancel", key=f"cancel_{prompt['id']}"):
+                    st.session_state[f"edit_mode_{prompt['id']}"] = False
+                    st.rerun()
 
 def image_analysis_tab():
     """Tab for analyzing images and generating prompts"""
@@ -1628,6 +1832,739 @@ def image_analysis_tab():
             except Exception as e:
                 st.error(f"Error analyzing image: {str(e)}")
                 logger.error(f"Image analysis error: {str(e)}")
+
+def generate_images_tab():
+    """Tab for generating images from prompts"""
+    st.markdown("""
+        <h1 class="page-header">Generate Images</h1>
+        <p class="page-subtitle">Generate images from your Flux prompts using AI</p>
+    """, unsafe_allow_html=True)
+    
+    # Check if image generator is available
+    if 'image_generator' not in st.session_state:
+        st.warning("Image generation is not available. Please check your API keys in the .env file.")
+        st.info("Required: OPENAI_API_KEY and BLACK_FOREST_LABS_API_KEY")
+        return
+    
+    generator = st.session_state.image_generator
+    
+    # Check if ComfyUI should be available but isn't in providers
+    # This handles the case where ComfyUI started after the app
+    providers = generator.get_available_providers()
+    if "comfyui" not in providers:
+        try:
+            from image_provider_router import ImageProviderRouter
+            config = Config()
+            test_router = ImageProviderRouter(config)
+            test_providers = test_router.get_available_providers()
+            if "comfyui" in test_providers:
+                # ComfyUI is now available, refresh the generator
+                # Clear old instance first
+                if 'image_generator' in st.session_state:
+                    del st.session_state.image_generator
+                # Create fresh instance
+                st.session_state.image_generator = ImageGenerator()
+                generator = st.session_state.image_generator
+                providers = generator.get_available_providers()
+                logger.info(f"Auto-refreshed ImageGenerator. Providers now: {list(providers.keys())}")
+                # Show success message
+                st.success("✓ ComfyUI detected! Providers updated.")
+                st.rerun()
+        except Exception as e:
+            logger.debug(f"Provider refresh check in tab failed: {e}")
+    
+    # Two-column layout
+    col_left, col_right = st.columns([1.2, 1])
+    
+    with col_left:
+        st.markdown("""
+            <h3 class="section-title-small">Prompt & Settings</h3>
+        """, unsafe_allow_html=True)
+        
+        # Prompt input
+        prompt = st.text_area(
+            "Enter your prompt",
+            height=150,
+            placeholder="A cinematic sunset over mountains, dramatic lighting, photorealistic",
+            help="Enter a detailed prompt for image generation"
+        )
+        
+        # Load prompt from repository (if available)
+        if st.session_state.get('prompt_repository'):
+            repository = st.session_state.prompt_repository
+            master_prompts = repository.get_all_master_prompts()
+            if master_prompts:
+                st.markdown("**Or select from saved prompts:**")
+                prompt_options = ["None"] + [p['name'] for p in master_prompts]
+                selected_prompt = st.selectbox("Load saved prompt", prompt_options)
+                if selected_prompt != "None":
+                    selected_prompt_data = next((p for p in master_prompts if p['name'] == selected_prompt), None)
+                    if selected_prompt_data:
+                        prompt = selected_prompt_data.get('content', prompt)
+                        st.text_area("Loaded prompt", value=prompt, height=100, disabled=True, key="loaded_prompt_display")
+        
+        # Style selection
+        st.markdown("""
+            <h3 class="section-title-small">Image Style</h3>
+        """, unsafe_allow_html=True)
+        
+        style_options = {
+            "fast_draft": "Fast Draft - Quick, lower quality",
+            "photoreal": "Photorealistic - High quality realistic images",
+            "brand_layout": "Brand Layout - Marketing visuals",
+            "portrait": "Portrait - Professional portraits",
+            "product": "Product - Product photography",
+            "logo_text": "Logo/Text - Logos and text-based images",
+            "artistic": "Artistic - Creative styles",
+            "cinematic": "Cinematic - Film-quality images"
+        }
+        
+        selected_style = st.selectbox(
+            "Select image style",
+            options=list(style_options.keys()),
+            format_func=lambda x: style_options[x],
+            help="Choose the style that best matches your needs"
+        )
+        
+        # Advanced settings
+        with st.expander("Advanced Settings"):
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                width = st.selectbox(
+                    "Width",
+                    options=[512, 768, 1024, 1280, 1536],
+                    index=2,
+                    help="Image width in pixels"
+                )
+                seed = st.number_input(
+                    "Seed (for reproducibility)",
+                    min_value=None,
+                    max_value=None,
+                    value=None,
+                    help="Optional: Set a seed for reproducible results",
+                    key="image_seed"
+                )
+            
+            with col2:
+                height = st.selectbox(
+                    "Height",
+                    options=[512, 768, 1024, 1280, 1536],
+                    index=2,
+                    help="Image height in pixels"
+                )
+                negative_prompt = st.text_area(
+                    "Negative Prompt",
+                    height=80,
+                    placeholder="blurry, low quality, distorted",
+                    help="What to avoid in the image"
+                )
+        
+        # Provider selection
+        st.markdown("---")
+        
+        # Add refresh button for providers
+        col_refresh, col_provider_label = st.columns([1, 4])
+        with col_refresh:
+            refresh_clicked = st.button("🔄 Refresh Providers", help="Refresh provider list to detect ComfyUI if it just started", key="refresh_providers_btn")
+            if refresh_clicked:
+                # Force clear and reinitialize ImageGenerator
+                try:
+                    # Clear the cached generator
+                    if 'image_generator' in st.session_state:
+                        del st.session_state.image_generator
+                    # Create fresh instance
+                    st.session_state.image_generator = ImageGenerator()
+                    generator = st.session_state.image_generator
+                    # Verify ComfyUI is now available
+                    new_providers = generator.get_available_providers()
+                    if "comfyui" in new_providers:
+                        st.success(f"✓ Providers refreshed! ComfyUI is now available.")
+                    else:
+                        st.warning("Providers refreshed, but ComfyUI not detected. Make sure ComfyUI is running.")
+                    st.rerun()
+                except Exception as e:
+                    st.error(f"Failed to refresh: {e}")
+                    logger.error(f"Provider refresh error: {e}", exc_info=True)
+        
+        with col_provider_label:
+            st.markdown("**Provider**")
+        
+        # Get providers (may have been refreshed above or in the check at top of function)
+        providers = generator.get_available_providers()
+        
+        # Debug: Log available providers
+        logger.info(f"Available providers in UI: {list(providers.keys())}")
+        
+        if providers:
+            provider_names = list(providers.keys())
+            provider_options = {}
+            for name, info in providers.items():
+                # Better display names
+                if name == "comfyui":
+                    display_name = f"ComfyUI (SDXL - Local)"
+                elif name == "flux":
+                    display_name = f"FLUX ({info['model']})"
+                elif name == "openai":
+                    display_name = f"OpenAI (DALL-E 3)"
+                else:
+                    display_name = f"{name.upper()} ({info['model']})"
+                provider_options[name] = display_name
+            
+            # Check for ComfyUI status
+            comfyui_available = "comfyui" in providers
+            comfyui_status = ""
+            
+            # Only check server status if ComfyUI is not in providers
+            # This prevents showing warning when ComfyUI is actually available
+            if not comfyui_available:
+                # Try to check if ComfyUI server might be available but not initialized
+                try:
+                    config = Config()
+                    comfyui_server = config.get_comfyui_server_address()
+                    import urllib.request
+                    import urllib.error
+                    try:
+                        # Use longer timeout and better error handling
+                        urllib.request.urlopen(f"http://{comfyui_server}/system_stats", timeout=5)
+                        # Server is reachable but provider not initialized - suggest refresh
+                        comfyui_status = f"⚠️ ComfyUI server at {comfyui_server} is reachable but not initialized. Click '🔄 Refresh Providers' button above."
+                    except urllib.error.URLError:
+                        # Server not reachable
+                        comfyui_status = f"ℹ️ ComfyUI server at {comfyui_server} not reachable. Start ComfyUI to enable local generation."
+                    except Exception:
+                        # Other errors - don't show confusing message
+                        pass
+                except Exception:
+                    pass
+            else:
+                # ComfyUI is available - clear any previous status
+                comfyui_status = ""
+            
+            # Default to "auto" for automatic selection
+            provider_options = {"auto": "Auto (Best for style)"} | provider_options
+            
+            selected_provider = st.selectbox(
+                "Provider",
+                options=list(provider_options.keys()),
+                format_func=lambda x: provider_options[x],
+                help="Choose a specific provider or 'Auto' to let the system select the best one for your style",
+                key="image_provider_select"
+            )
+            
+            # Show provider info
+            if selected_provider != "auto" and selected_provider in providers:
+                provider_info = providers[selected_provider]
+                features = provider_info.get('features', {})
+                feature_list = [f for f, enabled in features.items() if enabled]
+                if feature_list:
+                    st.caption(f"Features: {', '.join(feature_list)}")
+            
+            # Show ComfyUI status if not available
+            # Only show if status message exists AND ComfyUI is not in providers
+            if comfyui_status and not comfyui_available:
+                st.info(comfyui_status)
+            elif comfyui_available:
+                # ComfyUI is available - optionally show success message (commented out to reduce clutter)
+                # st.success("✓ ComfyUI is available for local generation")
+                pass
+        else:
+            selected_provider = "auto"
+            st.warning("No providers available. Please check your API keys.")
+        
+        # Generate button
+        generate_button = st.button("🎨 Generate Image", type="primary", use_container_width=True)
+    
+    with col_right:
+        st.markdown("""
+            <h3 class="section-title-small">Preview</h3>
+        """, unsafe_allow_html=True)
+        
+        # Display generated image
+        if generate_button and prompt:
+            with st.spinner("Generating image... This may take 30-60 seconds."):
+                try:
+                    # Convert style string to enum
+                    style_enum = ImageStyle(selected_style) if selected_style in [s.value for s in ImageStyle] else None
+                    
+                    # Use selected provider if not "auto"
+                    provider_override = None if selected_provider == "auto" else selected_provider
+                    
+                    result = generator.generate(
+                        prompt=prompt,
+                        style=style_enum,
+                        width=width,
+                        height=height,
+                        seed=int(seed) if seed else None,
+                        negative_prompt=negative_prompt if negative_prompt else None,
+                        num_images=1,
+                        provider=provider_override
+                    )
+                    
+                    if result.success:
+                        st.success(f"✓ Generated using {result.provider} ({result.model})")
+                        
+                        # Display image - handle both URLs and binary data
+                        image_url = result.get_image_url(0)
+                        image_bytes = result.get_image_bytes(0)
+                        
+                        if image_bytes:
+                            # Handle binary image data (e.g., from ComfyUI)
+                            from PIL import Image as PILImage
+                            import io
+                            img = PILImage.open(io.BytesIO(image_bytes))
+                            st.image(img, caption=f"Generated Image - {selected_style}", use_container_width=True)
+                            
+                            # Download button
+                            st.download_button(
+                                label="📥 Download Image",
+                                data=image_bytes,
+                                file_name=f"generated_image_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png",
+                                mime="image/png"
+                            )
+                        elif image_url:
+                            # Handle URL-based images (e.g., from OpenAI, Flux API)
+                            st.image(image_url, caption=f"Generated Image - {selected_style}", use_container_width=True)
+                            
+                            # Download button
+                            try:
+                                import requests
+                                img_response = requests.get(image_url)
+                                st.download_button(
+                                    label="📥 Download Image",
+                                    data=img_response.content,
+                                    file_name=f"generated_image_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png",
+                                    mime="image/png"
+                                )
+                            except Exception as e:
+                                logger.warning(f"Could not download image: {e}")
+                                st.info(f"Image URL: {image_url}")
+                        else:
+                            st.warning("Image generated but no image data available. Check metadata.")
+                        
+                        # Save to session state
+                        st.session_state.last_generated_image = result
+                        
+                    else:
+                        st.error(f"Generation failed: {result.error}")
+                        if "No available" in result.error:
+                            st.info("Make sure you have configured your API keys in the .env file")
+                
+                except Exception as e:
+                    st.error(f"Error generating image: {str(e)}")
+                    logger.error(f"Image generation error: {e}", exc_info=True)
+        
+        elif generate_button and not prompt:
+            st.warning("Please enter a prompt first")
+        
+        else:
+            # Show instructions when no generation yet
+            st.info("""
+            **Instructions:**
+            1. Enter your prompt in the left panel
+            2. Select an image style
+            3. Adjust settings (optional)
+            4. Click "Generate Image"
+            
+            **Tip:** You can load prompts from your Prompt Repository!
+            """)
+    
+    # Show last generated image info
+    if 'last_generated_image' in st.session_state:
+        result = st.session_state.last_generated_image
+        st.markdown("---")
+        with st.expander("Last Generated Image Details"):
+            st.json({
+                "provider": result.provider,
+                "model": result.model,
+                "metadata": result.metadata
+            })
+
+def image_editing_tab():
+    """Tab for image-to-image editing"""
+    st.markdown("""
+        <h1 class="page-header">Image Editing</h1>
+        <p class="page-subtitle">Transform and edit images using AI image-to-image generation</p>
+    """, unsafe_allow_html=True)
+    
+    # Check if image generator is available
+    if 'image_generator' not in st.session_state:
+        st.warning("Image editing is not available. Please check your API keys in the .env file.")
+        st.info("Required: OPENAI_API_KEY and BLACK_FOREST_LABS_API_KEY (for img2img)")
+        return
+    
+    generator = st.session_state.image_generator
+    
+    # Check if Flux provider supports img2img
+    providers = generator.get_available_providers()
+    flux_available = False
+    for name, info in providers.items():
+        if "flux" in name.lower() and info['features'].get('img2img', False):
+            flux_available = True
+            break
+    
+    if not flux_available:
+        st.error("Image-to-image editing requires Flux provider with img2img support.")
+        st.info("Make sure you have BLACK_FOREST_LABS_API_KEY configured in your .env file.")
+        return
+    
+    # Three-column layout: Input | Controls | Output
+    col_input, col_controls, col_output = st.columns([1, 1, 1])
+    
+    with col_input:
+        st.markdown("""
+            <h3 class="section-title-small">Source Image</h3>
+        """, unsafe_allow_html=True)
+        
+        # Image upload
+        uploaded_file = st.file_uploader(
+            "Upload image to edit",
+            type=['png', 'jpg', 'jpeg', 'gif', 'bmp', 'webp'],
+            help="Upload the image you want to edit/transform",
+            key="img2img_uploader"
+        )
+        
+        source_image = None
+        source_image_url = None
+        
+        if uploaded_file is not None:
+            # Display uploaded image
+            from PIL import Image as PILImage
+            import io
+            import base64
+            
+            source_image = PILImage.open(uploaded_file)
+            st.image(source_image, caption="Source Image", use_container_width=True)
+            
+            # Convert to base64 data URL for API
+            buffered = io.BytesIO()
+            # Save in original format or PNG
+            format_ext = uploaded_file.type.split('/')[-1].upper()
+            if format_ext == 'JPEG':
+                format_ext = 'JPEG'
+            else:
+                format_ext = 'PNG'
+            source_image.save(buffered, format=format_ext)
+            img_bytes = buffered.getvalue()
+            img_base64 = base64.b64encode(img_bytes).decode('utf-8')
+            source_image_url = f"data:image/{format_ext.lower()};base64,{img_base64}"
+            
+            # Show image info
+            st.caption(f"Size: {source_image.size[0]}x{source_image.size[1]} pixels")
+    
+    with col_controls:
+        st.markdown("""
+            <h3 class="section-title-small">Edit Settings</h3>
+        """, unsafe_allow_html=True)
+        
+        # Prompt input
+        prompt = st.text_area(
+            "Edit Prompt",
+            height=120,
+            placeholder="Make this more cinematic, add dramatic lighting, change the mood to mysterious",
+            help="Describe how you want to transform the image"
+        )
+        
+        # Strength slider
+        strength = st.slider(
+            "Transformation Strength",
+            min_value=0.1,
+            max_value=1.0,
+            value=0.7,
+            step=0.1,
+            help="How much to change the image (0.1 = subtle, 1.0 = major transformation)"
+        )
+        st.caption(f"Strength: {int(strength * 100)}% - {'Subtle changes' if strength < 0.5 else 'Moderate changes' if strength < 0.8 else 'Major transformation'}")
+        
+        # Style selection (optional)
+        st.markdown("""
+            <h3 class="section-title-small">Style (Optional)</h3>
+        """, unsafe_allow_html=True)
+        
+        style_options = {
+            "None": "No style override",
+            "photoreal": "Photorealistic",
+            "cinematic": "Cinematic",
+            "artistic": "Artistic",
+        }
+        
+        selected_style = st.selectbox(
+            "Apply style",
+            options=list(style_options.keys()),
+            format_func=lambda x: style_options[x],
+            help="Optional: Apply a specific style to the transformation"
+        )
+        
+        # Advanced options
+        with st.expander("Advanced Options"):
+            seed = st.number_input(
+                "Seed (for reproducibility)",
+                min_value=None,
+                max_value=None,
+                value=None,
+                help="Optional: Set a seed for reproducible results",
+                key="img2img_seed"
+            )
+            negative_prompt = st.text_area(
+                "Negative Prompt",
+                height=60,
+                placeholder="blurry, distorted, low quality",
+                help="What to avoid in the edited image"
+            )
+        
+        # Generate button
+        generate_button = st.button("🖼️ Generate Edited Image", type="primary", use_container_width=True)
+    
+    with col_output:
+        st.markdown("""
+            <h3 class="section-title-small">Edited Image</h3>
+        """, unsafe_allow_html=True)
+        
+        # Display result
+        if generate_button:
+            if not uploaded_file:
+                st.warning("⚠ Please upload an image first")
+            elif not prompt:
+                st.warning("⚠ Please enter an edit prompt")
+            elif not source_image_url:
+                st.warning("⚠ Could not process uploaded image")
+            else:
+                with st.spinner("Editing image... This may take 30-60 seconds."):
+                    try:
+                        # Convert style string to enum
+                        style_enum = None
+                        if selected_style != "None":
+                            try:
+                                style_enum = ImageStyle(selected_style)
+                            except ValueError:
+                                pass
+                        
+                        # Generate edited image using img2img with Flux Kontext
+                        # The router will automatically use Flux Kontext from routing config
+                        result = generator.generate(
+                            prompt=prompt,
+                            style=style_enum,
+                            source_image_url=source_image_url,
+                            strength=strength,
+                            seed=int(seed) if seed else None,
+                            negative_prompt=negative_prompt if negative_prompt else None,
+                            num_images=1,
+                            use_cache=False  # Don't cache img2img results
+                        )
+                        
+                        if result.success:
+                            st.success(f"✓ Generated using {result.provider} ({result.model})")
+                            
+                            # Display edited image
+                            image_url = result.get_image_url(0)
+                            if image_url:
+                                st.image(image_url, caption="Edited Image", use_container_width=True)
+                                
+                                # Before/After comparison
+                                if source_image:
+                                    st.markdown("**Before / After Comparison**")
+                                    col_before, col_after = st.columns(2)
+                                    with col_before:
+                                        st.caption("**Before**")
+                                        st.image(source_image, use_container_width=True)
+                                    with col_after:
+                                        st.caption("**After**")
+                                        st.image(image_url, use_container_width=True)
+                                
+                                # Download button
+                                try:
+                                    import requests
+                                    img_response = requests.get(image_url)
+                                    st.download_button(
+                                        label="📥 Download Edited Image",
+                                        data=img_response.content,
+                                        file_name=f"edited_image_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png",
+                                        mime="image/png",
+                                        use_container_width=True
+                                    )
+                                except Exception as e:
+                                    logger.warning(f"Could not download image: {e}")
+                                    st.info(f"Image URL: {image_url}")
+                            else:
+                                st.warning("Image generated but URL not available. Check metadata.")
+                            
+                            # Save to session state
+                            st.session_state.last_edited_image = result
+                        
+                        else:
+                            st.error(f"Editing failed: {result.error}")
+                            if "img2img" in result.error.lower() or "not support" in result.error.lower():
+                                st.info("💡 Tip: Make sure you're using Flux provider (Black Forest Labs API) as it supports image-to-image editing.")
+                    
+                    except Exception as e:
+                        st.error(f"Error editing image: {str(e)}")
+                        logger.error(f"Image editing error: {e}", exc_info=True)
+        
+        else:
+            # Show instructions when no generation yet
+            st.info("""
+            **Instructions:**
+            1. Upload an image in the left panel
+            2. Enter a prompt describing the changes
+            3. Adjust the strength slider
+            4. Click "Generate Edited Image"
+            
+            **Tips:**
+            - Lower strength = subtle changes
+            - Higher strength = major transformation
+            - Use negative prompts to avoid unwanted changes
+            """)
+
+def image_vault_tab():
+    """Tab for viewing and managing saved images in the vault"""
+    st.markdown("""
+        <h1 class="page-header">Image Vault</h1>
+        <p class="page-subtitle">Browse and manage all your generated and edited images</p>
+    """, unsafe_allow_html=True)
+    
+    # Check if image generator and vault are available
+    if 'image_generator' not in st.session_state:
+        st.warning("Image Vault is not available. Please initialize the image generator first.")
+        return
+    
+    generator = st.session_state.image_generator
+    if not generator.vault:
+        st.warning("Image Vault is not initialized. Images will not be automatically saved.")
+        return
+    
+    vault = generator.vault
+    
+    # Stats section
+    stats = vault.get_vault_stats()
+    
+    col_stat1, col_stat2, col_stat3, col_stat4 = st.columns(4)
+    with col_stat1:
+        st.metric("Total Images", stats["total_images"])
+    with col_stat2:
+        st.metric("Total Size", f"{stats['total_size_mb']} MB")
+    with col_stat3:
+        generated_count = stats["by_source_type"].get("generated", 0)
+        st.metric("Generated", generated_count)
+    with col_stat4:
+        edited_count = stats["by_source_type"].get("edited", 0)
+        st.metric("Edited", edited_count)
+    
+    # Filters
+    st.markdown("---")
+    col_filter1, col_filter2, col_filter3 = st.columns(3)
+    
+    with col_filter1:
+        filter_source = st.selectbox(
+            "Filter by Type",
+            options=["All", "Generated", "Edited"],
+            help="Filter images by source type"
+        )
+    
+    with col_filter2:
+        providers_list = ["All"] + list(set(stats["by_provider"].keys()))
+        filter_provider = st.selectbox(
+            "Filter by Provider",
+            options=providers_list if providers_list else ["All"],
+            help="Filter images by provider"
+        )
+    
+    with col_filter3:
+        styles_list = ["All"] + [s for s in stats["by_style"].keys() if s != "none"]
+        filter_style = st.selectbox(
+            "Filter by Style",
+            options=styles_list if styles_list else ["All"],
+            help="Filter images by style"
+        )
+    
+    # Apply filters
+    source_type_filter = filter_source.lower() if filter_source != "All" else None
+    provider_filter = filter_provider if filter_provider != "All" else None
+    style_filter = filter_style if filter_style != "All" else None
+    
+    # Get filtered images
+    images = vault.list_images(
+        source_type=source_type_filter,
+        provider=provider_filter,
+        style=style_filter,
+        limit=None,
+        sort_by="timestamp",
+        reverse=True
+    )
+    
+    if not images:
+        st.info("No images found in vault. Generated images will be automatically saved here.")
+        return
+    
+    # Display images in grid
+    st.markdown(f"### Showing {len(images)} image(s)")
+    
+    # Create grid layout - 3 columns
+    num_cols = 3
+    cols = st.columns(num_cols)
+    
+    for idx, img_meta in enumerate(images):
+        col_idx = idx % num_cols
+        with cols[col_idx]:
+            try:
+                image_path = vault.get_image_path(img_meta["id"])
+                
+                if image_path and image_path.exists():
+                    # Display image
+                    st.image(str(image_path), use_container_width=True)
+                    
+                    # Image info
+                    source_type_label = "✏️" if img_meta.get("source_type") == "edited" else "🎨"
+                    st.caption(f"{source_type_label} {img_meta.get('provider', 'unknown').upper()} | {img_meta.get('date', '')}")
+                    
+                    # Truncated prompt
+                    prompt_preview = img_meta.get("prompt", "")[:60]
+                    if len(img_meta.get("prompt", "")) > 60:
+                        prompt_preview += "..."
+                    st.caption(f"*{prompt_preview}*")
+                    
+                    # Expandable details
+                    with st.expander("Details"):
+                        st.write(f"**ID:** {img_meta['id']}")
+                        st.write(f"**Provider:** {img_meta.get('provider', 'N/A')}")
+                        st.write(f"**Model:** {img_meta.get('model', 'N/A')}")
+                        st.write(f"**Style:** {img_meta.get('style', 'N/A')}")
+                        st.write(f"**Date:** {img_meta.get('date', 'N/A')} {img_meta.get('time', '')}")
+                        st.write(f"**Prompt:** {img_meta.get('prompt', 'N/A')}")
+                        
+                        # Download and delete buttons
+                        col_download, col_delete = st.columns(2)
+                        with col_download:
+                            try:
+                                with open(image_path, 'rb') as f:
+                                    st.download_button(
+                                        "📥 Download",
+                                        data=f.read(),
+                                        file_name=img_meta["filename"],
+                                        mime="image/png",
+                                        key=f"download_{img_meta['id']}",
+                                        use_container_width=True
+                                    )
+                            except Exception:
+                                pass
+                        
+                        with col_delete:
+                            if st.button("🗑️ Delete", key=f"delete_{img_meta['id']}", use_container_width=True):
+                                if vault.delete_image(img_meta['id']):
+                                    st.success("Image deleted")
+                                    st.rerun()
+                                else:
+                                    st.error("Failed to delete image")
+                
+                else:
+                    st.warning(f"Image file not found: {img_meta.get('filename', 'N/A')}")
+            
+            except Exception as e:
+                st.error(f"Error loading image: {e}")
+                logger.error(f"Error displaying vault image: {e}")
+    
+    # Show more if there are many images
+    if len(images) > 9:
+        st.info(f"Showing first 9 images. Total: {len(images)}. Use filters to narrow down results.")
 
 def prompt_repository_tab():
     """Tab for managing the prompt repository"""
